@@ -19,4 +19,4 @@ An installable study app (PWA) for FRV courses. It has study notes for each topi
 3. If you added files to `data/`, add them to `SHELL` in `sw.js`, and bump `CACHE` in `sw.js`
    whenever the app's code changes.
 
-Hosted on GitHub Pages from the `main` branch root.
+Hosted on GitHub Pages from the `main` branch root: https://camjastewart90.github.io/Study-app/
