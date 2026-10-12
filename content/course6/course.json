@@ -1,0 +1,35 @@
+{
+  "id": "c6",
+  "title": "Course 6 Exam",
+  "subtitle": "Station Officer Course 6 study book and Q&A bank",
+  "groups": [
+    { "title": "Manuals & Administration", "topics": [
+      ["fso", "Fire Safety Operational Manual", "Fire Safety Manual"],
+      ["sta", "Station Administration", "Station Admin"],
+      ["gars", "Greater Alarm Response System (GARS)", "GARS"] ] },
+    { "title": "Policies & WHS", "topics": [
+      ["wpb", "Workplace Behaviour Policy", "Workplace Behaviour"],
+      ["whs", "WHS / OH&S (ORG109, ORG133)", "WHS / OH&S"],
+      ["pol", "Organisational Policies (POL 003)", "POL 003"],
+      ["orp", "Organisational Practices (ORP 002, 003)", "ORPs"] ] },
+    { "title": "Legislation", "topics": [
+      ["act", "FRV Act 1958", "FRV Act"],
+      ["regs", "FRV (General) Regulations 2020", "FRV Regulations"] ] },
+    { "title": "Field Emergency Response Guide (FERG) 2018", "topics": [
+      ["ferg-ctx", "FERG: State Context & Controlling the Incident", "FERG: Control"],
+      ["ferg-air", "FERG: Aircraft, Airports & Bushfire", "FERG: Aircraft & Bushfire"],
+      ["ferg-veh", "FERG: Vehicles, Car Parks, CityLink & Trams", "FERG: Vehicles"],
+      ["ferg-dg", "FERG: Dangerous Goods, LPG & Electrical", "FERG: DG & Electrical"],
+      ["ferg-site", "FERG: Buildings & Special Sites", "FERG: Sites"],
+      ["ferg-port", "FERG: Docks, Ships, Pollution, VicPol & Hostile Acts", "FERG: Ports & VicPol"] ] },
+    { "title": "Fireground Operations", "topics": [
+      ["ba", "Breathing Apparatus (PUAFIR207)", "Breathing Apparatus"],
+      ["oms-cmd", "OMS: Command & Communications", "OMS: Command"],
+      ["oms-ops", "OMS: Fireground Operations", "OMS: Operations"],
+      ["opp", "Operational Practices (OPP)", "OPPs"] ] },
+    { "title": "Emergency Management", "topics": [
+      ["semp", "State Emergency Management Plan (SEMP)", "SEMP"],
+      ["emr", "Emergency Medical Response", "Medical Response"],
+      ["dgc", "Dangerous Goods Classes", "DG Classes"] ] }
+  ]
+}

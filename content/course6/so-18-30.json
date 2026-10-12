@@ -1,0 +1,1275 @@
+{
+ "chunk": "so-18-30",
+ "notes": [
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "markdown": "### Field Emergency Response Guide (FERG) 2018\n- State Context\n- Controlling The Incident\n- Response\n\n### State Context\n### Emergency management priorities\n- **Protection** and **preservation** of **life** and relief of suffering is paramount.\n  - Safety of emergency service personnel\n  - Safety of members of the public\n- **Issuing** of **community** information and community warnings\n- **Protection** of **critical infrastructure** and community assets that support community resilience\n- **Protection** of **residential property** as a place of primary residence\n- **Protection** of **assets supporting individual** livelihoods and economic production\n- **Protection** of **environmental** and conservation assets\n\n### Controlling The Incident\n### CHEMDATA\nWhat info needs to be relayed to Firecom for chemdata info?\n1. **UN** name/number\n2. Product/company/trade **name of chemical**\n3. **Transport** company name\n4. **Quantity** transported\n5. **Quantity** spilled\n6. **Form** of spill\n\n**When** attending a chemical spill GREATER than **200lts**, consider **recovery of product** and contact **SCIENTIFIC OFFICER**"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "markdown": "### Pro-words\n- **Affirmative** - Yes – not to be confused with 'Roger'\n- **Negative** - No\n- **Roger** - Received and understood (should not be used to answer a question)\n- **Say again** - Repeat your last transmission\n- **Standby** - I must pause and get back to you ASAP\n- **Disregard** - Delete all reference to my last transmission\n- **Correction** - An error has been made in my last transmission\n- **I say again** - I am repeating my last transmission ⭐ PREVIOUS EXAM\n- **Send** - I am ready to receive your transmission\n- **I spell** - Spelling using phonetic alphabet\n- **Cancel** - Appliances or services nominated are no longer required to proceed\n- **Sitrep** - Situation report. This report will give pertinent details of the incident\n- **Firecall** - Used to pre-empt a radio dispatch\n\n### Community Warnings and Advice\n### ACTIONS\n- Control agency has the responsibility to issue warnings\n- Warnings and release of other public info must be authorised by IC\n- Community warnings issued by DCC manager/RDO\n- Media msg's/updates made via agency arrangements"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 20,
+   "markdown": "### Debriefs\n### After Action Review AAR\nWhat is an AAR – After Action Review – what's it used for?\n- **C**onducted **immediately** after an incident/exercise.\n- **M**ay be undertaken on **scene** or **return** to station.\n- **A**ddresses any urgent **health** and **safety** issues or **other** concerns that will not **wait** until the operational debrief.\n\n### Incident Management Team IMT\n### All Roles\n### INCIDENT CONTROLLER (IC)\n- One per incident\n- Establish and take control\n- Assess the situation (DRA)\n- Establish and maintain IMT\n- Chair and manage the EMT meeting\n- Develop, implement and monitor Incident Action Plan (IAP)\n- Communicate impact, risk and progress to all affected parties and Duty Officer\n- Communicate within and beyond the IMT\n- Establish a control facility e.g. Incident Control Point (ICP), Incident Control Centre (ICC)\n- Monitor and review safety and welfare of all involved and appoint Safety Officer/s\n- Establish a Personnel Accountability Report\n- Authorise community warnings and advice\n- Facilitate media management\n- Conclude and review activities"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "markdown": "### DEPUTY IC\n- Report to and support IC\n- Undertake the role of IC in their absence\n\n### SAFETY OFFICER\n- Safety Officer is not a functional role but reports directly to the IC\n- Provide advice on safety\n- Liaise with IC and safety officers (field)\n- Review and provide input IAP\n- Ensure IC and IMT focus on safety\n\n### PLANNING OFFICER\n- Identify current objectives, strategies and resources required\n- Develop IAP\n- Develop alternative objectives and strategies\n- Assess current and future risks (e.g. weather, hazmat, fire water runoff)\n- Monitor resources requested, en route, allocated to, and released from the incident\n- Provide information to Public Info Officer and IMT (via SITREPS)\n- Develop communications plan\n- Prepare report for IC at incident conclusion\n\n### PUBLIC INFORMATION OFFICER\n- Prepare and issue community warnings and advice at request of IC\n- Obtain authorisation from IC before issuing community warnings and advice\n\n**Note:** *Warnings must be authorised by Commander rank or above*"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "markdown": "*(Public Information Officer, continued)*\n- Liaise with OO on risks and PO to ensure information is timely, relevant and tailored\n- Format of community warnings and advice:\n  - Verbal messages (door knock)\n  - EMCOP Public Publisher – VicEmergency website\n  - Emergency Alert (telephone warning system, mobile and landline)\n  - Standard Emergency Warning Signal (SEWS) – Radio and TV\n- Format of community information:\n  - Media conference/interview\n  - Media releases\n- Ensure 'advice – all clear' is given when incident has subsided\n- Provide information on completion of incident or removal of risk to community\n\n### OPERATIONS OFFICER (OO)\n- Brief the IC on current strategies when handing over control\n- Establish operational structure (sectors, staging, BA, decontamination and rehabilitation as required)\n- Allocate resources to enable safe work practices to be implemented\n- Manage and monitor progress of operations and provide regular progress reports (SITREPS) to IC\n- Implement IAP and request additional resources if required\n- Implement process for briefing incoming personnel (SMEACS)\n- Identify current and emerging risks\n- Manage and communicate risks to IC and IMT\n- Facilitate AAR when required"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "markdown": "### Structure Under Operations\n### All Roles\n### SECTOR COMMANDER\n- Implement portion of IAP relevant to their sector\n- Allocate and manage resources within sector\n- Report to OO on progress of operations, emerging risks and status of resources including personnel\n- Sector names can be either Geographical or Functional i.e.: staging, evacuation, hazmat\n- Facilitate AAR for sector when required\n\n### STAGING OFFICER\n- Establish staging area and communication with OO\n- Establish all appliances and personnel on scene\n- Deploy resources requested by OO\n- When directed, maintain a reserve of two primary appliances with personnel\n\n### BAO\n- Liaise with the OO on BA strategies and tactics and provide periodic status reports\n- Supervise BA entry point/s, BA service and all BA requirements\n- Nominate person in charge and distinctive identification for each BA entry\n- Set up the Emergency Signal Unit (ESU) (BA Stage 2 incidents)\n- Ensure adequate personnel dressed in BA for relief and emergency intervention\n\n### REHAB OFFICER\n- Establish rehab sector remote from fireground\n- Provide shelter, seating and facilities as required, Ensure personnel remove PPC/dress down"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "markdown": "*(Rehab Officer, continued)*\n- Facilitate hydration, nutrition and personal hygiene\n- Manage and document movement of personnel through Rehab\n- Minimum rest of 20 minutes\n- Facilitate medical evaluation or intervention as required\n- Provide regular reports to the OO\n\n### SAFETY OFFICER - FIELD\n- Safety Officer is responsible through chain of command to the **IC**\n- Preferably be rank of **SO** or above\n- Check general **structural safety** (walls, roofing, etc.)\n- Ensure use of **appropriate procedures** (e.g. PPC, PPE, hazmat, BA, asbestos, high rise)\n- Communicate **risks/problems** immediately to **OO/IC**\n- Report **near misses**, **accidents**, **injuries** and ensure they are **followed up**\n- **IC** may allocate more than one **Safety Officer** depending on incident complexity\n\n### LOGISTICS OFFICER\n- Obtain resources (human and physical), facilities, services and materials to support control of the incident\n- Monitor current and expected resources\n- Assist PO to produce communications plan\n- Establish staging area and rehabilitation requirements\n- Develop Logistics section of IAP\n- Intelligence, Finance and Investigation are roles usually incorporated into the Planning, Logistics and Operations functions respectively. IC may determine that the complexity, scale or nature of an incident requires separate functions be established"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 25,
+   "markdown": "### LIAISON OFFICER\n- Is **appointed** for incident where **FRV deployed but NOT** Controlling Agency. May become Deputy IC.\n- **Establish contact** with IC/OO of **other agency**\n- Provide **communications link - to other agency**\n- Provide **communications link - from fireground to DCC/ICC/RCC**\n- **Represent FIRE BRIGADE** in another agencies facility or EMT"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "markdown": "### RESPONSE\n### Aircraft Incidents\n### Safety\n### PROP PLANES\n- Clear distance of **5m** radius from front of plane\n- Approach spinning propellers from **rear** only\n- Do not interfere with **inactive** propellers\n- Do not **walk** under wings\n\n### JET PLANES\n- Ear **protection** is worn\n- Isolate **fuel** supply and shut down **engine**\n- **Avoid** blast area (rear of engines) at all times\n- Maintain **8m** clearance from jet **intake** area\n\n### HELO'S\n- Approach and leave helicopter in **crouched** position in **front** view of pilot\n- Approach from **downhill** side only on uneven ground\n- Carry all equipment below **waist** level\n\n### Category (designates carrying capacity of aircraft)\n- Level 1 – **up to 18 seats**\n- Level 2 – **up to 215 seats** ⭐ PREVIOUS EXAM\n- Level 3 – **up to 450 seats**"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "markdown": "### Generic Actions\n### AIRCRAFT GENERIC ACTIONS **AIRMEN** ⭐ PREVIOUS EXAM (short answer)\n- **A**PPROACH from either nose or tail directing streams along fuselage, Avoid wheels area – dry powder only\n- **I**NSULATE/isolate crew/passengers from fire using foam/water sprays\n- Clear **R**ESCUE path to door using water/foam sprays\n- **M**AINTAIN path to enable escape route **OR** access path for FFs\n- **E**VACUATE passengers from plane immediately. **ATTEND** to fire/fuel spill\n- **N**EXT appliance on scene act as backup/supply water/foam\n\n### Airports\n### Definitions\n- **FULL EMERG** – aircraft **known** or **suspected** to be in danger of accident ⭐ PREVIOUS EXAM\n- **CRASH ON AIRPORT** – self-evident. Plane **seen** or is **about** to crash ⭐ PREVIOUS EXAM\n\n### Melbourne Airport - Actions\n**Seek guidance from ARFF, turn off lights in airport**\n\n**R R C O F E L**\n- **R**espond to designated emergency access gate\n- **R**equest all additional info from CommCen (Firecom)\n- **C**omms with Aviation Rescue (ARFF) via Ch 52\n- **O**btain directions from control tower or ASA Safety Officer\n- **F**wdCmdPost indicated by **FLASHING BLUE LIGHT**"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "markdown": "*(Melbourne Airport – Actions RRCOFEL, continued)*\n- **E**xercise extreme caution crossing runways/taxiways\n- **L**iaise with airport/FF personnel on scene\n\n### Bushfire\n### BUSH FIRE SAFETY ACRONYM **L A C E S**\n- **L**ookouts – **fixed/aerial/mobile** lookout deployed 2 maintain **appreciation** of **risk** and **advise** on need to use **escape routes** and **safety zones**\n- **A**wareness - of changes in fire **behavior** due to variations in – **fuel/weather/topography** & other fire ground **hazards**\n- **C**ommunications – all to follow agreed Comms Plan to discuss safety issues\n- **E**scape Routes – **TWO** agreed and made **aware** by all AND **reviewed**\n- **S**afety Zones – **identified** and **known** to all. Consider escape **time** and safety zone **size** that will change as **fire behaviour** changes"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 28,
+   "markdown": "### Car Parks Incorporating Multi-Tiered Vehicle Stacking/Storage Devices (Car Stackers)\n### Consideration (A6C)\n- **ACCESS** to recessed parking pits not guaranteed\n- **CONSIDER** – **PPV** or **INSTALLED** MECHANICAL **VENTILATION** for visibility\n- Consider **DEFENSIVE** attack\n- Consider **FOAM** fire attack\n- Concerns regard for **FIREWATER**\n- Consider building **POWER ISOLATION**"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "markdown": "*(Car Stackers – Consideration (A6C), continued)*\n- Consider **HART**\n\n### ACTIONS ⭐ PREVIOUS EXAM (short answer)\n- **Isolate** electricity to car stacker – lock out/tag power supply\n- Use **electrical current detector** to test for live equipment before proceeding with any **firefighting operations**\n- Ascertain if **sprinklers activated** or **installed**\n- Regularly conduct DRA\n\n### CityLink\n### Fire/HAZMAT\n- **Confirm** location of fire from TCR and close tunnel to traffic\n- Consider use of **telephone** system in tunnels\n- **Evac tunnel** as required via emergency access point or use safe havens in tunnel\n- **Respond VicPol** assist Evac\n\n### Within tunnels\n- IC shall try to contain pollutants to site (major inc pollutants can be permitted down drains)\n- Minor Inc managed at road surface level\n\n### Open Roads\n- Pollutants managed at road level\n- IC consider bunding drains, applying absorbent etc"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 30,
+   "markdown": "### Minor hazardous incidents/petrol washaways\n- **CONFIRM LOCATION** of incident and request **ADJACENT LANE** closure to incident (from TCR). **Or close tunnel.**\n- **CONTROL POLLUTANTS** in tunnels & open road level as above\n- **DO NOT USE SAND**\n- Check **HYDROCARBON** alarms installed in **UNDERGROUND PIT and above filtration tanks** and if operated, flush drainage system until alarm reset"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 30,
+   "markdown": "### Dangerous Goods\n### BOILERS\n**Considerations:** Consider **site evacuation**\n\n### Actions\nTurn off using:\n- Emergency stop buttons\n- Burner switch\n- Main isolation switch\n\nIf unable to shut down or turn off boiler:\n- Attempt to maintain water level in boiler\n- Reduce steam pressure to lowest pressure"
+  }
+ ],
+ "questions": [
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "q": "List the emergency management priorities (FERG State Context), in order.",
+   "a": [
+    "Protection and preservation of life and relief of suffering is paramount (safety of emergency service personnel; safety of members of the public)",
+    "Issuing of community information and community warnings",
+    "Protection of critical infrastructure and community assets that support community resilience",
+    "Protection of residential property as a place of primary residence",
+    "Protection of assets supporting individual livelihoods and economic production",
+    "Protection of environmental and conservation assets"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "q": "Under the top emergency management priority (protection and preservation of life), which two safety considerations are listed?",
+   "a": [
+    "Safety of emergency service personnel",
+    "Safety of members of the public"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "q": "What info needs to be relayed to Firecom for CHEMDATA info?",
+   "a": [
+    "UN name/number",
+    "Product/company/trade name of chemical",
+    "Transport company name",
+    "Quantity transported",
+    "Quantity spilled",
+    "Form of spill"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "q": "Above what spill volume should you consider recovery of product and contact the Scientific Officer at a chemical spill?",
+   "a": "Greater than 200 litres",
+   "choices": [
+    "Greater than 100 litres",
+    "Greater than 500 litres",
+    "Greater than 1000 litres"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 18,
+   "q": "When attending a chemical spill greater than 200 lts, what should you consider and who should you contact?",
+   "a": "Consider recovery of product and contact the SCIENTIFIC OFFICER",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'I say again'?",
+   "a": "I am repeating my last transmission",
+   "choices": [
+    "Repeat your last transmission",
+    "An error has been made in my last transmission",
+    "I am ready to receive your transmission"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Say again'?",
+   "a": "Repeat your last transmission",
+   "choices": [
+    "I am repeating my last transmission",
+    "Delete all reference to my last transmission",
+    "I must pause and get back to you ASAP"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What does the pro-word 'Affirmative' mean, and what must it not be confused with?",
+   "a": "Yes – not to be confused with 'Roger'",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What does the pro-word 'Roger' mean, and what should it not be used for?",
+   "a": "Received and understood – should not be used to answer a question",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Standby'?",
+   "a": "I must pause and get back to you ASAP",
+   "choices": [
+    "I am ready to receive your transmission",
+    "Repeat your last transmission",
+    "Delete all reference to my last transmission"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Disregard'?",
+   "a": "Delete all reference to my last transmission",
+   "choices": [
+    "An error has been made in my last transmission",
+    "I am repeating my last transmission",
+    "Repeat your last transmission"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Correction'?",
+   "a": "An error has been made in my last transmission",
+   "choices": [
+    "Delete all reference to my last transmission",
+    "I am repeating my last transmission",
+    "I must pause and get back to you ASAP"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Send'?",
+   "a": "I am ready to receive your transmission",
+   "choices": [
+    "Repeat your last transmission",
+    "I must pause and get back to you ASAP",
+    "Received and understood"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'I spell'?",
+   "a": "Spelling using phonetic alphabet",
+   "choices": [
+    "I am repeating my last transmission",
+    "Repeat your last transmission",
+    "An error has been made in my last transmission"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the meaning of the pro-word 'Cancel'?",
+   "a": "Appliances or services nominated are no longer required to proceed",
+   "choices": [
+    "Delete all reference to my last transmission",
+    "Used to pre-empt a radio dispatch",
+    "An error has been made in my last transmission"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is a 'Sitrep'?",
+   "a": "Situation report. This report will give pertinent details of the incident",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "What is the pro-word 'Firecall' used for?",
+   "a": "Used to pre-empt a radio dispatch",
+   "choices": [
+    "Appliances nominated are no longer required to proceed",
+    "To give pertinent details of the incident",
+    "To request additional appliances"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "List the community warnings and advice ACTIONS.",
+   "a": [
+    "Control agency has the responsibility to issue warnings",
+    "Warnings and release of other public info must be authorised by IC",
+    "Community warnings issued by DCC manager/RDO",
+    "Media msg's/updates made via agency arrangements"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "Who has the responsibility to issue community warnings?",
+   "a": "The Control agency",
+   "choices": [
+    "The Support agency",
+    "The Duty Officer",
+    "Victoria Police"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 19,
+   "q": "Who issues community warnings?",
+   "a": "DCC manager/RDO",
+   "choices": [
+    "Public Information Officer only",
+    "Operations Officer",
+    "Sector Commander"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 20,
+   "q": "What is an AAR (After Action Review) – what's it used for?",
+   "a": [
+    "Conducted immediately after an incident/exercise",
+    "May be undertaken on scene or return to station",
+    "Addresses any urgent health and safety issues or other concerns that will not wait until the operational debrief"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 20,
+   "q": "How many Incident Controllers are there per incident?",
+   "a": "One per incident",
+   "choices": [
+    "Two per incident",
+    "One per sector",
+    "One per agency"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 20,
+   "q": "List the role of the Incident Controller (IC).",
+   "a": [
+    "One per incident",
+    "Establish and take control",
+    "Assess the situation (DRA)",
+    "Establish and maintain IMT",
+    "Chair and manage the EMT meeting",
+    "Develop, implement and monitor Incident Action Plan (IAP)",
+    "Communicate impact, risk and progress to all affected parties and Duty Officer",
+    "Communicate within and beyond the IMT",
+    "Establish a control facility e.g. Incident Control Point (ICP), Incident Control Centre (ICC)",
+    "Monitor and review safety and welfare of all involved and appoint Safety Officer/s",
+    "Establish a Personnel Accountability Report",
+    "Authorise community warnings and advice",
+    "Facilitate media management",
+    "Conclude and review activities"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 20,
+   "q": "Give two examples of a control facility the IC may establish.",
+   "a": [
+    "Incident Control Point (ICP)",
+    "Incident Control Centre (ICC)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "What are the roles of the Deputy IC?",
+   "a": [
+    "Report to and support IC",
+    "Undertake the role of IC in their absence"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "Who does the (IMT) Safety Officer report to, and is it a functional role?",
+   "a": "Safety Officer is not a functional role but reports directly to the IC",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "List the role of the (IMT) Safety Officer.",
+   "a": [
+    "Safety Officer is not a functional role but reports directly to the IC",
+    "Provide advice on safety",
+    "Liaise with IC and safety officers (field)",
+    "Review and provide input IAP",
+    "Ensure IC and IMT focus on safety"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "List the role of the Planning Officer.",
+   "a": [
+    "Identify current objectives, strategies and resources required",
+    "Develop IAP",
+    "Develop alternative objectives and strategies",
+    "Assess current and future risks (e.g. weather, hazmat, fire water runoff)",
+    "Monitor resources requested, en route, allocated to, and released from the incident",
+    "Provide information to Public Info Officer and IMT (via SITREPS)",
+    "Develop communications plan",
+    "Prepare report for IC at incident conclusion"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "Which IMT role develops the communications plan (assisted by the Logistics Officer)?",
+   "a": "Planning Officer",
+   "choices": [
+    "Operations Officer",
+    "Public Information Officer",
+    "Liaison Officer"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 21,
+   "q": "What rank must authorise community warnings?",
+   "a": "Commander rank or above",
+   "choices": [
+    "Station Officer rank or above",
+    "Senior Station Officer rank or above",
+    "Assistant Chief Fire Officer or above"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "List the role of the Public Information Officer.",
+   "a": [
+    "Prepare and issue community warnings and advice at request of IC",
+    "Obtain authorisation from IC before issuing community warnings and advice",
+    "Liaise with OO on risks and PO to ensure information is timely, relevant and tailored",
+    "Ensure 'advice – all clear' is given when incident has subsided",
+    "Provide information on completion of incident or removal of risk to community"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "What are the formats of community warnings and advice?",
+   "a": [
+    "Verbal messages (door knock)",
+    "EMCOP Public Publisher – VicEmergency website",
+    "Emergency Alert (telephone warning system, mobile and landline)",
+    "Standard Emergency Warning Signal (SEWS) – Radio and TV"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "What are the formats of community information?",
+   "a": [
+    "Media conference/interview",
+    "Media releases"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "What does SEWS stand for and what media does it use?",
+   "a": "Standard Emergency Warning Signal – Radio and TV",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "What is 'Emergency Alert'?",
+   "a": "Telephone warning system, mobile and landline",
+   "choices": [
+    "VicEmergency website publisher",
+    "Radio and TV warning signal",
+    "Door knock verbal messages"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "List the role of the Operations Officer (OO).",
+   "a": [
+    "Brief the IC on current strategies when handing over control",
+    "Establish operational structure (sectors, staging, BA, decontamination and rehabilitation as required)",
+    "Allocate resources to enable safe work practices to be implemented",
+    "Manage and monitor progress of operations and provide regular progress reports (SITREPS) to IC",
+    "Implement IAP and request additional resources if required",
+    "Implement process for briefing incoming personnel (SMEACS)",
+    "Identify current and emerging risks",
+    "Manage and communicate risks to IC and IMT",
+    "Facilitate AAR when required"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 22,
+   "q": "What process does the Operations Officer implement for briefing incoming personnel?",
+   "a": "SMEACS",
+   "choices": [
+    "SITREP",
+    "DRA",
+    "PAR"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "List the role of the Sector Commander.",
+   "a": [
+    "Implement portion of IAP relevant to their sector",
+    "Allocate and manage resources within sector",
+    "Report to OO on progress of operations, emerging risks and status of resources including personnel",
+    "Sector names can be either Geographical or Functional i.e.: staging, evacuation, hazmat",
+    "Facilitate AAR for sector when required"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "Sector names can be either ___ or ___?",
+   "a": "Geographical or Functional (i.e. staging, evacuation, hazmat)",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "List the role of the Staging Officer.",
+   "a": [
+    "Establish staging area and communication with OO",
+    "Establish all appliances and personnel on scene",
+    "Deploy resources requested by OO",
+    "When directed, maintain a reserve of two primary appliances with personnel"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "When directed, what reserve does the Staging Officer maintain?",
+   "a": "Two primary appliances with personnel",
+   "choices": [
+    "One primary appliance with personnel",
+    "Three primary appliances with personnel",
+    "Four primary appliances with personnel"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "List the role of the BAO.",
+   "a": [
+    "Liaise with the OO on BA strategies and tactics and provide periodic status reports",
+    "Supervise BA entry point/s, BA service and all BA requirements",
+    "Nominate person in charge and distinctive identification for each BA entry",
+    "Set up the Emergency Signal Unit (ESU) (BA Stage 2 incidents)",
+    "Ensure adequate personnel dressed in BA for relief and emergency intervention"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 23,
+   "q": "At which BA stage incidents does the BAO set up the Emergency Signal Unit (ESU)?",
+   "a": "BA Stage 2 incidents",
+   "choices": [
+    "BA Stage 1 incidents",
+    "BA Stage 3 incidents",
+    "All BA incidents"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "List the role of the Rehab Officer.",
+   "a": [
+    "Establish rehab sector remote from fireground",
+    "Provide shelter, seating and facilities as required, Ensure personnel remove PPC/dress down",
+    "Facilitate hydration, nutrition and personal hygiene",
+    "Manage and document movement of personnel through Rehab",
+    "Minimum rest of 20 minutes",
+    "Facilitate medical evaluation or intervention as required",
+    "Provide regular reports to the OO"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "What is the minimum rest period in Rehab?",
+   "a": "20 minutes",
+   "choices": [
+    "10 minutes",
+    "15 minutes",
+    "30 minutes"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "List the role of the Safety Officer - Field.",
+   "a": [
+    "Safety Officer is responsible through chain of command to the IC",
+    "Preferably be rank of SO or above",
+    "Check general structural safety (walls, roofing, etc.)",
+    "Ensure use of appropriate procedures (e.g. PPC, PPE, hazmat, BA, asbestos, high rise)",
+    "Communicate risks/problems immediately to OO/IC",
+    "Report near misses, accidents, injuries and ensure they are followed up",
+    "IC may allocate more than one Safety Officer depending on incident complexity"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "What rank should a Safety Officer - Field preferably be?",
+   "a": "SO (Station Officer) or above",
+   "choices": [
+    "LFF or above",
+    "SSO or above",
+    "Commander or above"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "List the role of the Logistics Officer.",
+   "a": [
+    "Obtain resources (human and physical), facilities, services and materials to support control of the incident",
+    "Monitor current and expected resources",
+    "Assist PO to produce communications plan",
+    "Establish staging area and rehabilitation requirements",
+    "Develop Logistics section of IAP"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 24,
+   "q": "Intelligence, Finance and Investigation roles are usually incorporated into which functions respectively?",
+   "a": [
+    "Intelligence – Planning",
+    "Finance – Logistics",
+    "Investigation – Operations"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 25,
+   "q": "When is a Liaison Officer appointed, and what may they become?",
+   "a": "For an incident where FRV is deployed but NOT the Controlling Agency. May become Deputy IC.",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 25,
+   "q": "List the role of the Liaison Officer.",
+   "a": [
+    "Is appointed for incident where FRV deployed but NOT Controlling Agency. May become Deputy IC.",
+    "Establish contact with IC/OO of other agency",
+    "Provide communications link - to other agency",
+    "Provide communications link - from fireground to DCC/ICC/RCC",
+    "Represent FIRE BRIGADE in another agencies facility or EMT"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What are the safety considerations around prop planes?",
+   "a": [
+    "Clear distance of 5m radius from front of plane",
+    "Approach spinning propellers from rear only",
+    "Do not interfere with inactive propellers",
+    "Do not walk under wings"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What clear distance radius should be kept from the front of a prop plane?",
+   "a": "5m",
+   "choices": [
+    "8m",
+    "3m",
+    "10m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "From which direction should spinning propellers be approached?",
+   "a": "From the rear only",
+   "choices": [
+    "From the front only",
+    "From either side",
+    "From the nose or tail"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What are the safety considerations around jet planes?",
+   "a": [
+    "Ear protection is worn",
+    "Isolate fuel supply and shut down engine",
+    "Avoid blast area (rear of engines) at all times",
+    "Maintain 8m clearance from jet intake area"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What clearance must be maintained from a jet intake area?",
+   "a": "8m",
+   "choices": [
+    "5m",
+    "10m",
+    "15m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What are the safety considerations around helicopters?",
+   "a": [
+    "Approach and leave helicopter in crouched position in front view of pilot",
+    "Approach from downhill side only on uneven ground",
+    "Carry all equipment below waist level"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "On uneven ground, from which side should a helicopter be approached?",
+   "a": "Downhill side only",
+   "choices": [
+    "Uphill side only",
+    "Rear of the helicopter",
+    "Either side"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "Below what level should all equipment be carried near a helicopter?",
+   "a": "Waist level",
+   "choices": [
+    "Shoulder level",
+    "Head level",
+    "Knee level"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What does aircraft Category designate?",
+   "a": "Carrying capacity of aircraft",
+   "choices": [
+    "Fuel load of aircraft",
+    "Length of runway required",
+    "Number of engines"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What is the carrying capacity of a Level 2 category aircraft?",
+   "a": "Up to 215 seats",
+   "choices": [
+    "Up to 18 seats",
+    "Up to 450 seats",
+    "Up to 150 seats"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What is the carrying capacity of a Level 1 category aircraft?",
+   "a": "Up to 18 seats",
+   "choices": [
+    "Up to 215 seats",
+    "Up to 50 seats",
+    "Up to 30 seats"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 26,
+   "q": "What is the carrying capacity of a Level 3 category aircraft?",
+   "a": "Up to 450 seats",
+   "choices": [
+    "Up to 215 seats",
+    "Up to 600 seats",
+    "Up to 350 seats"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "What are the aircraft generic actions (AIRMEN)?",
+   "a": [
+    "APPROACH from either nose or tail directing streams along fuselage, Avoid wheels area – dry powder only",
+    "INSULATE/isolate crew/passengers from fire using foam/water sprays",
+    "Clear RESCUE path to door using water/foam sprays",
+    "MAINTAIN path to enable escape route OR access path for FFs",
+    "EVACUATE passengers from plane immediately. ATTEND to fire/fuel spill",
+    "NEXT appliance on scene act as backup/supply water/foam"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "In AIRMEN, what extinguishing agent only should be used on the wheels area?",
+   "a": "Dry powder only",
+   "choices": [
+    "Foam only",
+    "Water spray only",
+    "CO2 only"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "Define 'FULL EMERG' (airport).",
+   "a": "Aircraft known or suspected to be in danger of accident",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "Define 'CRASH ON AIRPORT'.",
+   "a": "Self-evident. Plane seen or is about to crash",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "At Melbourne Airport, what should you seek guidance from and what should you turn off?",
+   "a": "Seek guidance from ARFF, turn off lights in airport",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "What are the Melbourne Airport actions (RRCOFEL)?",
+   "a": [
+    "Respond to designated emergency access gate",
+    "Request all additional info from CommCen (Firecom)",
+    "Comms with Aviation Rescue (ARFF) via Ch 52",
+    "Obtain directions from control tower or ASA Safety Officer",
+    "FwdCmdPost indicated by FLASHING BLUE LIGHT",
+    "Exercise extreme caution crossing runways/taxiways",
+    "Liaise with airport/FF personnel on scene"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "On which channel do you communicate with Aviation Rescue (ARFF) at Melbourne Airport?",
+   "a": "Ch 52",
+   "choices": [
+    "Ch 50",
+    "Ch 25",
+    "Ch 12"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "At Melbourne Airport, how is the Forward Command Post indicated?",
+   "a": "By a flashing blue light",
+   "choices": [
+    "By a flashing red light",
+    "By a flashing amber light",
+    "By a green flag"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 27,
+   "q": "At Melbourne Airport, where do you respond to?",
+   "a": "Designated emergency access gate",
+   "choices": [
+    "Main terminal entrance",
+    "ARFF fire station",
+    "Control tower"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "q": "What does the bush fire safety acronym LACES stand for?",
+   "a": [
+    "Lookouts",
+    "Awareness",
+    "Communications",
+    "Escape Routes",
+    "Safety Zones"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "q": "In LACES, what is the role of Lookouts?",
+   "a": "Fixed/aerial/mobile lookout deployed to maintain appreciation of risk and advise on need to use escape routes and safety zones",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "q": "In LACES, Awareness of changes in fire behaviour is due to variations in what?",
+   "a": "Fuel/weather/topography & other fire ground hazards",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "q": "In LACES, how many escape routes should be agreed?",
+   "a": "TWO – agreed and made aware by all AND reviewed",
+   "choices": [
+    "One",
+    "Three",
+    "Four"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 28,
+   "q": "In LACES, what must be considered regarding Safety Zones?",
+   "a": "Identified and known to all. Consider escape time and safety zone size that will change as fire behaviour changes",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 28,
+   "q": "What are the considerations (A6C) for car parks incorporating car stackers?",
+   "a": [
+    "ACCESS to recessed parking pits not guaranteed",
+    "CONSIDER – PPV or INSTALLED MECHANICAL VENTILATION for visibility",
+    "Consider DEFENSIVE attack",
+    "Consider FOAM fire attack",
+    "Concerns regard for FIREWATER",
+    "Consider building POWER ISOLATION",
+    "Consider HART"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 28,
+   "q": "For car stackers, access to what is not guaranteed?",
+   "a": "Recessed parking pits",
+   "choices": [
+    "Upper parking tiers",
+    "Building fire control room",
+    "Sprinkler valve sets"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "What are the ACTIONS for a fire in a car stacker?",
+   "a": [
+    "Isolate electricity to car stacker – lock out/tag power supply",
+    "Use electrical current detector to test for live equipment before proceeding with any firefighting operations",
+    "Ascertain if sprinklers activated or installed",
+    "Regularly conduct DRA"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "For a car stacker, what should be used to test for live equipment before firefighting operations?",
+   "a": "Electrical current detector",
+   "choices": [
+    "Thermal imaging camera",
+    "Gas detector",
+    "Multimeter from building maintenance"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "What are the CityLink Fire/HAZMAT actions?",
+   "a": [
+    "Confirm location of fire from TCR and close tunnel to traffic",
+    "Consider use of telephone system in tunnels",
+    "Evac tunnel as required via emergency access point or use safe havens in tunnel",
+    "Respond VicPol assist Evac"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "At CityLink, where is the location of a fire confirmed from?",
+   "a": "TCR",
+   "choices": [
+    "Firecom",
+    "VicRoads",
+    "Tunnel CCTV only"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "How are pollutants managed within CityLink tunnels?",
+   "a": [
+    "IC shall try to contain pollutants to site (major inc pollutants can be permitted down drains)",
+    "Minor Inc managed at road surface level"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 29,
+   "q": "How are pollutants managed on CityLink open roads?",
+   "a": [
+    "Pollutants managed at road level",
+    "IC consider bunding drains, applying absorbent etc"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 30,
+   "q": "What are the CityLink actions for minor hazardous incidents/petrol washaways?",
+   "a": [
+    "CONFIRM LOCATION of incident and request ADJACENT LANE closure to incident (from TCR). Or close tunnel.",
+    "CONTROL POLLUTANTS in tunnels & open road level as above",
+    "DO NOT USE SAND",
+    "Check HYDROCARBON alarms installed in UNDERGROUND PIT and above filtration tanks and if operated, flush drainage system until alarm reset"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 30,
+   "q": "At CityLink minor hazardous incidents/petrol washaways, what must NOT be used?",
+   "a": "Sand",
+   "choices": [
+    "Absorbent",
+    "Water",
+    "Bunding"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 30,
+   "q": "At CityLink, if hydrocarbon alarms have operated, what should be done?",
+   "a": "Flush drainage system until alarm reset",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 30,
+   "q": "What is the consideration for a boiler incident?",
+   "a": "Consider site evacuation",
+   "choices": [
+    "Consider defensive attack",
+    "Consider foam attack",
+    "Consider PPV"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 30,
+   "q": "What can be used to turn off a boiler?",
+   "a": [
+    "Emergency stop buttons",
+    "Burner switch",
+    "Main isolation switch"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 30,
+   "q": "If unable to shut down or turn off a boiler, what should you do?",
+   "a": [
+    "Attempt to maintain water level in boiler",
+    "Reduce steam pressure to lowest pressure"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  }
+ ],
+ "issues": [
+  "so-20/21/22: source prints a stray 'y' (Wingdings bullet artefact) mid-line, e.g. 'appoint Safety Officer/s y Establish a Personnel Accountability Report'; split into separate bullets.",
+  "so-28: source misspells 'CONDSIDER' in car stacker considerations; transcribed as 'CONSIDER'. Heading 'Consideration (A6C)' presumably = ACCESS + 6 'C' items (incl. 'Consider HART' carried over to so-29).",
+  "so-28: LACES Lookouts line uses '2' for 'to' ('lookout deployed 2 maintain'); kept verbatim in notes.",
+  "so-27/28: RRCOFEL list spans pages 27-28 (E and L items on so-28); the RRCOFEL question is attached to page 27.",
+  "so-21 Planning Officer 'Develop communications plan' and so-24 Logistics 'Assist PO to produce communications plan': PO here = Planning Officer (not Public info Officer).",
+  "so-26/27 PREVIOUS EXAM tags: exam phrasing not visible beyond tags; AIRMEN tagged 'short answer'. so-29 car stacker ACTIONS also tagged PREVIOUS EXAM short answer."
+ ]
+}

@@ -1,0 +1,1278 @@
+{
+ "chunk": "wb-17-32",
+ "notes": [],
+ "questions": [
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q70. List 6 on-site resources provided by a Major Hazard Facility?",
+   "a": [
+    "Booster Connections – Static Water Supply",
+    "Tactical Fire Plans, Floor Plans",
+    "Shutting off – rerouting of supplies",
+    "Ring mains water/foam",
+    "Installed monitors",
+    "Foam/dry chem",
+    "Deluge",
+    "Onsite Bunding and drain isolation valves",
+    "Spill kits",
+    "Specialist advice"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q71. What must you always have with you at an Electrical Sub Station fire?",
+   "a": "Firefighter shall not enter unless accompanied by an electrical supply company representative or other trainer / authorised person.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q72. List your actions when on scene at a Pole fire? (6)",
+   "a": [
+    "Request Electrical Company attend",
+    "No attempt to extinguish the fire until electrical company has confirmed the area has been made electrically safe",
+    "Protect exposure if required",
+    "Only attack fire if absolutely necessary for preservation of life:",
+    "  Using PARTIAL FOG or BROKEN STREAM – Do NOT use Jet",
+    "  Avoid hitting wires directly with water",
+    "  Spraying stream above pole and lob onto fire",
+    "  Not standing in pools of water or wet surfaces"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q73. Electrical Substation Actions:",
+   "a": [
+    "Fire/Incident – No rescue",
+    "Respond electrical supply company",
+    "Protect exposures",
+    "Keep firefighters clear",
+    "No water jets"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q74. List your actions when attending premises that have or may have Uninterrupted Power Supplies, as stated in the ERG (4):",
+   "a": [
+    "UPS may be present when dealing with computers, telephone exchanges, process controllers",
+    "Treat all such equipment as live",
+    "Isolate power between electrical equipment and UPS",
+    "Consider requesting electrical company to ensure power isolation"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 17,
+   "q": "Q75. Aerial Appliances Considerations:",
+   "a": [
+    "Always use a spotter when working near powerlines",
+    "3 Meters from powerline – No Go Zone"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 18,
+   "q": "Q76. What are the on-scene considerations for FIA?",
+   "a": [
+    "Obstacles preventing entry into the building",
+    "Extent of the fire on arrival",
+    "Location / intensity / colour of flames/smoke",
+    "Indications of forcible entry",
+    "Condition of doors/windows (covered/broken)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 18,
+   "q": "Q77. List the criteria for response of fire investigators Request of Commander or above:",
+   "a": [
+    "Undetermined structure fires",
+    "Bushfires within FRV's jurisdiction",
+    "All fire related deaths",
+    "All fire related serious injuries",
+    "Any fire related firefighter injury",
+    "Fires involving FRV property",
+    "At the request of a Commander or above"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 18,
+   "q": "Q78. What are the Properties of LPG?",
+   "a": [
+    "UN number of LPG, 1075",
+    "Hazchem 2YE",
+    "Expansion Ratio: 270:1",
+    "LEL 1.5%, UEL 10%",
+    "Heavier than air",
+    "Cylinders silver, bullets white"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 18,
+   "q": "Q79. List 6 actions to be implemented when attending calls to Hospitals as outlined in the FERG. (12 all up):",
+   "a": [
+    "Identify the Emergency Co-Ordinator / Chief Warden / Security",
+    "Locate and Access EIC",
+    "Check SDS",
+    "PA Colour Code Announcement",
+    "Confine incident",
+    "Assist Evacuation (Ambulant, Semi-Ambulant, Non-Ambulant)",
+    "Ambulance - Request additional AV Units",
+    "Check Operating Theatre progress",
+    "Isolate Medical Gases",
+    "Check Staffing / Patient Levels",
+    "Check High Security Patients",
+    "Check plant room / vent systems"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 18,
+   "q": "Q80. When at a hybrid vehicle incident, how long is power maintained for in the SRS system?",
+   "a": "90 Seconds in the airbags",
+   "choices": [
+    "10 minutes in the airbags",
+    "30 seconds in the airbags",
+    "5 minutes in the airbags"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 18,
+   "q": "Q81. When at a hybrid vehicle incident, how do you immobilise the car and remove the HEV fuse, if the correct fuse cannot be recognized?",
+   "a": "Remove the Yellow (20 amp). If unable to identify correct fuse, remove all.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q82. When at a hybrid vehicle incident, how long is power maintained for in the high voltage electrical system?",
+   "a": "10 minutes in HV system",
+   "choices": [
+    "90 seconds in HV system",
+    "5 minutes in HV system",
+    "30 minutes in HV system"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q83. Removing the key from a hybrid vehicle and put it in a safe location after an incident. How many metres must you place it away from the vehicle?",
+   "a": "5 Meters FERG, 10 Meters OMS",
+   "choices": [
+    "3 Meters FERG, 5 Meters OMS",
+    "10 Meters FERG, 5 Meters OMS",
+    "2 Meters FERG, 10 Meters OMS"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q84. You are first on-scene at a car fire involving LPG. List your \"Actions\" during the fire:",
+   "a": [
+    "Utilise hose line from sheltered position",
+    "Cool cylinder by directing flooding quantities of water onto upper surfaces until well after fire is out",
+    "Use dry chemical, Carbon Dioxide, or water spray to extinguish fire"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q85. You are first on scene at a car fire involving LPG. List your \"Actions\" after the fire:",
+   "a": [
+    "Cool the tank with water spray",
+    "Consider flare-off remaining contents (gas flare off kit on heavy rescue vehicles)",
+    "Apply damaged cylinder sticker on cylinder",
+    "Advise the owner to have cylinder tested"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q86. You are dispatched to a car fire involving LPG. List 4 safety actions only if safe to do so:",
+   "a": [
+    "Disconnect the battery under water spray",
+    "Open the boot under water spray",
+    "Locate the tank to find liquid service valve",
+    "Isolate the gas by shutting liquid service valve"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q87. LPG CAR FIRE – SAFETY:",
+   "a": [
+    "Do not extinguish burning gas if tank is still venting; leave to burn",
+    "Beware of an increase in fire intensity/pitch of escaping gas – indications of the situation deteriorating and risk of tank failure/rupture",
+    "Evacuate if tank is suspected of rupturing",
+    "Do not direct water at venting pressure relief valve as icing may occur"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 19,
+   "q": "Q88. What are the considerations at a Car Fire?",
+   "a": [
+    "Availability of water supply – respond water tanker or pumper tanker if required",
+    "Fuel source (petrol, diesel, LPG, hybrid, hydrogen powered, compressed natural gas powered and alternative fuel sources)",
+    "Undeployed airbags (including side intrusion / curtain)",
+    "Be aware once 12 volt battery is disconnected, the handbrakes may not engage / disengage, it may be impossible to open the boot, open or close windows, etc."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 20,
+   "q": "Q89. What are CityLink Fire/Hazmat Considerations?",
+   "a": [
+    "Confirm location of fire from CityLink Traffic Control Room and ensure the effected tunnel is closed to traffic",
+    "Consider use of installed telephone systems in tunnels",
+    "Evacuate tunnel as required via emergency access points or use safe havens within tunnel",
+    "Respond VicPol to assist evacuation",
+    "Within the tunnels:",
+    "  The IC shall make every effort to contain pollutants to the incident site however during major incidents pollutants can be permitted into drains",
+    "  Minor Hazmat and biohazard incidents should be managed at road surface level only",
+    "  On the open roads:",
+    "    All pollutants must be managed at road level",
+    "    The IC is to consider 'bunding' of the drains or applying absorbent, etc."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 20,
+   "q": "Q90. What are the Minor hazardous incidents/petrol washaways Actions for CityLink?",
+   "a": [
+    "Confirm the location of the incident, request and confirm a lane closure adjacent to location of incident from the CityLink TCR (or a requirement to close the tunnel)",
+    "Control of pollutants in the tunnels and open roadways as above",
+    "DO NOT use sand",
+    "Check hydrocarbon alarms installed in underground pit and above filtration tanks and if operated, flush the drainage system until the alarm resets"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 20,
+   "q": "Q91. Rubbish tips and waste sites, who to notify?",
+   "a": [
+    "Council MERO",
+    "EPA",
+    "Department of Health, if required",
+    "Workcover",
+    "Operations Commander",
+    "Fire Safety Issue Notification"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 20,
+   "q": "Q92. What are your actions when responded to a prison (secured facility) incident/fire?",
+   "a": [
+    "Meet with the Facility Liaison Officer (LO) and Field Commander (FC) at entrance to site",
+    "The attending OIC is to ascertain nature and status of event, status of secured facility and assess situation",
+    "Enter only on request of facility management, if site security is confirmed, and only under the guidance of an escort / liaison officer – one per appliance",
+    "If requested to enter and is deemed safe to do so, and if the need arises the IC is to notify MFB Operations Commander of CFA Rostered Duty Officer",
+    "Fire service personnel to receive briefing from facility staff including arrangements for any emergency evacuation plan",
+    "A Minimum number of appliances and crew will be committed, IC to determine",
+    "Routine security checks undertaken in consideration of situation",
+    "Fire services to Withdraw if safety/crew threatened"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 21,
+   "q": "Q93. List Considerations at a high-rise building:",
+   "a": [
+    "As for low rise plus",
+    "Evacuation (floor and roof area)",
+    "Falling debris perimeter",
+    "Tactical fire plans, floor plans, MSDS",
+    "Comms plan – consider alternative trunked channel",
+    "Sectors – floor or level number",
+    "Use of firefighters lift (manned)",
+    "Refuge zones",
+    "Ultra-high rise >55 levels – check for fire pumps on upper levels are operating, if not, use Rosenbauer",
+    "Ensure clearance for ULP is provided",
+    "Building class, contents, fire load",
+    "Industry type",
+    "Dangerous goods",
+    "Location, severity, behaviour of fire",
+    "Specialist advice/services",
+    "Sprinklers/fire protection systems",
+    "Boosting ring mains, hydrants, sprinklers",
+    "Static water supply, foam, hose reels",
+    "Smoke management – air handling",
+    "Wardens",
+    "Evac points/BA service/Staging area, BA entry",
+    "Sectors 1,2,3,4",
+    "Community warnings",
+    "Aerial/specialist appliances (siting)",
+    "Salvage/ventilation",
+    "Rehab/fire duty",
+    "FIA/ fire safety",
+    "After the fire pamphlets",
+    "Firefighter welfare, CIS",
+    "Business continuity",
+    "USAR/HART"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 21,
+   "q": "Q94. When safe working at heights procedures is being employed. List four considerations:",
+   "a": [
+    "Respond HART",
+    "Possibly use Aerial appliances",
+    "Separate radio channel",
+    "TIC"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 21,
+   "q": "Q95. Actions – Ports and Docks, as stated in the FERG:",
+   "a": [
+    "Liaise with Port Authority Personnel",
+    "Seek specialist advice",
+    "Maintain flashing lights at all times",
+    "Be aware of other vehicles in dock areas"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 22,
+   "q": "Q96. Safety Docks & Ports:",
+   "a": [
+    "Beware of load limitations on piers, jetties, and wharves. No vehicles are to be driven onto these that do not have a weight limitation plaque",
+    "Exercise caution when parking near edges",
+    "PFD worn when working within 2 meters of body of water",
+    "Caution, establish a 2 meter safety zone around edges",
+    "Appoint a safety officer when working near water"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 22,
+   "q": "Q97. Considerations – Ports and Docks, as stated in the FERG:",
+   "a": [
+    "Waterway Emergency Response operators",
+    "Beware of weight limitations/loading on wharves and appliance exclusion zones",
+    "Do not enter if load limit is not identified. Marine response for safety, lighting, firefighting, booms, and specialist advice",
+    "Tugs – available if required for firefighting west of Bolte Bridge only. SF1s to be assigned to operate water monitors on tugs. The tug Coxswain has overriding responsibility for the safety of the vessel and the crew",
+    "Shipping container – obtain container number (2, 3 or 4 alpha characters, followed by 6-7 numeric characters e.g., CRXU2933507) and relay to Comm Centre for details of contents. Number marked on all sides of container"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 22,
+   "q": "Q98. What are the actions required when dispatched to a ship fire?",
+   "a": [
+    "Respond fire boat (FRV) / Respond Coast Guard (CFA)",
+    "Establish & Maintain contact Ships SENIOR OFFICER on board",
+    "Report to THE SHIPS BRIDGE",
+    "Determine LOCATION AND ACCESS to fire and INTENSITY",
+    "Access INFORMATION:",
+    "  SHIPS PLANS",
+    "  Firefighting ALREADY UNDERTAKEN",
+    "  Operation of FIREFIGHTING INSTALLATIONS / EQUIPMENT",
+    "  Details of CARGO / MANIFEST / LOG",
+    "  State of SHIPS SERVICES power, water",
+    "  VENTILATION",
+    "  Ship's STABILITY",
+    "  State of the ships HATCHES",
+    "Fire service vessels or fire tugs to Cool exterior of the vessel",
+    "MONITOR AMOUNT of water used/removal of FIREFIGHTING WATER",
+    "Establish ORIGIN OF IGNITION",
+    "Consider/monitor ALTERNATIVE EXTINGUISHING media"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 22,
+   "q": "Q99. What are your considerations for inland waterway pollution control?",
+   "a": [
+    "Size, location, and type of spill",
+    "Identify control agency",
+    "Specialist advice early on",
+    "Accessing State cache of equipment",
+    "Waterway Emergency Responder (WER) response"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 23,
+   "q": "Q100. List your considerations when attending incidents involving Trams (4):",
+   "a": [
+    "Trams operate on 600 volt DC tractive control from overhead trolley wire",
+    "Power control centre is able to isolate power to each section in the network remotely. However isolation is not ensured until maintenance crews confirm on site",
+    "Responding Heavy Rescue pod (MFB)",
+    "Responding High Angle Rescue if incident involves roof of tram"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q101. Victoria Police – Municipal Emergency Response Coordinator (MERC):",
+   "a": "VicPol District Senior Sergeant (MERC) has the responsibility to coordinate requests from the Fire Service, including but not limited to accommodation, logistics, support resources or issues related to recovery activities. The MERC should be embedded into the EMT at the earliest convenience, regardless of the size of the incident.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q102. Bomb threat siting?",
+   "a": "300 meters",
+   "choices": [
+    "100 meters",
+    "200 meters",
+    "500 meters"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q103. What are your actions at a Bomb threat in the appliance?",
+   "a": [
+    "Utilise open space where possible",
+    "Park appliance facing away",
+    "Appliance location to – Notify Comms Centre or location",
+    "ALL FF in rear seat windows open",
+    "Maintain clear access and egress at all times"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q104. List your actions for FRV first on-scene or present at time of event Hostile Act (3):",
+   "a": [
+    "Immediately withdraw to a safe location and send signal 5 5 to Firecom detailing circumstances of the hostile act",
+    "Firecom will request immediate attendance of Victoria Police and send notifications to ensure high level situational awareness and organisational readiness",
+    "Restrict Access to the area"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q105. Appliance Siting Considerations for Hostile Acts/Bomb Threats:",
+   "a": [
+    "Park minimum 300 meter from area until the incident site has been assessed by Bomb Response Unit personnel (BRU)",
+    "Utilise open space wherever possible",
+    "Park appliance facing away",
+    "Notify Comm Centre of location of appliances",
+    "All firefighters stay in rear seat, side windows open",
+    "Maintain clear access and egress all times"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 23,
+   "q": "Q106. Air wing authorisation/guidelines:",
+   "a": "Requests for Victorian Police air support in emergency situations may be made through the on-scene VicPol coordinator.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 24,
+   "q": "Q107. Responsibilities of the Incident Controller:",
+   "a": [
+    "Take control of all resources at fires/incidents",
+    "Assume responsibility for the health, safety, and actions of all responding personnel at that fire/incident at all times",
+    "Ensure all OICs of appliances report to the Incident Control Point for tasking",
+    "Conduct an initial incident Size Up and continue throughout the incident",
+    "Develop and implement an Incident Action Plan (IAP)",
+    "Implement an Incident Management System",
+    "Establish Incident Emergency Management Teams (IEMT)",
+    "Initiate Community Information/Warning messages as required",
+    "Provide regular Situation Reports for FRV senior command",
+    "Establish a Communications Plan",
+    "Manage and track resources",
+    "Document/log pertinent incident information",
+    "Transfer control where required",
+    "Determine the cause of the fire, where possible",
+    "Assist in organising emergency accommodation for displaced persons where required",
+    "Notify Local Government Area if concerned about potential for residents to remain in uninhabitable fire affected properties",
+    "Conduct an appropriate After Action Review"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 24,
+   "q": "Q108. Name two Actions for Establishing Incident Control Points:",
+   "a": [
+    "Establish an Incident Control Point at every fire/incident. This is the responsibility of the OIC of the first arriving appliance",
+    "Name each Incident Control Point and communicate the name to the Communications Centre"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 24,
+   "q": "Q109. List your considerations for establishing a control point (OMS 001):",
+   "a": [
+    "Establish an Incident Control Point at every fire/incident. This is the responsibility of the OIC of the first arriving appliance",
+    "Name each Incident Control Point and communicate the name to the Communications Centre",
+    "  Establish an Incident Control Point, taking the following into consideration:",
+    "    Ease of access",
+    "    Prominence of location with a good overview of the incident",
+    "    Ability to stage and deploy all arriving appliances and support agency personnel",
+    "    Safety from any incident hazards",
+    "    Potential impediments to incident communications",
+    "Ensure the Incident Controller wears a tabard"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 24,
+   "q": "Q110. List 3 Examples of When Sectors Should be Established:",
+   "a": [
+    "Establish incident sectors with appointed Sector Commanders at incidents where the scale and complexity is likely to limit the Incident Controller's situational awareness, particularly where:",
+    "  Operations are taking place in more than one location, or remotely from the Incident Control Point",
+    "  The span of control on the fireground exceeds 1:5",
+    "  Technical operations are taking place"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 25,
+   "q": "Q111. Sector Commander roles and responsibilities:",
+   "a": [
+    "Obtain a SMEACSQ briefing from the Operations Officer or Incident Controller",
+    "Implement the section of the Incident Action Plan relevant to the sector, with consideration to RECEO and the Emergency Management Priorities published in the Victorian State Emergency Management Plan",
+    "Brief all personnel allocated to the sector",
+    "Allocate tasks to resources within the sector and maintain control of the resources",
+    "Implement and monitor safety and welfare measures of all personnel within the sector",
+    "Conduct regular Safe Person Approach, Dynamic Risk Assessments (SPADRA) and perform continual Size Up for the duration of the shift",
+    "Provide regular strategic level Situation Reports through the chain of command",
+    "Wear a tabard to identify the role",
+    "Ensure the allocated crews work within the established Communications Plan and monitor the effectiveness of communications",
+    "Work with the Safety Officer appointed to the sector",
+    "Ensure Rapid Intervention Teams (RIT) are formed where required and located in a ready status at appropriate locations for the sector",
+    "Coordinate activities with adjoining sectors",
+    "Respond additional resources for the sector via the chain of command when necessary",
+    "Report all accidents, injuries, hazards or near misses through the chain of command",
+    "Resolve problems as they arise",
+    "Participate in development of plans for the next operational period",
+    "Maintain a log of all activities"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 25,
+   "q": "Q112. Who Establishes the Creation and Location of Incident Sectors?",
+   "a": "Incident Controller",
+   "choices": [
+    "Operations Officer",
+    "Sector Commander",
+    "Safety Officer"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 25,
+   "q": "Q113. Incident Sectors – Actions – 6 General Requirements:",
+   "a": [
+    "Establish incident sectors with appointed Sector Commanders at incidents where the scale and complexity is likely to limit the Incident Controller's situational awareness",
+    "Ensure the creation and location of incident sectors is only established under instruction from the Incident Controller",
+    "Allocate appropriately ranked and experienced personnel to the role of Sector Commander where available",
+    "Appoint a Safety Officer to all sectors where resources permit",
+    "Ensure all crews and appliances report directly to the Sector Commander for tasking",
+    "Consider conducting Atmospheric Monitoring at designated Sector Command Points"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 25,
+   "q": "Q114. What are the 4 Sectors at an incident?",
+   "a": "Sector 1, 2, 3, 4",
+   "choices": [
+    "Sector A, B, C, D",
+    "North, South, East, West sectors",
+    "Fire, Lobby, Evacuation, Operations sectors"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 25,
+   "q": "Q115. List all of the High-Rise Sectors:",
+   "a": [
+    "Fire Sector",
+    "Operations Point",
+    "Lobby Sector",
+    "Evacuation Sector"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 26,
+   "q": "Q116. Objectives of Incident Action Plan:",
+   "a": [
+    "Include a statement of intent within incident objectives, adhering to the SMART principle:",
+    "  Specific – Language and actions stated can be easily communicated and understood",
+    "  Measurable – Specific actions and timeframes are stated so progress and completion of the objective can be evaluated",
+    "  Achievable – Selected strategies and tactics are realistic considering resource availability and identified risks/hazards",
+    "  Relevant – Objective includes consideration of Size Up information, State Emergency Management Plan, and identified risks/hazards",
+    "  Time frame – Specific time anticipated to achieve objective",
+    "Consider implementing recovery efforts during the response phase of an incident to enable possible early rehabilitation activities, business continuity, and lessen other community impacts"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 26,
+   "q": "Q117. When En Route Consider the following for Size Up:",
+   "a": [
+    "Any existing pre-plans or Site Specific Risk Information (e.g., flammable cladding, height of structure, hoarding, criminal activity, fuel load, dangerous animals)",
+    "Alarmed premises with keys held on station",
+    "Any further information provided from the Communications Centre",
+    "Local knowledge",
+    "Current and forecast weather conditions",
+    "Time of day",
+    "Potential community exposure and impacts",
+    "Potential infrastructure exposure and impacts",
+    "Consider issuing early Community Information/Warning",
+    "Fire Services jurisdiction",
+    "Potential water points",
+    "Columns of smoke and/or gas clouds"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 26,
+   "q": "Q118. Ensure the following principles are included in Size Up:",
+   "a": [
+    "Facts – What do you know that is affecting the incident, mitigation, and safety?",
+    "Probabilities – What is likely to happen, including potential for fire spread and risk to life?",
+    "Own situation – Do you have sufficient resources and capabilities? Should you respond more?",
+    "Decision – What is your objective for the incident?",
+    "Plan – How do you plan to resolve the incident, and what strategies and tactics will be applied?"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 26,
+   "q": "Q119. On-scene emergency services should liaise with any on-site representatives, occupants, technicians, or witnesses to gather what information:",
+   "a": [
+    "Nature of premises/occupancy status",
+    "Risk to life and evacuation status",
+    "Fuel types and fuel loads",
+    "Potential exposures",
+    "Known hazards",
+    "Access/egress paths",
+    "On-site intelligence (property plans, Emergency Information book/manifest)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q120. Utilise B-SAHF during Size Up at a structure fire:",
+   "a": [
+    "Building – construction style/materials that impact fire behaviour",
+    "Smoke – volume, velocity, density, and colour",
+    "Air track – inlets and outlets, what is the building ventilation profile?",
+    "Heat – blackening/crazing of windows, blistering of paintwork",
+    "Flame – colour (yellow/red/blue), indicator of oxygen supply to fire"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q121. Use the following format for all Strategic Level Situation Reports:",
+   "a": [
+    "Incident type and status",
+    "Incident potential – risks to life and property",
+    "Loss and damage",
+    "Incident objective(s)",
+    "Likely resource requirements and commitment",
+    "Community warnings issued"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q122. Consider sending a Strategic Level Situation Report in the following circumstances:",
+   "a": [
+    "An emergency or priority situation such as Mayday or loss of PAR",
+    "Upon request from the Communications Centre",
+    "Changes to the IAP",
+    "Significant community evacuations or impacts"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q123. Use the CAN format for all Tactical Level Situation Reports:",
+   "a": [
+    "Conditions – What are the current conditions of the incident/task?",
+    "Actions – What actions are being implemented?",
+    "Needs – What additional resources are required?"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q124. Consider sending a Tactical Level Situation Report in the following circumstances:",
+   "a": [
+    "Upon request from the chain of command",
+    "Periodically while undertaking a task",
+    "New critical information is discovered",
+    "Assigned tasks are completed or unable to be completed",
+    "When further resources are required or no longer required"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q125. What is the difference between a Situational and Tactical SitRep?",
+   "a": [
+    "Strategic Level Situation Reports are to contain information relevant to the incident strategies and objective(s)",
+    "Tactical Level Situation Reports are to only contain information relevant to an assigned task and must be kept brief"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 27,
+   "q": "Q126. When to conduct a Personnel Accountability Report PAR?",
+   "a": [
+    "Receipt of a mayday message",
+    "Use of emergency evacuation signal",
+    "A change from offensive to defensive strategies",
+    "Crews are failing to respond"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 28,
+   "q": "Q127. Ensure a PAR is requested only by the following authorised personnel for their area of accountability:",
+   "a": [
+    "Incident Controller",
+    "Operations Officer",
+    "Safety Officer",
+    "Sector Commander",
+    "BA Entry Officer (BAEO)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 28,
+   "q": "Q128. What Actions Should be Conducted After Unaccounted for resources on Request of PAR?",
+   "a": [
+    "Continue to try and make contact with any unaccounted for appliances, resources, or personnel in the situation of a failed PAR",
+    "Send a nearby resource(s) to the last known location of any unaccounted for personnel to try and make contact",
+    "Issue a Mayday message if a resource remains unaccounted for",
+    "Utilise RIT to begin searching for unaccounted resources where appropriate"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 28,
+   "q": "Q129. How do you as an OIC Maintain Personnel Accountability?",
+   "a": [
+    "Ensure Fast Cards are completed and accurately reflect appliance crews. This is the responsibility of the OIC of the appliance",
+    "Ensure all OICs of appliances report to the Incident Control Point for tasking upon arrival at an incident",
+    "Avoid splitting appliance crews where practicable. Appliances should be directed to complete a task as a unit where possible",
+    "Ensure personnel performing functional roles account for resources under their command",
+    "Maintain accountability when supervising a resource, team, or functional role. Ensure all radio calls to allocated call sign are answered, and immediately report any loss of personnel accountability as soon as possible"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 28,
+   "q": "Q130. When should a Red Flag Warning be issued?",
+   "a": [
+    "Consider a Red Flag Warning when a change in circumstances presents a significant risk to Safety or is predicted to present a significant risk to safety:",
+    "  Weather Conditions",
+    "  Fuel Conditions",
+    "  Incident/Fire Behaviour",
+    "  Potential hazardous atmosphere",
+    "  Equipment availability",
+    "  Communications issues/difficulties",
+    "  Access issues/difficulties",
+    "  Structural collapse",
+    "  LPG BLEVE or other possible explosion"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 28,
+   "q": "Q131. Who can Issue a Red Flag Warning?",
+   "a": [
+    "Sector Commander",
+    "Division Commander",
+    "Operations Officer",
+    "Incident Controller"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q132. What must be done once a Red Flag Warning is received?",
+   "a": [
+    "Confirm the Red Flag Warning has been received",
+    "Repeat the key points of the warning back to the sender to demonstrate understanding",
+    "Notify all responding and support agency personnel of the Red Flag Warning under your supervision",
+    "Obtain a confirmation from these personnel that they have received the warning"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q133. Convey Red Flag Warnings by any appropriate means, including:",
+   "a": [
+    "Radio",
+    "Telephone",
+    "Written notice",
+    "Verbal"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q134. Document/log all details of the Red Flag Warning, including:",
+   "a": [
+    "Name of person who issued the Red Flag Warning",
+    "The time it was issued",
+    "The information it contained",
+    "How it was issued",
+    "Who it was issued to and who was informed (both up and down the chain of command)",
+    "The time acknowledgements were received from those you supervise"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q135. When to transmit a MAYDAY?",
+   "a": "Transmit a mayday immediately when in a life-threatening situation, or when others are in a life-threatening situation.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q136. When should you not transmit a MAYDAY Message?",
+   "a": "Mayday Messages should not be transmitted during training scenarios.",
+   "choices": [
+    "During a Red Flag Warning",
+    "During a PAR",
+    "During extreme radio congestion"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q137. How to transmit a MAYDAY?",
+   "a": [
+    "Mayday Mayday Mayday",
+    "Name of person transmitting or unit/call sign",
+    "Location",
+    "Situation Report / Assignment / Task",
+    "Resources / Assistance"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 29,
+   "q": "Q138. How to respond to a MAYDAY?",
+   "a": [
+    "Confirm the details by the caller",
+    "Commit Resources to the intervention effort including any pre-determined RIT",
+    "Establish a rescue sector (as determined by the IC)",
+    "Allocate appropriate radio channels to the intervention effort",
+    "Issue a general message or a Red Flag Warning to the Fire/incident channels, if appropriate"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q139. Ensure the following is completed once the Mayday situation has been resolved:",
+   "a": [
+    "Notify Communications Centre",
+    "Notify all personnel on the fireground",
+    "Ensure any Duress Alarms activated have been reset",
+    "Resume prioritising the combating of the fire or incident"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q140. Why issue a Red, Red, Red Priority Signal?",
+   "a": "To send an urgent message where extreme radio congestion exists, in order to gain priority access to Communications Centre and the fireground channel(s).",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q141. Scenarios where a Red, Red, Red may be required include the following:",
+   "a": [
+    "A word back message requiring the escalation of an incident",
+    "A general message communicating a significant fireground safety issue",
+    "A Red Flag Warning"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q142. Detail when to transmit the Emergency Evacuation Signals:",
+   "a": [
+    "Imminent Structural collapse",
+    "Bushfire burn over",
+    "Landslip",
+    "Uncontrolled release of gasses"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q143. Activate an Emergency Evacuation Signal in the following sequence:",
+   "a": [
+    "Three short blasts, each for one second duration",
+    "Wait ten seconds and repeat",
+    "Repeat this sequence until all persons are accounted for"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q144. How may the Emergency Evacuation Signal warning be given?",
+   "a": [
+    "Appliance/vehicle horn",
+    "Air horn",
+    "Evacuation Signal Unit (ESU)",
+    "Whistle",
+    "Loud hailer",
+    "PA system on appliance"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 30,
+   "q": "Q145. Complete the following Actions immediately upon hearing an Emergency Evacuation Signal:",
+   "a": [
+    "Ensure all other crew members are aware of the signal",
+    "Report to immediate supervisor",
+    "Evacuate to a safe area"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 31,
+   "q": "Q146. Requirement to Wear Breathing Apparatus:",
+   "a": [
+    "Don BA in a state of readiness at any alarm of fire, unless directed otherwise by the IC after completing a Size Up",
+    "Put on facemask and activate the BA when a Safe Person Approach, Dynamic Risk Assessment (DRA) identifies that a confirmed or potential hazardous atmosphere may exist",
+    "  Do not wait for an order from the Incident Controller to don and activate BA where it is obvious that a hazardous atmosphere exists",
+    "Ensure BA remains donned and activated at all times when a hazardous atmosphere exists. Only the IC/SC/OO can determine when BA is no longer required",
+    "  Ensure P2 masks are not worn in situations where BA should be worn",
+    "Note: P2 masks only provide particulate protection (e.g., hazardous fibres such as asbestos)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 31,
+   "q": "Q147. Breathing Apparatus crews entering the hazardous atmosphere (Hot Zone) should Consider:",
+   "a": [
+    "Ensure BA is donned correctly",
+    "Do not commence initial entry into a hazardous atmosphere with a cylinder pressure less than 250 bar",
+    "Work in teams of at least two, where appropriate",
+    "Select the designated fireground channel on portable radios",
+    "Deposit BA tally tags at BA entry prior to entering a potential or confirmed hazardous atmosphere",
+    "Check time out/low-air periodically",
+    "Exit the fireground accompanied by at least one other member of the team when the cylinder pressure gauge of the BA reaches a pre-determined level, or the cylinder low-air warning signal operates",
+    "Proceed towards the sound of a full alarm or distress signal. Rendering assistance is to take precedence over the work at hand. Communicate the situation to IC/SC/OO",
+    "Withdraw immediately upon the operation of the evacuation alarm",
+    "Report to BA Entry and collect tally tags upon exiting the fire/incident",
+    "Report to BA Service (if one is in operation) after collecting BA tally tags from the BA Entry",
+    "Do not re-enter a hazardous atmosphere with a cylinder pressure of less than 200 bar unless a Safe Person Approach, Dynamic Risk Assessment (DRA) has been completed, and it has been deemed acceptable"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 32,
+   "q": "Q148. BA Stage 1 – Incident Controller Responsibilities and Actions:",
+   "a": [
+    "Implement BA Stage 1 where it is necessary to use BA and monitor BA wearers at the incident, where the following circumstances exist:",
+    "  BA operations are limited and not complex",
+    "  The incident requires no more than one BA Entry Point",
+    "  BA guidelines are not required",
+    "Ensure accountability of BA teams is managed through the use of a BA Control Board",
+    "Consider the following when establishing BA Stage 1 operations:",
+    "  Allocate BA Teams, call signs and fireground channels, ensuring personnel are working in teams of at least two where appropriate",
+    "  Avoid splitting appliance crews when establishing BA Teams wherever possible. This will assist in maintaining personnel accountability",
+    "  Allocate call signs in line with appliance numbers (e.g., \"Pumper 22 BA Team\")",
+    "  Ensure BA Teams are operating on the assigned fireground channel",
+    "  Advise the Communications Centre that \"BA Stage 1 is in operation\". This can also be completed within the wordback",
+    "  Establish a BA Entry Point as soon as possible and delegate the role of BA Entry Officer (BAEO) once resources become available. Until delegated, the IC is accountable for all BA operations",
+    "Establish a Rapid Intervention Team",
+    "Establish a DEBRiS Zone based on a Safe Person Approach, Dynamic Risk Assessment (DRA), taking into consideration the incident alarm level, extent of the contamination, and/or number of personnel to be processed"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 32,
+   "q": "Q149. BA Stage 1 – BA Entry Officer (BAEO) Responsibilities and Actions:",
+   "a": [
+    "Record the following on the BA Control Board:",
+    "  Names of personnel operating within the hazardous atmosphere (Hot Zone)",
+    "  BA Team call sign(s) and location",
+    "  Low air and time of whistle",
+    "  Allocated fireground channel(s)",
+    "Track locations of BA Teams and record on BA Stage 1 Control Board. Consider utilising a mud map to assist with location accountability",
+    "Ensure all personnel exiting the hazardous atmosphere retrieve BA tally and proceed through DEBRiS, where established"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 32,
+   "q": "Q150. BA Stage 2 – Incident Controller responsibilities and actions:",
+   "a": [
+    "Implement BA Stage 2 operations when a greater level of control is required to manage and monitor the safety of BA wearers in complex BA operations",
+    "Delegate the role of BA Control Officer (BACO) when enough resources are available on scene",
+    "Establish the appropriate number of BA Entry Points and allocate call signs for each (e.g., BA Entry Sector 1)",
+    "Ensure the appropriate Emergency Evacuation Signal device is established",
+    "Establish additional Rapid Intervention Teams to support each BA Entry Point, as required",
+    "Establish the appropriate number of BA Service Areas as per DEBRiS",
+    "Ensure a sufficient supply of BA equipment is provided to the incident by responding the appropriate resources to support this capability",
+    "Utilise personal or main guidelines in extreme conditions where practicable"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  }
+ ],
+ "issues": [
+  "wb-17..wb-32 contain Q70-Q150 (wb-16 ends at Q69, wb-33 starts at Q151, so no carry-over either side).",
+  "Partial green highlighting treated as priority: Q75 (heading + first bullet only), Q78 (heading + 'UN number of LPG, 1075' only), Q83 (answer green except 'OMS'), Q110, Q129 (heading + first bullet 'Fast Cards'), Q130 (heading + intro sentence only).",
+  "OCR omitted lines that are on the page images; restored from images: Q107 'Assist in organising emergency accommodation for displaced persons where required', Q109 'Ability to stage and deploy all arriving appliances and support agency personnel', Q150 first bullet 'Implement BA Stage 2 operations...' and 'Ensure a sufficient supply of BA equipment...'.",
+  "Nested sub-bullets in list answers are encoded as array items with leading two-space indent (e.g. Q72, Q89, Q98, Q109, Q110, Q116, Q130, Q146, Q148, Q149).",
+  "Source wording kept as-is where odd: Q81 'how do you immobilising' (lightly normalised to 'immobilise'), Q92 'notify MFB Operations Commander of CFA Rostered Duty Officer' ('of' likely 'or'), Q125 heading says 'Situational' but answer refers to Strategic SitRep, Q138 'of appropriate' corrected to 'if appropriate', Q89 'effected tunnel' kept, Q98 'INSTALLATOINS'/'VENTILLATION' spelling fixed.",
+  "Q83 answer gives different distances by source: 5 m (FERG) vs 10 m (OMS).",
+  "Q105 page splits 'assessed by Bomb.' / 'Bomb Response Unit personnel (BRU)' into two bullets; merged into one item.",
+  "Q97 page splits the shipping container sentence over two bullets; merged into one item.",
+  "Topic choices: Q115 (high-rise sectors) and Q146-150 (BA use, BA Stage 1/2) put in oms-ops; Q101 MERC and Q106 airwing in ferg-port; Q100 trams in ferg-veh; Q94 working at heights in ferg-site."
+ ]
+}

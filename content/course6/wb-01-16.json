@@ -1,0 +1,1006 @@
+{
+ "chunk": "wb-01-16",
+ "notes": [],
+ "questions": [
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q1. What is the definition of workplace BULLYING?",
+   "a": [
+    "Workplace bullying is REPEATED UNREASONABLE BEHAVIOUR directed towards an EMPLOYEE, CLIENT, CUSTOMER, CONTRACTOR, OR OTHER EXTERNAL PARTY that creates a risk to THEIR HEALTH AND SAFETY.",
+    "Bullying is behaviour that VICTIMISES, HUMILIATES, UNDERMINES OR THREATENS a person.",
+    "Bullying is not: Genuine / reasonable disciplinary procedure",
+    "Bullying is not: Constructively delivered feedback to improve work performance / behaviour",
+    "Bullying is not: Directing & controlling how work is done"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q2. What is the definition of SEXUAL HARASSMENT?",
+   "a": "Sexual harassment IS UNWELCOME UNINVITED BEHAVIOUR which is OFFENSIVE from the viewpoint of the PERSON BEING HARASSED. It does not matter that the offender did not MEAN OR INTEND TO SEXUALLY HARASS the other person. In other words, an offender's INNOCENT INTENT IS IRRELEVANT.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q3. Conduct of a sexual nature includes:",
+   "a": [
+    "Subjecting a person to any act of physical intimacy",
+    "Making, orally or in writing, any remark or statement with sexual connotations to a person or about a person",
+    "Making any gesture, action, or comment of a sexual nature"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q4. List 3 actions where a person could sexually harass another person?",
+   "a": [
+    "Make an unwelcome sexual advance",
+    "Make an unwelcome request for sexual favours",
+    "Engage in any other unwelcome conduct of a sexual nature"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q5. What is VILIFICATION?",
+   "a": "Vilification is a public act which incited hatred towards, serious contempt for, or severe ridicule of, a person or group on the grounds of race or religion.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q6. What is Victimisation?",
+   "a": "Retaliation against a person just because they propose to, or have, made a complaint about unacceptable behaviour.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q7. Who does WPB Policy apply to?",
+   "a": [
+    "Employees (current & prospective), work experience & work placement students, contract workers & commissioned agents of FRV",
+    "Everyone FRV employees deal with in the course of their work"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 1,
+   "q": "Q8. When does the WPB Policy apply?",
+   "a": [
+    "Dealing with members of the public",
+    "Work related functions",
+    "Conferences",
+    "Social activities involving employees"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q9. Under General responsibilities of workplace behaviour, everyone who works at the FRV is responsible that they? (3)",
+   "a": [
+    "Participate in FRV scheduled workplace behaviour information",
+    "Are familiar with this policy",
+    "Comply with this policy"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q10. What actions can be taken for breaching this policy? (5)",
+   "a": [
+    "A verbal apology",
+    "A written apology",
+    "Attendance at additional awareness / information sessions",
+    "Counselling",
+    "An adverse report",
+    "Charges laid under the FRV Act"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q11. Give 3 examples to which the FRV workplace behaviour applies to?",
+   "a": [
+    "Employees",
+    "Contractors",
+    "Work Experience people"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q12. What are 3 actions that may be taken for breaches of workplace behaviour policies?",
+   "a": [
+    "Vilification",
+    "Bullying",
+    "Harassment"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q13. Workplace behaviour policy extends beyond the physical premises of work and outside working hours, these include (4):",
+   "a": [
+    "Dealing with members of the public",
+    "Work related functions",
+    "Conferences",
+    "Other social activities involving employees"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 2,
+   "q": "Q14. List 8 legislations relating to discrimination:",
+   "a": [
+    "Racial Discrimination Act",
+    "Racial Hatred Act",
+    "Sex Discrimination Act",
+    "OHS Act",
+    "Disability Act",
+    "FRV Act",
+    "Equal Opportunity Act",
+    "Public Records Act"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 3,
+   "q": "Q15. Discrimination: unacceptable grounds or attributes of discrimination or harassment:",
+   "a": [
+    "Age",
+    "Breastfeeding",
+    "Gender Identity",
+    "Disability / Impairment",
+    "Industrial Activity Employment Activity",
+    "Lawful Sexual Activity",
+    "Marital Status",
+    "Parental Status",
+    "Physical Features",
+    "Political Belief or Activity",
+    "Pregnancy",
+    "Race",
+    "Religious Belief",
+    "Sex",
+    "Sexual Orientation",
+    "Personal Association"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 3,
+   "q": "Q16. No Unlawful Discrimination:",
+   "a": "There will be no unlawful discrimination at FRV. Employment related decisions, such as those regarding recruitment, appointment, selection for promotion and performance management will be made on the basis of merit, that is, on the basis of a person's abilities, skills, and performance and not on the basis of irrelevant personal characteristics.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 3,
+   "q": "Q17. What is Unlawful Discrimination?",
+   "a": "Unlawful discrimination occurs when an employee is treated less favourably than others because of an irrelevant personal characteristic, such as their age, race, sex and so on. Unlawful discrimination can happen either directly or indirectly.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 3,
+   "q": "Q18. What is Direct Unlawful Discrimination?",
+   "a": "Occurs when a person is treated less favourably than another person in the same or similar circumstances, because of any of the grounds or attributes listed (unacceptable grounds/attributes of discrimination).",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 3,
+   "q": "Q19. What is Indirect Unlawful Discrimination?",
+   "a": "Occurs when there is a rule, requirement or practice which applies to everyone, but with which some groups of people cannot comply because of a personal attribute. Unless the rule is 'reasonable in the circumstances' it will be unlawful.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 4,
+   "q": "Q20. What are the requirements of the OIC in relation to WHS Incident Management - Notifiable Incidents?",
+   "a": [
+    "Completing an FRV Safe initial report or ensuring that the reporting / injured / affected worker has completed the FRV Safe initial report within 24 hours of an incident occurring",
+    "Completing an FRV Safe initial report on behalf of a visitor, contractor, subcontractor, or member of the public who is affected by an incident / near miss / hazard",
+    "Notify their Commander or Manager if the incident is notifiable as per appendix A or if the risk rating is rated as high or above"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 4,
+   "q": "Q21. What is the management of OH&S incidents, near misses and exposures?",
+   "a": [
+    "6.1 Immediate response: Eliminate or isolate any remaining hazards at the incident site which may have the potential to cause any immediate further harm, if safe to do so",
+    "Call 000 (if necessary)",
+    "Notify Supervisor / Officer in Charge (OIC)",
+    "Provide assistance as per 6.1.1 if an injury has occurred",
+    "Supervisor/OIC must immediately notify the relevant Manager/Commander unless the hazard / incident is of a minor nature (e.g. a facility issue requiring rectification): (i) the Manager / Commander must be provided with information regarding the details of the injured or affected person, the facts of the incident and any medical transport and destination details which are relevant; and (ii) the Manager / Commander must notify the relevant ACFO / Director and relevant Health & Safety Representative as soon as reasonably practicable",
+    "6.1.1 If an injury has occurred: If necessary to avoid further injury (and if safe to do so) remove injured person(s) from immediate threat of further harm",
+    "Initiate first aid treatment and consider the need for further emergency medical treatment, if required",
+    "Worker and/or Supervisor/OIC must immediately contact FRV Health (1800 378 432) so that triage of the injury, early intervention and appropriate injury management support can be provided. If it is an emergency situation, contact should be made as soon as possible after the event"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 5,
+   "q": "Q22. Incidents requiring notification to WorkSafe:",
+   "a": [
+    "The death of a person",
+    "A person requiring medical treatment within 48 hours of exposure to a substance",
+    "A person requiring immediate treatment as an in-patient in a hospital",
+    "A person requiring immediate medical treatment for: the amputation of any part of his or her body; a serious head injury; a serious eye injury; the separation of his or her skin from an underlying tissue (such as degloving or scalping); electric shock; a spinal injury; the loss of a bodily function; serious lacerations (one or more deep and/or extensive cuts, tears or wounds to the flesh or tissue; immediate medical treatment may include stitching to prevent loss of blood and/or other treatment to prevent loss of bodily function and/or infection)",
+    "Any other injury to a person or other consequence prescribed by the regulations",
+    "Any incident that exposes a person in the immediate vicinity to an immediate risk to the person's health or safety through: the collapse, overturning, failure or malfunction of, or damage to, any plant that the regulations prescribe must not be used unless the plant is licensed or registered; the collapse or failure of an excavation or of any shoring supporting an excavation; the collapse or partial collapse of all or part of a building or structure; an implosion, explosion, or fire; the escape, spillage or leakage of any substance including dangerous goods (within the meaning of the Dangerous Goods Act 1985); the fall or release from a height of any plant, substance, or object; in relation to a mine: the overturning or collapse of any plant, the inrush of water, mud, or gas, or the interruption of the main system of ventilation",
+    "Any other event or circumstance prescribed by the regulations"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 5,
+   "q": "Q23. What are the requirements of the OIC in relation to WorkCover claims ORG 133?",
+   "a": [
+    "Ensure that the initial FRV Safe report is completed as soon as practical and assigning FRV Safe report to an appropriate investigator",
+    "Completing the initial FRV Safe report when a claimant is unable to do so and assigning FRV Safe report to appropriate investigator",
+    "Reporting to the FRV WorkCover claims section any additional information that may assist in making a decision concerning the acceptance of liability"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 5,
+   "q": "Q24. Resumption of Duty:",
+   "a": [
+    "All staff returning to work following time off for a work related injury are to obtain a WorkCover Certificate of Capacity - Full clearance for pre-injury duties before resuming their pre-injury work. This can be included in a certificate authorising time off (e.g. unfit for duty 28 and 29 October, fit to resume 30 October)",
+    "FRV, under its regulations, may also request operational staff to attend the Brigade Medical Services (BMS) to confirm fitness for duty before resuming work"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "whs",
+   "page": 6,
+   "q": "Q25. WorkCover Certificate of Capacity (ORG133):",
+   "a": [
+    "These must be an authorised WorkCover Certificate of Capacity",
+    "The initial certificate cannot be for a period exceeding 14 days and must be issued by a medical practitioner",
+    "Subsequent WorkCover Certificates of Capacity can be issued by medical practitioners, physiotherapists, osteopaths, or chiropractors for periods of up to 28 days",
+    "The claimant must obtain and submit ongoing WorkCover Certificates of Capacity to FRV WorkCover Claims section to ensure the claimant's pay continues. Certificates must be continuous (no overlapping dates or missed dates), and not just covering rostered shift days",
+    "To ensure the WorkCover Certificate of Capacity is valid the claimant must complete the patient declaration on the 2nd page of the certificate. It is advised the person issuing the certificate also witness and date the patient declaration"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 7,
+   "q": "Q26. What are the following Act numbers and meanings?",
+   "a": [
+    "32. Powers of Access",
+    "32A. Meaning of Alarm of Fire",
+    "32AA. Duty to Warn the Community",
+    "32B. Action on Alarm of Fire",
+    "54. Damage to be covered by fire insurance",
+    "54A. Immunity from Certain Liabilities",
+    "58. Removal of Persons from Burning Premises",
+    "59. Rights to Water",
+    "61. Police to Aid Units",
+    "78A. Offences by Members and Officers",
+    "12. Prohibitions of Members"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 7,
+   "q": "Q27. What are the Powers of Access as in Section 32?",
+   "a": [
+    "The storage of EXPLOSIVES",
+    "The storage of RADIOACTIVE SUBSTANCES",
+    "The storage of INFLAMMABLE LIQUIDS AND SUBSTANCES",
+    "The PREVENTION OF FIRE or the PROTECTION OF LIFE or PROPERTY IN THE CASE OF FIRE; are being complied with"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 7,
+   "q": "Q28. What is the definition of 32A?",
+   "a": "32A. Meaning of \"alarm of fire\": In sections 32B, 32C and 32D, \"alarm of fire\" means any call for assistance at a fire, accident, explosion, or other emergency.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 7,
+   "q": "Q29. Complete the missing words as per section 32B(3)(c) of the FRV Act: (3) At the scene of an alarm of fire the senior member of the operational staff— (a) shall endeavour by all practical means to have any fire suppressed and any person or property in jeopardy saved; (b) shall have the control and direction of any unit present and of all persons assisting any unit or units at the scene; (c) may, for the purposes of dealing with any alarm of fire, cause—",
+   "a": [
+    "Any land, building, structure, vessel or vehicle to be ENTERED upon or into (if necessary by force), taken possession of, SHORED UP, PULLED DOWN, otherwise destroyed or removed",
+    "Any VEHICLE OR EQUIPMENT to be taken through, upon or into any land, building, structure, vessel or vehicle",
+    "WATER TO BE SHUT off from any main pipe or other source of supply in order to gain a greater pressure or supply of water; and",
+    "ANY ROAD, WATERWAY, RAILWAY or tramway to be closed to traffic, or any main, pipeline, conduit or conductor of GAS, ELECTRICITY, OIL or any other source of power, fuel or energy to be shut off"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 7,
+   "q": "Q30. Describe the Act that provides immunity from certain liabilities.",
+   "a": "Section 54A – The Fire Rescue Commissioner or members not personally liable for anything done or omitted to be done in good faith.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 8,
+   "q": "Q31. 54A. Immunity from certain liabilities:",
+   "a": "The Fire Rescue Commissioner, any member of a unit and any officer or member of an interstate fire brigade or international fire brigade are NOT PERSONALLY LIABLE for anything DONE OR OMITTED to be done in good faith— (a) in the exercise of a power or the discharge of a duty under section 32B, 32C, 55, 55A, 55B, 55C, 55D, or 55E; (b) or in the REASONABLE BELIEF that the act or omission was in the exercise of a power or the discharge of a duty under that section.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 8,
+   "q": "Q32. Section 58 of the Act: Removal of persons from a burning building:",
+   "a": [
+    "(1) A member of a unit or a POLICE OFFICER MAY ORDER ANY PERSON who is not a member of a unit or who is not acting under the control or direction of a member of a unit to WITHDRAW from any premises then burning or which are threatened by fire",
+    "(1A) A person MUST COMPLY IMMEDIATELY with an order given to the person under sub-section (1)",
+    "(2) If such person neglects or REFUSES to so withdraw he may be forcibly removed by order of any such member",
+    "(3) Nothing herein contained shall authorise the removal from any such premises of any person having ANY PECUNIARY INTEREST therein or in any goods or valuables whatsoever thereon"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 8,
+   "q": "Q33. Outline the Act that gives FRV right to water:",
+   "a": "59. Rights to water: Fire Rescue Victoria, its operational staff and any unit registered under this Act shall have the use of all WATER MAINS, WATER PLUGS, VALVES, PIPES vested in or belonging to the Melbourne and Metropolitan Board of Works or any public or municipal corporation or local body whatsoever and of all water therein or in any WELL OR TANK free of charge for the purpose OF EXTINGUISHING ANY FIRE or for the purpose of DRILLS, COMPETITIONS AND PRACTICE conducted under the authority of Fire Rescue Victoria.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 8,
+   "q": "Q34. 61. Police to aid Units (man with a gun – 61):",
+   "a": [
+    "(1) Every member of the police force present at any fire must support and assist the senior member of the operational staff at the scene – (a) in the MAINTENANCE of the senior member's AUTHORITY; and (b) IN ENFORCING COMPLIANCE by all persons with any order given by the senior member in the execution of his or her duty",
+    "(2) All police officers are AUTHORISED and REQUIRED to aid units in the execution of their duties",
+    "(3) For the purpose of sub-section (2), police officers may – (a) CLOSE ANY STREET in or near which a fire is burning; and (b) of their OWN VOLITION or at the REQUEST OF THE SENIOR MEMBER of the operational staff at the scene, REMOVE any persons who interfere by their presence or otherwise with the operations of the unit",
+    "(4) In this section SENIOR MEMBER OF THE OPERATIONAL STAFF has the same meaning as it has in section 32B"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "act",
+   "page": 9,
+   "q": "Q35. Pursuant to the FRV Act 1958, Section 78A regarding Discipline, officers or members may commit an offence if found to be in breach of what conditions? Give a description of Sec 78A. Offences by Officers or Members:",
+   "a": [
+    "A member of the operational staff who is: (a) Guilty of any breach of the regulations",
+    "(b) Guilty of any misconduct",
+    "(c) Negligent or careless in the discharge of his duties",
+    "(d) Inefficient or incompetent and such inefficiency or incompetence arises from causes within his own control; or",
+    "Guilty of any disgraceful or improper conduct",
+    "– Shall be guilty of an offence"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "regs",
+   "page": 9,
+   "q": "Q36. List all the Prohibitions on members under Regulation 12 of FRV Regulations:",
+   "a": [
+    "Disobey or fail to carry out a general order or any lawful order given in the course of his or her duty whether the order is in writing or not",
+    "Exceed or misuse the member's authority",
+    "Wilfully cause or allow loss, damage, or injury to occur to any person or property",
+    "Whilst on duty partake in or be under the influence of or affected by any intoxicating liquor, narcotic, hallucinogen, medication, or substance which could or is likely to impair, limit or affect the member's performance of duty",
+    "Whilst on duty have any of the substances referred to in paragraph (d) in his or her possession or at the workplace",
+    "Act in a manner that is likely to bring discredit to the reputation of the board or diminish public confidence in it",
+    "Be found guilty of having committed an indictable offence whilst on duty",
+    "Be found guilty of having committed an indictable offence under division 2 part 1 of the Crimes Act 1958 whilst not on duty if the offence involved dishonesty or corruption or intent to deceive or defraud or trespass"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 11,
+   "q": "Q37. What information needs to be relayed to the Comms Centre for data chemical information? (6)",
+   "a": [
+    "UN Name / Number",
+    "Product and Company name",
+    "Transport Company Name",
+    "Quantity",
+    "Quantity Spilled",
+    "Form"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 11,
+   "q": "Q38. Prowords: give the meaning of each proword.",
+   "a": [
+    "Affirmative – Yes (not to be confused with 'Roger')",
+    "Negative – No",
+    "Roger – Received and understood (should not be used to answer a question)",
+    "Say again – Repeat your last transmission",
+    "Standby – I must pause and get back to you ASAP",
+    "Disregard – Delete all reference to my last transmission",
+    "Correction – An error has been made in my last transmission",
+    "I say again – I am repeating my last transmission",
+    "Send – I am ready to receive your transmission",
+    "I spell – Spelling using phonetic alphabet",
+    "Cancel – Appliances or services nominated are no longer required to proceed",
+    "Sitrep – Situation report. This report will give pertinent details of the incident",
+    "Firecall – Used to pre-empt a radio dispatch"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 11,
+   "q": "Q39. Community Warnings and Advice: list the levels and when each is issued.",
+   "a": [
+    "Advice – Issued to notify the community that an incident has occurred that may escalate to impact on life or property",
+    "Warning (Watch and Act) – Issued when an incident is likely to or is directly impacting the community. They need to take action now",
+    "Emergency Warning – Issued when the community is in imminent danger from an incident and need to take action now",
+    "Advice All Clear – Issued when the threat of an incident has subsided. An Advice All Clear is required as a follow up where a Warning / Watch and Act or Emergency Warning has been issued",
+    "Prepare to Evacuate – Issued when the community is recommended to quickly prepare to leave the area",
+    "Evacuate Now – Issued when the community is recommended to immediately leave, or processes are in place to evacuate communities"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 11,
+   "q": "Q40. What is an After Action Review?",
+   "a": "After Action Review (AAR): Conducted immediately after an incident/exercise. May be undertaken on scene or on return to home station. Addresses any urgent health and safety issues or other concerns that will not wait until the operational debrief.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 12,
+   "q": "Q41. What are the components of an AAR?",
+   "a": [
+    "What was planned?",
+    "What really happened?",
+    "Why did it happen?",
+    "What can we do better next time?"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 12,
+   "q": "Q42. Manage all fires/incidents in accordance with the following AIIMS principles:",
+   "a": [
+    "Management by objectives",
+    "Functional management",
+    "Span of control",
+    "Unity of command",
+    "Flexibility",
+    "SMEACSQ"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 12,
+   "q": "Q43. List the 4 Roles of a Staging Officer.",
+   "a": [
+    "Establish Staging and Communicate with the OO",
+    "Establish all appliances and personnel on scene",
+    "Deploy resources requested by OO",
+    "When directed, maintain a reserve of 2 primary appliances with personnel"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 12,
+   "q": "Q44. What are the 7 duties of the Safety Officer as outlined in the IMT advice Card?",
+   "a": [
+    "Safety Officer is responsible through chain of command to the IC",
+    "Preferably hold the rank of Station Officer or above",
+    "Check general structural safety (walls, roofing, etc.)",
+    "Ensure use of appropriate procedures (PPC, PPE, Hazmat, BA, Asbestos, High Rise)",
+    "Communicate Risks / Problems immediately to the OO / IC",
+    "Report near misses, accidents, injuries and ensure they are followed up",
+    "IC may allocate more than one Safety Officer depending on incident complexity"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 12,
+   "q": "Q45. The Public Information Officer must ensure the following format of community warnings and advice:",
+   "a": [
+    "Verbal messages (Door Knock)",
+    "ECMOP Publisher – VicEmergency website",
+    "Emergency Alert",
+    "Standard Emergency Warning Signal"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 13,
+   "q": "Q46. List 8 Responsibilities of the Planning Officer:",
+   "a": [
+    "Identify current objectives, strategies and resources required",
+    "Develop IAP",
+    "Develop alternative objective and strategies",
+    "Assess current and future risks (e.g. Weather, Hazmat, Fire Water Run Off)",
+    "Monitor resources requested, en route, allocated to, and released from the incident",
+    "Provide information to Public Information Officer and IMT (via Sit Reps)",
+    "Develop Communications Plan",
+    "Prepare report for IC at incident conclusion"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 13,
+   "q": "Q47. What is the role of the Rehabilitation Officer?",
+   "a": [
+    "Establish rehabilitation sector remote of the fireground",
+    "Provide shelter, seating, toilet",
+    "Ensure personnel remove PPC / Dress Down",
+    "Facilitate hydration, nutrition, and personal hygiene",
+    "Manage and document movement of personnel through rehab – Minimum 20 Minutes",
+    "Facilitate medical evaluation or intervention as required (AV/BMS)",
+    "Provide regular reports to the OO"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-ctx",
+   "page": 13,
+   "q": "Q48. List the 5 Roles of the Logistics Officer:",
+   "a": [
+    "Obtain Resources (Human and Physical), facilities, service, and materials to support the IMT",
+    "Monitor current and expected resources",
+    "Assist the PO to produce communications plan",
+    "Establish staging area and rehabilitation requirements",
+    "Develop logistics section of the IAP"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 13,
+   "q": "Q49. Describe AIRMEN:",
+   "a": [
+    "Approach from either the nose or tail directing lines down the fuselage, avoiding the wheel area. Dry powder must be used for wheels",
+    "Insulate / Isolate passengers / crews from fire using foam or water sprays",
+    "Rescue path – clear access to the door through application of foam or water sprays",
+    "Maintain path to enable escape routes for passengers or access path for firefighters",
+    "Evacuate passengers from the aircraft immediately. Attend to the fire / spill",
+    "Next appliance on scene acts as a backup to support crew or provides extra water / foam"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 13,
+   "q": "Q50. What are the 3 categories for planes?",
+   "a": [
+    "Level 1 – Up to 18 seats",
+    "Level 2 – Up to 215 seats",
+    "Level 3 – Up to 450 seats"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 13,
+   "q": "Q51. An aircraft emergency at Melbourne Airport: what is the colour of the flashing light at the forward command post?",
+   "a": "A single flashing blue light",
+   "choices": [
+    "A single flashing red light",
+    "A single flashing green light",
+    "Two flashing amber lights"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 13,
+   "q": "Q52. If an aircraft approaching is known or suspected to be in danger of an accident, what is it classified as?",
+   "a": "Full Emergency",
+   "choices": [
+    "Crash on airport grounds / area",
+    "Local Standby",
+    "Aircraft Incident"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 14,
+   "q": "Q53. A self-evident situation where an aircraft is seen to crash or about to crash is classified as a:",
+   "a": "Crash on airport grounds / area",
+   "choices": [
+    "Full Emergency",
+    "Local Standby",
+    "Aircraft Incident"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 14,
+   "q": "Q54. What are the 4 safety considerations when working around a propeller aircraft?",
+   "a": [
+    "Maintain a clear distance of 5 meters radius from front of plane",
+    "Approach spinning propellers from rear only",
+    "Do not interfere with inactive propellers",
+    "Do not walk under wings"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 14,
+   "q": "Q55. What are the considerations with Jet Aircraft?",
+   "a": [
+    "Ensure ear protection is worn",
+    "Isolate fuel supply and shut down engine",
+    "Avoid blast area (rear of engine) at all times",
+    "Maintain 8 meters clearance from Jet intake"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 14,
+   "q": "Q56. What does LACES stand for?",
+   "a": [
+    "Lookouts – Fixed, Aerial or Mobile Lookout shall be deployed to maintain clear appreciation of risks",
+    "Awareness – FF shall be made aware of the impact of changes in fire behaviour",
+    "Communications – All FF shall follow the comms plan",
+    "Escape Routes – At least 2 escape routes should be made known and agreed",
+    "Safety Zones – Safety Zones shall be identified and made known"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-air",
+   "page": 14,
+   "q": "Q57. What do you do if caught in a Wildfire?",
+   "a": [
+    "Seek refuge and protect yourself from radiant heat, in nearest structure or vehicle",
+    "Burnt ground is the safest place to be",
+    "Don't try to outrun the fire uphill",
+    "Transmit a priority distress message advising location and situation",
+    "Shield in a vehicle with the engine running, lights on and cover yourself with a blanket",
+    "Close all doors, windows and vents",
+    "Activate cabin sprays and deploy cabin curtains if available"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 14,
+   "q": "Q58. List the considerations when attending fires/incidents involving car stackers:",
+   "a": [
+    "Access to vehicles recessed in sub structure not guaranteed",
+    "PPV fan or installed ventilation to improve visibility",
+    "Defensive Attack",
+    "Foam Fire Attack",
+    "Firewater",
+    "Building Power Isolation",
+    "HART"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 14,
+   "q": "Q59. List your actions when attending car stackers.",
+   "a": [
+    "Isolate power to stacker. Lock Out/Tag Out on power supply",
+    "Use current detector to test for live",
+    "Check sprinkler activation",
+    "Conduct SPADRA"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 15,
+   "q": "Q60. What are the safety considerations when attending car stackers?",
+   "a": [
+    "LPG BLEVE",
+    "Slips, Trips and Falls",
+    "Collapse of stackers",
+    "Above and Below storage of cars",
+    "High Pressure Hydraulic Fluid",
+    "Unattended Operating Key",
+    "Serious crush hazards"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q61. Boilers – Actions:",
+   "a": [
+    "Turn off using: Emergency Stop Buttons; Burner Switch; Main Isolation Switch",
+    "If unable to shut down: Attempt to maintain water level in boiler; Reduce steam pressure to lowest pressure"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q62. List your actions at an incident involving Pressure Vessels:",
+   "a": [
+    "Liaise with onsite specialist",
+    "Secure the scene",
+    "Protect exposures and contain",
+    "Attempt to control with fuel isolation or dry agents",
+    "Ascertain – Contents, can it be Isolated/Turned Off, can it be depressurised"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q63. When attending flammable metal fires exercise extreme caution – SAFETY?",
+   "a": [
+    "Spontaneous heating or combustion",
+    "High risk of explosion for metal or dust",
+    "Storage potentially being in flammable liquid",
+    "Toxic gases being given off"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q64. What not to use on flammable metals due to violent reaction?",
+   "a": "Do not use water as an extinguishing agent.",
+   "choices": [
+    "Do not use dry powder as an extinguishing agent.",
+    "Do not use sand as an extinguishing agent.",
+    "Do not use CO2 as an extinguishing agent."
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q65. LPG flare-off (leak cannot be contained): vehicles cylinders and cylinders up to:",
+   "a": "200 kilograms",
+   "choices": [
+    "100 kilograms",
+    "500 kilograms",
+    "50 kilograms"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 15,
+   "q": "Q66. List your actions when attending an incident involving a leak of Natural Gas inside a Confined Space (4):",
+   "a": [
+    "Evacuate",
+    "Use personal gas detector to monitor gas concentration (%LEL)",
+    "Ventilate until personal gas monitor alarm ceases",
+    "Shut off gas when safe to do so"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 16,
+   "q": "Q67. Considerations at an incident involving gas mains / natural gas:",
+   "a": [
+    "Natural gas has an explosive range of 5 - 15 % when mixed with air",
+    "Nontoxic",
+    "Lighter than air",
+    "In high concentrations will dissipate air and may cause asphyxiation",
+    "Prolonged exposure may desensitise individuals",
+    "Community warning and advice, possible evacuation"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 16,
+   "q": "Q68. List the class labels:",
+   "a": [
+    "1. Explosive",
+    "2.1 Flammable Gas",
+    "2.2 Non-Flammable Gas",
+    "2.2 Oxidising Gas",
+    "2.3 Toxic Gas",
+    "3. Flammable Liquid",
+    "4.1 Flammable Solid",
+    "4.2 Spontaneously Combustible Material",
+    "4.3 Spontaneously Dangerous When Wet",
+    "5.1 Oxidising Substance",
+    "5.2 Organic Peroxides",
+    "6.1 Toxic",
+    "6.2 Infectious Substance",
+    "7. Radioactive Substance",
+    "8. Corrosive Substance",
+    "9. Miscellaneous Dangerous Goods"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 16,
+   "q": "Q69. Actions when attending calls to Refineries and Major Hazard Facilities:",
+   "a": [
+    "First appliance respond to the Incident Support Centre",
+    "Following appliances respond to designated staging area",
+    "Locate and access the Emergency Information Container",
+    "Send regular SitReps",
+    "Liaise with onsite supervisor",
+    "Establish location and access to fire/spill",
+    "Evacuate work areas",
+    "Boost sprinklers / hydrants",
+    "Maintain flashing lights when travelling in MHF",
+    "Wear ear / eye protection",
+    "Monitor wind directions / weather reports"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  }
+ ],
+ "issues": [
+  "wb-10 is a title-only page ('GARS CARD') with no content: no GARS questions in this range.",
+  "Q12 (wb-02): question asks for 'actions that may be taken for breaches' but the bank's answer lists behaviours (Vilification, Bullying, Harassment) - mismatch in source; transcribed as-is. Q10 is the actual list of actions.",
+  "Q10 says '(5)' but lists 6 items; Q46 heading says 8 (correct). Q70 (wb-17, not in this chunk) says 'List 6' but lists 10.",
+  "Q42: 'SMEACSQ' is listed under AIIMS principles but is not highlighted and is not itself an AIIMS principle (it is a briefing format); kept as on page.",
+  "Partial highlights treated as priority: Q1 (only the 'victimises, humiliates, undermines or threatens' sentence), Q26 (only 54, 58, 59, 61 rows), Q29 (only part (c)), Q38 (only the word 'Prowords'), Q42 (first 5 items), Q43 (question + 'Establish all appliances and personnel on scene'), Q46 (question + 'Assess current and future risks'), Q61 (question + 'If unable to shut down' items), Q63 (question + 'Storage potentially being in flammable liquid').",
+  "Q36 (Reg 12 prohibitions) assigned to 'regs'; Q26 list includes '12. Prohibitions of Members' (a Regulation, not an Act section) and was kept under 'act'.",
+  "Q37-Q48 (CHEMDATA, prowords, community warnings, AAR, AIIMS, IMT roles) all assigned to ferg-ctx; Q68 class labels assigned to ferg-dg per topic table (could also be dgc).",
+  "Source typos fixed: 'PERSONNALY'->'PERSONALLY' (Q31), 'COMPLAINCE'->'COMPLIANCE' (Q34), 'EXINGUISHING'->'EXTINGUISHING' (Q33), 'un division 2'->'under division 2' (Q36), 'SPONTANSEOUSLY', 'OXIDISNG', 'MISCELANEOUS' (Q68), 'Vilification if'->'is' (Q5). Q18 says 'grounds or attributes listed below' - refers to the Q15 list (above); reworded reference.",
+  "Q22 sub-items 'a serious head injury; or o a serious eye injury' and 'a spinal injury; or o the loss of a bodily function' contain stray 'o' bullets in source; split into separate items.",
+  "Q65 question is a fill-in fragment ('LPG flare-off (leak cannot be contained) vehicles cylinders and cylinders up to:').",
+  "OCR of wb-13 misnumbered Q46 as 45; image shows 46."
+ ]
+}

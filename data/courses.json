@@ -1,0 +1,9 @@
+{
+  "courses": [
+    {
+      "id": "c6",
+      "title": "Course 6 Exam",
+      "file": "course6.json"
+    }
+  ]
+}

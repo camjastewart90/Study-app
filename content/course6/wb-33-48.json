@@ -1,0 +1,959 @@
+{
+ "chunk": "wb-33-48",
+ "notes": [],
+ "questions": [
+  {
+   "topic": "oms-ops",
+   "page": 33,
+   "q": "Q151. List your Actions with regards to High Rise Strategies and Tactics:",
+   "a": [
+    "Site Appliance and Conduct Initial Size Up",
+    "Determine Initial Fire Attack and Evacuation Strategy",
+    "Establish a Command Structure",
+    "Secure Firefighting Lifts",
+    "Establish Communication Plans",
+    "Conduct Initial Reconnaissance or Fire Attack",
+    "Implement High Rise Water Plan",
+    "Establish an Operations Point",
+    "Establish a Lobby Sector and Implement Fireground Accountability Process",
+    "Determine Firefighter Welfare/Rotation Strategy",
+    "Establish a Safety Plan",
+    "Establish Safety Cordons",
+    "Assess the Effectiveness of Aerial Appliances when Attacking External Fires with Suspected or Known Combustible Cladding",
+    "Conduct Post Fire Salvage"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 33,
+   "q": "Q152. When Siting your Appliance for High Rise Response Consider:",
+   "a": [
+    "Site first arriving appliance in an appropriate position near the main entrance or known Fire Control Room (FCR) location and establish Incident Control Point (ICP).",
+    "Consider early assignment of an appliance to the boosting point for the building.",
+    "Consider the following when siting additional appliances: location of additional crews for tasking; access for aerial and other specialist appliances; protection from falling debris; staging arrangements in place.",
+    "Conduct and maintain a visual check for external fire spread. Attempt to prevent vertical spread of any external fire observed immediately, using appliance monitors or hose lines if possible.",
+    "Liaise with Building Representative and occupants, where available, to determine: number of occupants, their location and evacuation status; access and egress; fuel loads and contents (e.g., combustible cladding); onsite intelligence (e.g., tactical fire diagrams); status of installed building systems; isolation points for utility services; air handling systems.",
+    "Check automated fire control systems (e.g., FIP, EWIS) to confirm location of fire.",
+    "Ensure an initial evacuation has commenced of the fire floor, two floors above the fire floor, and one floor below the fire floor."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 34,
+   "q": "Q153. Ensure the IRT carries the following items in order to minimise any delay on fire attack:",
+   "a": [
+    "One high rise pack, and an additional High Rise Pack should be considered to ensure sufficient hose (60m) for coverage, or the addition of a second line.",
+    "Individual personal radios",
+    "Breathing Apparatus equipment including individual BA sets, personal atmospheric monitoring equipment, and Stage 1 BA control board",
+    "Forcible entry equipment",
+    "Thermal Imaging Camera."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 34,
+   "q": "Q154. When combating a High rise fire where should you establish the Operations Point?",
+   "a": "Establish an Operations Point (OP) if the fire is not able to be mitigated by the IRT. The OP should be established two floors below the lowest reported fire floor and an Operations Officer should be appointed to coordinate mitigation activities from the OP.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 34,
+   "q": "Q155. Consider a full evacuation when any of the following situations are observed:",
+   "a": [
+    "Internal breach of compartmentation",
+    "External fire on building with known combustible cladding",
+    "Any external fire spread beyond two floors.",
+    "Failure of installed sprinkler or hydrant system",
+    "Uncontrolled self-evacuation of large numbers of people"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 34,
+   "q": "Q156. Ensure lift operator is equipped with the following equipment:",
+   "a": [
+    "Lift access keys",
+    "Full structure fire PPC",
+    "Breathing Apparatus (not required to be 'on air')",
+    "Personal radio",
+    "Dry powder extinguisher",
+    "Forcible entry equipment."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 35,
+   "q": "Q157. Assess the effectiveness of aerial appliances when attacking external fires with suspected or known combustible cladding:",
+   "a": [
+    "When a fire is in range of appliance monitors or aerial appliances: consider the use of appliance monitors early in the incident to prevent vertical fire spread; establish external firefighting sectors as required; respond ULP and aerial appliances; consider responding Hose Layer Pod if water supply is inadequate.",
+    "When a fire is outside of the range of appliance monitors or aerial appliances: utilise installed boosters to maintain volume to both sprinkler and hydrant systems; consider deploying crews above the fire to attempt to stop the vertical spread; conduct a Safe Person Approach, Dynamic Risk Assessment (SPADRA) prior to deploying firefighters above the fire floor and assign Safety Officers; consider utilising hose lines from balconies of surrounding buildings if within close proximity.",
+    "Consider deploying crews floor by floor to complete extinguishment.",
+    "Check structural integrity of glass panels and/or balconies that have been exposed to heat prior to crews working close to these areas. Cordon off the area/s if concerns exist."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 35,
+   "q": "Q158. Who should you liaise with when rehousing or a prolonged evacuation from High Rise is required?",
+   "a": "MERC",
+   "choices": [
+    "VicPol",
+    "Department of Health",
+    "Building Representative"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 35,
+   "q": "Q159. Consider implementing the following DEBRiS sectors:",
+   "a": [
+    "Decontamination of personnel",
+    "Entry and exit of Hot Zones",
+    "Breathing Apparatus (BA) service areas",
+    "Rehabilitation of personnel",
+    "Incident accountability of all personnel (this is not a sector but provides systematic accountability)",
+    "Staging Area (vehicles and personnel). Consider responding additional resources to perform these functional roles and enable efficient control, as the number of DEBRiS sectors increase within the DEBRiS Base of Operations."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 35,
+   "q": "Q160. Nominate a location for the DEBRiS Base of Operations and sectors, and consider the following:",
+   "a": [
+    "Atmospheric monitoring",
+    "Current and forecast weather conditions.",
+    "Access to potable water for clean up.",
+    "Access to natural shelter",
+    "Lighting",
+    "Access for oncoming appliances",
+    "Adjacency to the warm zone",
+    "Wind, terrain, and water run off.",
+    "Logical placement of sectors",
+    "Placement of other agencies",
+    "Access to facilities to aid in implementing DEBRiS process (e.g., toilets, potable water, shelter)."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q161. DEBRiS Officer Responsibilities:",
+   "a": [
+    "Establish and oversee DEBRiS appropriate to the requirements of the incident.",
+    "Record the allocation of DEBRiS roles within the DEBRiS Base of Operations and report these to the Incident Controller.",
+    "Ensure the DEBRiS Officer is of SSO or higher rank at 3rd alarm fire and Hazmat incidents, where available.",
+    "Ensure equipment in allocated DEBRiS Kit is used to assist in delineation of DEBRiS sectors."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q162. Appoint a Staging Officer (minimum of SSO rank for 3rd Alarm incidents, where available) to oversee the following:",
+   "a": [
+    "Establish a Staging sector at a strategic location.",
+    "Maintain control over the DEBRiS staging area.",
+    "Ensure rest and refreshment facilities are available.",
+    "Ensure an appropriate number of Rapid Intervention Teams are available to be deployed to the Hot Zone.",
+    "Log the location of the Staging sector with the Incident Controller.",
+    "Liaise with Sector Commanders as per available personnel."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q163. Conduct a Size Up and consider the potential for asbestos to be present at any incident. At structures, particular attention should be paid to the following:",
+   "a": [
+    "Buildings constructed before 2004.",
+    "Flat or corrugated sheet",
+    "Lagging on water pipes, particularly in boiler rooms",
+    "Insulation of older water pipes, domestic heaters, and stoves",
+    "Ceiling insulations."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q164. In relation to asbestos at fires/incidents, you should keep material ...",
+   "a": "Minimise disturbance, wet it down to ensure it remains damp and intact.",
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q165. Requirements for establishing Rapid Intervention Teams for Incident Controllers:",
+   "a": [
+    "Establish a RIT whenever BA crews are operating internally or in hazardous conditions and a thorough Size Up indicates the incident poses a risk to crews.",
+    "Ensure an appropriate number of RIT(s) are formed and ready for deployment at any fire or incident where this role has been deemed necessary.",
+    "Replace RIT as a matter of urgency where RIT has been used for BA operations."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 36,
+   "q": "Q166. Equipment required for RIT:",
+   "a": [
+    "Ladders",
+    "TIC",
+    "Charged Hose Line",
+    "Lighting",
+    "Portable Radios",
+    "Forcible Entry Tools"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q167. When to deploy a RIT?",
+   "a": [
+    "Call of distress – Mayday",
+    "BA full alarm activation",
+    "Loss of accountability identified by PAR.",
+    "Any other situation requiring rapid intervention."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q168. Duties of the RIT (Team Leader):",
+   "a": [
+    "Ensure RIT team have received briefing.",
+    "Conduct Size Up – Consider BSAHF, Access/Egress Locations, Location of BA Crews",
+    "Work with Sector Commander, Safety Officer, and BA Entry",
+    "Use forcible entry tools to soften building for emergency access.",
+    "Lead the RIT using TIC to assist navigation.",
+    "Provide sit reps to the IC once deployed."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q169. Duties of the RIT (Personnel):",
+   "a": [
+    "Ensure PPC is appropriate to the incident risk.",
+    "Each team member has portable radio.",
+    "Each team member has a TIC.",
+    "Source other equipment as indicated by RIT Leader",
+    "Identify other water sources as a contingency.",
+    "Continuously Size up the scene to determine change in the incident.",
+    "Monitor fireground radio channel.",
+    "Ensure RIT members are aware of their assigned call sign and allocated Fireground channel."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q170. The Evacuation Sector Commander must Maintain communications with the Stairwell Safety Officer to:",
+   "a": [
+    "Gain intelligence from firefighting crews operating in the evacuation sector.",
+    "Ensure smooth movement of evacuees via the stairwells.",
+    "Ensure safety of egress for evacuees.",
+    "Ensure safety of access for firefighting crews."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q171. The Evacuation Sector Commander must Liaise with the Lobby Sector Commander to assist with the following:",
+   "a": [
+    "Use of the building's lifts for evacuating mobility impaired occupants.",
+    "The flow of firefighting personnel and evacuees up and down the structure.",
+    "The management of the building's main entrance for access/egress."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 37,
+   "q": "Q172. Stairwell Safety Officer must:",
+   "a": [
+    "Report on the progress of evacuation",
+    "Monitor temperature inside stairwells",
+    "Look out for presence of smoke in stairwells",
+    "Monitor levels of fire gases"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 38,
+   "q": "Q173. When working with Aircraft what are the Incident Controller Responsibilities?",
+   "a": [
+    "Assume responsibility for control and coordination of all aircraft allocated to the incident.",
+    "Ensure all ground crews are aware of aircraft operating in the area.",
+    "Close any paths, walking tracks or roads into the area and evacuate people from the area.",
+    "Consider available water sources for the aircraft.",
+    "Determine if there are other aircraft in the area and manage appropriately (e.g., RPAS).",
+    "Ensure aircraft are allocated in line with incident priorities.",
+    "Provide an initial Situation Report to the Communications Centre for initial inbound aircraft.",
+    "Ensure the Communications Centre notifies the pilot(s) of the fireground channel in use.",
+    "Consider requesting an Air Attack Supervisor (AAS) or other aviation specialist/s to assist in aircraft management.",
+    "Appoint an Operations Officer to coordinate aircraft operations and to act as a contact point.",
+    "Adhere to Interagency Aviation Operating Procedure SO 4.07 – Firebombing Operation by only authorising firebombing operations without the direct supervision of an Air Attack Supervisor (AAS) in the following circumstances: implement a safety plan; ensure ground crews work with air crews to achieve the incident objective(s); ensure aircraft are released from operations when they are no longer required."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 38,
+   "q": "Q174. What are the actions if caught in an aircraft bombing zone OMS 033?",
+   "a": [
+    "Place hand tools well clear of you.",
+    "Secure helmet.",
+    "Shelter in or under a vehicle if possible.",
+    "Crouch down in a clear area and hold helmet firmly down on head.",
+    "Watch out for falling branches and trees after the drop.",
+    "Be careful of slippery ground after the drop.",
+    "Wash with clean cold water if hit with foam or retardant and seek medical advice if contaminated."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-ops",
+   "page": 38,
+   "q": "Q175. Tasking an Aircraft – OMS 33:",
+   "a": [
+    "Asset protection",
+    "Slowing the rate of fire spread",
+    "Containing spot fires",
+    "Direct suppression",
+    "Any other relevant tasking"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 39,
+   "q": "Q176. Establishing an Incident Communications Plan – Incident Controller Responsibilities:",
+   "a": [
+    "Establish a communications plan for all incidents: utilise the dispatch channel to communicate with the Communications Centre on the allocated channel for incident response and incident control; determine the level of fireground communications required based on the scale of the incident and request additional radio channels where necessary (Fireground Communications – to be used for firefighting and incident mitigation operations; Command Communications – to be used for command level incident management; manage small incidents utilising fireground communications only; manage large and complex incidents with a combination of fireground and command communications).",
+    "Ensure personnel are not required to monitor more than two radios at any one time.",
+    "Ensure all on-scene FRV personnel are briefed regarding the communications plan.",
+    "Document the communications plan in any written IAP.",
+    "Expand and evolve the communications plan as the incident escalates to alleviate safety issues around excessive radio traffic and improve incident manageability: task the Planning Officer with communications planning where available; ensure any changes to the communications plan throughout the incident are communicated to all on scene personnel and updated in any IAP.",
+    "Encourage and enforce radio discipline.",
+    "Refer to Section 5 for examples of communications plans, noting that these plans are flexible and scalable, and should be tailored to each specific incident.",
+    "Consider request for operational support from FRV Communications Technicians where incident communications black spots are experienced: consider utilising a local channel where communication problems occur with allocated fireground channels."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q177. In order to establish a BA service area, ensure:",
+   "a": [
+    "A Breathing Apparatus Support appliance is on scene, such as: Breathing Apparatus appliance (e.g., BAS38)",
+    "A district car carrying BA cylinders and Biogard®",
+    "or a support agency."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q178. Establish a Service Area, detail what the red and green tarp are used for:",
+   "a": [
+    "Red – For Decontaminated BA's requiring Hygienic Cleaning",
+    "Green – Hygienically cleaned BA's and decontaminated PC, ready to be reused or re stowed on appliances."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q179. What actions are required for decontamination of fireground personnel?",
+   "a": [
+    "Don required PPC and PPE",
+    "Exiting the Hot Zone",
+    "Removing the BA",
+    "Removing PPC"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q180. With regards to decontamination of personnel on the fireground what are the blue and red brushes used for?",
+   "a": [
+    "Blue brush - to remove visible contaminants on PPC, helmet, BA, and gloves.",
+    "Red brush - only on the boots for contaminants that are hard to remove."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "emr",
+   "page": 40,
+   "q": "Q181. What are the 5 Disposition Signals?",
+   "a": [
+    "27 - Critical Incident Response",
+    "40 - Urgent Police",
+    "55 - Hostile Act",
+    "56 - Police Required",
+    "83 - Deceased Person"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q182. SPADRA ACTIONS STEPS – OPP 107:",
+   "a": [
+    "Evaluate the situation.",
+    "Select Systems of work",
+    "Assess the chosen systems of work.",
+    "Decide the risks are proportionate to benefit.",
+    "Modify / Attempt to add additional control measures.",
+    "Proceed with task."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 40,
+   "q": "Q183. Considering SPADRA, Evaluate the situation, tasks, and persons at risk:",
+   "a": [
+    "Consider what information and tools are available.",
+    "Identify the hazards present in the execution of objective/tasks and the associated risks that could impact emergency service personnel, the public and/or the environment.",
+    "Evaluate the level of risk by considering the likelihood and consequence of an adverse event.",
+    "Determine the resources available.",
+    "Communicate with crew members, supervisor, Incident Controller, Safety Officer and/or specialist personnel as appropriate."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 41,
+   "q": "Q184. Under Operational Practice 017 – Dynamic Risk Assessment, What are the 5 Control Measures?",
+   "a": [
+    "Elimination – Consider removing or minimizing.",
+    "Substitution – Consider using additional specialist resources.",
+    "Engineering Controls – Consider specialist equipment.",
+    "Administration Controls – Consider appointing a safety officer.",
+    "PPE – Consider additional PPE."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 41,
+   "q": "Q185. Wear the following PPC and PPE as a minimum when handling and/or bagging contaminated items:",
+   "a": [
+    "Structure Fire/Wildfire PPC or disposable coveralls.",
+    "P2 mask",
+    "Nitrile gloves (not firefighting gloves)",
+    "Firefighting boots",
+    "Safety glasses."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 41,
+   "q": "Q186. Steps for bagging BA set after exposure to asbestos:",
+   "a": [
+    "Remove cylinder from BA set and fit red plastic cap over male cylinder connection.",
+    "Place asbestos contaminated BA set with matching asset numbered mask (including battery and tally) in an asbestos bag."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 41,
+   "q": "Q187. 6 Items of PPC to be bagged after asbestos exposure:",
+   "a": [
+    "Jacket",
+    "Overtrousers and braces",
+    "Gloves",
+    "Flash hood",
+    "Helmet neck protector",
+    "Helmet Lining"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 41,
+   "q": "Q188. Bag the following SW@H equipment for disposal if suspected of being contaminated with asbestos:",
+   "a": [
+    "Bags",
+    "Rope protectors",
+    "Riggers gloves",
+    "Throw line.",
+    "Reel",
+    "Bag",
+    "Tool bags",
+    "Anchor slings (purple 1 meter and 2 meter or 3 meter)",
+    "Life Rescue Line (25 meter and 50 meter)."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "orp",
+   "page": 42,
+   "q": "Q189. Ensure the following stakeholders sign the Drill Site Approval Form:",
+   "a": [
+    "Drill site approval applicant",
+    "District Operations or Functional Commander (or another delegated Commander)",
+    "Employee HSR",
+    "Specialist instructor/operator (where required)."
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "orp",
+   "page": 42,
+   "q": "Q190. When conducting debriefs:",
+   "a": [
+    "Ensure all debriefs are completed by the OIC of the appliance or Incident Controller.",
+    "Document the debrief using the FRV Debrief Template.",
+    "Conduct the debrief after the event/incident as soon as practicable.",
+    "Ensure the following areas are covered in the debrief: acknowledge and highlight successful outcomes and processes; provide the opportunity for personnel to discuss any issues or concerns and capture relevant information in regard to operations; address any health and safety issues; initiate action/s to resolve any significant issues; identify opportunities for improvement which may result in lessons to be learned for the organisation.",
+    "Ensure the following occurs when conducting a debrief: avoid focusing on individual performance or issues that can be resolved at a local level; do not confuse opinions with observations; focus on the performance of systems and processes as a whole; capture key points and observations which may include successful outcomes and/or opportunities for improvement.",
+    "Refer to the Debrief Checklist (Appendix 1) to assist in the coordination or facilitation of a debrief involving multiple crews and FRV personnel."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "pol",
+   "page": 43,
+   "q": "Q191. When responding, Who has overall responsibility?",
+   "a": "An appliance OIC has overall responsibility during any emergency response and will determine the code under which the appliance will respond. The OIC may direct a driver to slow down, however cannot request the driver of an appliance to speed up and travel faster than what the driver considers safe for the conditions.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "pol",
+   "page": 43,
+   "q": "Q192. While turning out to emergency response, Who is to Determine Response Code?",
+   "a": [
+    "An appliance OIC is to determine the appropriate response code upon turn out, using either Code 1 emergency response (lights and sirens) or Code 3 response (normal driving conditions).",
+    "When providing a turn out message, the appliance OIC must communicate the selected response code (Code 1 or Code 3) to the Communications Centre.",
+    "Any change in response code whilst en route to an incident must be communicated to the Communications Centre and other responding appliances."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "pol",
+   "page": 43,
+   "q": "Q193. Code 1 Emergency Response:",
+   "a": "Code 1 emergency response must be used where an appliance OIC conducts a Size Up based on the incident response information and a Safe Person Approach, Dynamic Risk Assessment and determines the threat to life and/or property necessitates a Code 1 response.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "pol",
+   "page": 43,
+   "q": "Q194. Code 3 Response: The following incident types must be considered Code 3 response unless the appliance OIC determines otherwise based on further information:",
+   "a": [
+    "Burn off in residential yards.",
+    "Storm damage.",
+    "Rubbish/clothing bin fire.",
+    "Power lines arcing and sparking/power lines down.",
+    "Lock ins/lock outs.",
+    "Animal rescues.",
+    "Late notification of fire – fire now out.",
+    "Retrieval of deceased person(s).",
+    "Public service calls (e.g., assistance to change smoke alarm batteries, welfare checks).",
+    "Alarmed premises where alarm has returned to normal.",
+    "Valve monitor alarms.",
+    "Sieges or civil disturbances."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q195. List the 6 Strategic Control Priorities:",
+   "a": [
+    "Protection and preservation of life is paramount - This includes: safety of Emergency Service Personnel; safety of community members including vulnerable community members and visitors/tourists located within the incident area.",
+    "Issuing of Community Information and Warnings - detailing incident information that is timely, relevant, and tailored to assist community members to make informed decisions about their safety.",
+    "Protection of Critical Infrastructure and community assets that support community resilience.",
+    "Protection of residential property as a place of primary residence",
+    "Protection of assets supporting individual livelihoods and economic production that supports individual and community financial sustainability.",
+    "Protection of environmental and conservation assets that considers the cultural, biodiversity and social values of the environment."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q196. As per the SEMP what is the definition of command?",
+   "a": "Command is the direction of response activities internally within an agency to use its people, resources, governance, systems, and processes to discharge its responsibilities in line with relevant legislation.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q197. With regards to the SEMP what does control mean?",
+   "a": "Control is the direction of response activities across agencies, horizontally, including the coordination and tasking of other agencies.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q198. In a Class 1 emergency, the EMC must appoint a State Response Controller (SRC) to be responsible for the control of response activities, in accordance with the SEMP. The SRC:",
+   "a": [
+    "is responsible for the control of response activities.",
+    "may exercise all the statutory powers and authorities of the chief officers of the relevant Control Agencies",
+    "may appoint and deploy controllers in accordance with the SEMP.",
+    "is responsible for issuing warnings providing information to the community."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q199. Under the SEMP define Coordination:",
+   "a": "Coordination is the bringing together of people, resources, governance, systems, and processes, to ensure effective response to and relief and recovery from an emergency. Coordination operates: vertically within an agency as a function of command; horizontally across agencies as a function of the authority to control.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q200. Emergency response coordination ensures the following:",
+   "a": [
+    "effective control arrangements are established and maintained.",
+    "information is shared effectively.",
+    "the resources required to support the response are accessed."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 44,
+   "q": "Q201. Class 1 emergency means:",
+   "a": [
+    "a. A major fire",
+    "b. any other major emergency for which Fire Rescue Victoria, the Country Fire Authority or the Victoria State Emergency Service Authority is the Control Agency under the SEMP. (EM Act 2013 s 3)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 45,
+   "q": "Q202. The SEMP defines a major fire as: A major fire is a large or complex fire (however caused) which:",
+   "a": [
+    "a. has the potential to cause or is causing loss of life and extensive damage to property, infrastructure, or the environment; or",
+    "b. has the potential to have or is having significant adverse consequences for the Victorian community or a part of the Victorian community; or",
+    "c. requires the involvement of 2 or more fire services agencies to suppress the fire; or",
+    "d. will, if not suppressed, burn for more than one day."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 45,
+   "q": "Q203. Controlling Authority for Explosive Device:",
+   "a": "VicPol",
+   "choices": [
+    "Department of Health",
+    "Fire Rescue Victoria",
+    "EPA Victoria"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 45,
+   "q": "Q204. Controlling Authority for Biological Incidents:",
+   "a": "Department of Health",
+   "choices": [
+    "VicPol",
+    "EPA Victoria",
+    "Fire Rescue Victoria"
+   ],
+   "priority": true,
+   "source": "bank"
+  },
+  {
+   "topic": "semp",
+   "page": 45,
+   "q": "Q205. Controlling Authority for Biological / Pollution:",
+   "a": "Department of Health",
+   "choices": [
+    "EPA Victoria",
+    "VicPol",
+    "Fire Rescue Victoria"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 46,
+   "q": "Q206. What is Level A, B, and D in regard to Protective Clothing?",
+   "a": [
+    "Level A – Fully Encapsulated Suit",
+    "Level B – Chemical Splash Suit",
+    "Level D – Station Wear"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "oms-cmd",
+   "page": 46,
+   "q": "Q207. If a duress alarm is accidentally activated, What Action Must be taken to Cancel the alarm?",
+   "a": "Hold down the emergency button for approximately five seconds or until the beep has sounded. This signals that the duress function has been cancelled and normal operation has resumed. Notify OIC and Firecom.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 46,
+   "q": "Q208. MMR radios are rated to be used in hazardous atmospheres except for:",
+   "a": "Hydrogen and Acetylene",
+   "choices": [
+    "Methane and Propane",
+    "Ammonia and Chlorine",
+    "LPG and Butane"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "sta",
+   "page": 46,
+   "q": "Q209. What is the purpose of an entry advice?",
+   "a": [
+    "Notify owner/occupier of entry to their unattended premises.",
+    "Notify owner/occupier of attendance at premises of the false alarm and circumstances found by brigade."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 46,
+   "q": "Q210. What are the resources needed for decontamination of Asbestos?",
+   "a": [
+    "Asbestos Bags",
+    "Adhesive Envelopes",
+    "White Asbestos Cards",
+    "Duct Tape",
+    "Wipes / Cloths",
+    "Dekonmate – Personal",
+    "Disposable CHUX – Equipment"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "gars",
+   "page": 46,
+   "q": "Q211. 2nd Alarm SF:",
+   "a": [
+    "5 Primary appliances",
+    "1 Teleboom",
+    "1 Heavy Rescue",
+    "1 Rehab",
+    "1 BA unit",
+    "1 Commander"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "gars",
+   "page": 46,
+   "q": "Q212. 3rd Alarm N/SF Tip:",
+   "a": [
+    "9 Primary – 3PT",
+    "1 Control unit",
+    "1 Hazmat",
+    "1 BA unit",
+    "1 Scientific advisor",
+    "1 Rehab",
+    "4 Commanders",
+    "1 ACFO"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "opp",
+   "page": 47,
+   "q": "Q213. When decontaminating PPC what colour tags are used and what are their meaning?",
+   "a": [
+    "Green Tag – Where equipment and PPC that can be washed has been decontaminated on site and clean ready for use.",
+    "Yellow Tag – Where PPC has had contaminant removed however the items still need to be hygienically cleaned.",
+    "Red Tag – Contaminated with hazardous material, requires specialist cleaning, and may present a risk to operational crew or cleaning contractors."
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 47,
+   "q": "Q214. What is the minimum number of appliances required for a mass DECON?",
+   "a": "2 Appliances required.",
+   "choices": [
+    "1 appliance",
+    "3 appliances",
+    "4 appliances"
+   ],
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "wpb",
+   "page": 47,
+   "q": "Q215. Selling of shifts:",
+   "a": "Selling of Change or Part Change of Shift is prohibited as it is illegal to contract out Firefighter Award Terms and Conditions of Employment. Any person found selling their rostered shifts may be subject to disciplinary action.",
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 47,
+   "q": "Q216. Personal mobile phones can be a hazard at places such as:",
+   "a": [
+    "Chemical Incidents",
+    "Hospitals",
+    "Explosive Storage",
+    "Gas Leaks",
+    "Petrochemical plant"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "bank"
+  }
+ ],
+ "issues": [
+  "wb-33 starts fresh at Q151; nothing from Q150 (wb-32) continues onto wb-33. wb-48 is a blank page.",
+  "Topic assignment by closest fit (no exact topic): Q159-Q162 DEBRiS and Q163-Q164 asbestos -> oms-ops; Q170-Q172 evacuation/stairwell -> oms-ops (high rise); Q177-Q180, Q185-Q188, Q210, Q213 decon/asbestos bagging -> opp (bank lists them under 'Operational Practices' / Misc); Q203-Q205 controlling authorities -> semp; Q206 protective clothing levels, Q208 MMR radios, Q214 mass DECON, Q216 mobile phones -> ferg-dg; Q207 duress alarm -> oms-cmd; Q209 entry advice -> sta; Q215 selling of shifts -> wpb (Miscellaneous section, no exact topic).",
+  "Q173: the source bullet says 'only authorising firebombing operations without the direct supervision of an Air Attack Supervisor (AAS) in the following circumstances:' but the sub-bullets listed (implement a safety plan, ensure ground crews work with air crews, release aircraft) do not read as circumstances; transcribed as-is.",
+  "Q182 heading says 'SPADRA ACTIONS STEPS – OPP 107' (likely meant OPP 017, per Q184); kept as printed.",
+  "Q175 heading says 'OMS 33' while Q174 says 'OMS 033'; kept as printed.",
+  "Q180 heading reads 'decontamination or personnel' on the page; corrected to 'of personnel'.",
+  "Q204 (Biological Incidents) and Q205 (Biological / Pollution) both answer Department of Health; both kept as separate bank questions.",
+  "Q177 answer: Biogard is printed with a registered mark (Biogard®)."
+ ]
+}

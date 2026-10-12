@@ -1,0 +1,1454 @@
+{
+ "chunk": "so-31-43",
+ "notes": [
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "markdown": "### Pressure Vessels\n### Safety\n- Identify contents prior to application of water onto exposed surface as water can cause heat reaction\n- Possible BLEVE\n### Considerations\n- Consider site evacuation\n- Consider utilising TIC\n### Actions\n- Liaise with onsite specialist\n- Secure the scene\n- Protect exposures and contain\n- Attempt to control with fuel isolation or dry agents\n- Liaise with onsite specialist\n\nAscertain:\n- Vessel contents\n- Can the vessel be isolated/turned off?\n- Can the vessel be depressurised?\n### Specialist contacts / Notifications\nPlant Managers, operators and onsite specialist\n\nNOTIFY – WorkSafe Victoria"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "markdown": "### Flammable Metals\n### Safety\n- Exercise extreme caution due to: Possible spontaneous heating or combustion\n- High risk of explosion for metal dust or powder\n- Storage potentially being in flammable liquid – kerosene,\n### Actions\n**DO NOT USE WATER** as extinguishing agent – creates violent reaction\n\n### Gas Flare Off - LPG\nAble to flare-off LPG cylinders (vehicle and other) **up to 200kg**.\n\nLPG flare-off operation is to be implemented at incidents involving leaking LPG cylinders, where the **leak cannot be isolated**.\n### Considerations\n- Location of incident for evacuation and possible **ignition sources**\n- Cylinder size – **max 200kg**\n- Flare-off operations can only take place with a minimum of **two gas flare-off operators** on scene\n- Atmospheric monitoring equipment to determine flammability\n- VicPol and Ambulance Victoria response"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "markdown": "### Gas Mains / Natural Gas\nACTIONS\n### With Fire ...GAAS\n- **G**as Company for **IMMEDIATE** response\n- **A**pproach from safe direction\n- **A**scertain whether supply can be **shut off**\n- Protect **exposures**\n### Without Fire ...GEtFUQD\n- **G**as Company for **IMMEDIATE** response\n- **E**liminate ignition sources **30mts** minimum\n- (t)\n- **F**ully charged **line**. Dissipate gas in exceptional circumstances\n- **U**pwind approach with **appropriate** PPC\n- **Q**REA for gas monitoring\n- **D**rychem on standby\n### Inside/Confined Space\n- **Evacuate**\n- Use personal **gas monitor** to monitor gas **concentration** (%LEL)\n- **Ventilate** until **personal** gas monitor **alarm** ceases\n- Shut off **gas** when **safe** to do so"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "markdown": "### Major Hazardous Facilities / Refineries\n### Actions — FFLLEES BMW(M)\n- **FIRST APPLIANCE** on scene report to INCIDENT SUPPORT CENTRE\n- **FOLLOWING APPLIANCES** report to STAGING AREA\n- **LOCATE** and ACCESS emergency information container (front gate/nr entrance)\n- **LIASE** with on-site EMERGENCY SUPERVISOR\n- **ESTABLISH LOCATION** and access to fire/spill\n- **EVACUATE** area\n- **SEND** regular sitreps\n- **BOOST** hydrants/sprinklers\n- **MAINTAIN** appliance FLASHING lights in MHF\n- **WEAR** ear/eye protection\n- **MONITOR** wind direction/weather reports\n\n### Electrical\n### Aerial Appliances - Safety\n- Use a **spotter** near powerline ⭐ PREVIOUS EXAM\n- Clearance for EWP **3m** no go zone **poles**\n- **8m** no go zone **Towers**\n### Electrical Substations / Substation yards ⭐ PREVIOUS EXAM (short answer)\n- **Firefighters** shall not **enter** unless **accompanied** by an electrical supply **company representative** or other **trained/authorised** persons."
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "markdown": "### Pole Fires – Actions ⭐ PREVIOUS EXAM (short answer)\n- **Power Co.** requested immediately\n- Do not attempt **extinguish** until power company confirm **isolation** or confirm area safe before extinguishing\n- Protect **exposures**\n- Attack fire **ONLY** to protect life by;\n  - **Fog** or broken stream (no jet)\n  - **Lob** onto fire\n  - Avoid **wires**\n  - Don't **stand** in water/wet surfaces\n### Uninterrupted Power Supplies (UPS)\nTreat as live, isolate power between electrical equipment and UPS, ESC to respond to ensure power is isolated\n- UPS may be present when dealing with **computers**, **telephone exchanges**, **process controllers**.\n- Treat all such **equipment** as **live**.\n- **Isolate** power between **electrical equipment** and **UPS**.\n- Request power supply company to **respond** to ensure power **isolation**"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "markdown": "### Fire Investigation\n### Response Criteria of Fire Investigators\n- All **fire** related **deaths**\n- All **fire** related **serious** injuries\n- Fires where the **origin** and cause cannot be easily **determined**\n- Notification at **3rd alarm** and **automatic** FIA response at **4th alarm** or greater at structure fires (MFB)\n- Any firefighter **injury** (MFB)\n- Fires involving fire brigade **property**\n- MFB Fire Investigation will not attend **suspicious** fires unless **requested** by **VicPol**\n### Considerations\n- Obstacles preventing entry into building access/firefighting\n- Extent of fire on arrival\n- locations / intensity / colour of flames/smoke\n- Indications of forcible entry\n- Conditions of doors / windows"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "markdown": "### LPG\n### Properties\n- DG IERG GUIDE 04\n- UN **1075** ⭐ PREVIOUS EXAM\n- HAZCHEM: **2YE**\n- Exp ratio **270:1**\n- LEL **1.5%** UEL **10%**"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 37,
+   "markdown": "### LPG (Properties, continued)\n- **Heavier** than air, will collect in low areas\n- LPG cylinder **silver**, bullets **White**"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "markdown": "### Hospitals\n### Actions\n| Code | Meaning |\n|---|---|\n| Code RED | Fire, smoke |\n| Code PURPLE | Bomb threat, extortion, suspicious package |\n| Code ORANGE | Evacuation |\n| Code YELLOW | Explosion, person trapped, chemical emergency |\n| Code GREY | Patient violent, patient restraint |\n| Code BLACK | Non patient violence, armed/unarmed intrusion, armed patient violence |\n| Code BLUE | Medical emergency |\n| Code BROWN | State disaster, major incident, internal accident |\n\n**Code Black** ⭐ PREVIOUS EXAM"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 37,
+   "markdown": "### Electric and hybrid vehicles\n### Actions\n- Approach from side\n- Chock wheels, apply park brake\n- Place transmission into Park\n- Stabilise if not on four wheels\n- ***Note:*** *After disabling the HV battery pack, power is maintained for 90 seconds in the airbags and up to 10 minutes in the high voltage electrical system.* ⭐ PREVIOUS EXAM\n### Generic Information for all motor vehicle incidents/fires\n### Considerations\n- Availability of water supply (respond WT or PT if req)\n- Fuel Source (petrol, gas, elec...)\n- Undeployed airbags\n- Once 12v battery is disconnected, handbrake may not engage/disengage"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 38,
+   "markdown": "### LPG powered vehicles\n### Safety\n- Do **not extinguish** burning if **gas** still **venting**; **LEAVE TO BURN**\n- Be aware of **increase** in **fire intensity/ pitch** of escaping gas; **SITUATION DETERIORATING**\n- **EVACUATE** if suspected of rupturing\n- Do not direct water at **VENTING PRESSURE GAUGE** - icing\n### Actions\n**During Fire**\n- Utilize hose lines from **SHELTERED POSITION** where possible\n- Cool cylinder with flooding quantities of water onto upper surfaces until **well after** fire is out\n- Use dry chem, CO2 or water spray to **EXT FIRE** (only if **absolutely necessary** AND **safe to do so**)"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 38,
+   "markdown": "### Non-structure fires - Rubbish Tips and other waste storage sites\n### Notifications ⭐ PREVIOUS EXAM (short answer)\n- Council MERO\n- EPA\n- DoH\n- Vic WorkCover Authority\n- Ops Comm\n- Comm Resilience Comm"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "markdown": "- Fire Safety Issue notification (completed to ensure notification of Building Inspection and compliance dept)\n\n### Secured Facility Response ⭐ PREVIOUS EXAM\n### Actions\n- Meet with facility Liaison Officer (LO) and Field Comm (FC) at entrance to site\n- OIC to ascertain nature and status of event, status of secured facility and assess situation\n- Enter on only req by Facility Management, if site security is confirmed, and only under guidance of escort/liaison officer (one per appl)\n- If req to enter and is deemed safe to do so, and if need arises, IC notify Ops Comm\n- FSV personnel to receive briefing by facility staff incl arrangements for emerg evac plan\n- Min number of appl and crew to be committed, IC to determine\n- Routine security checks undertaken in consideration of situation\n- FSV to withdraw if safety/security of personnel/appl becomes threatened\n- Security checks on departure. LO to confirm absence of prisoners on appl\n- IC to confirm ID of FF leaving secured Facility\n### High rise buildings\n### Considerations\n- **EVACUATE** (floor and roof area)- EWIS control- location of fire exit stairs\n- **TACTICAL FIRE** plans / **floor plans / MSDS**\n- **COMMUNICATION PLAN**\n- **ESTABLISH SECTORS** (Sector 2-16)\n- Use of manned **FIREFIGHTER LIFT**\n- Establish **FALLING DEBRIS** perimeter"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 40,
+   "markdown": "### High rise buildings (continued)\nHigh rise (**25m +**) – utilize **BOOSTERS** ⭐ PREVIOUS EXAM\n\nIf a building is **ULTRA HIGH RISE** (**50 + stories/ 150m +**)\n- **REFUGE ZONES** may be present on **HIGHER FLOORS** to aid **EVACUATION**\n### Safe Working at Heights\n### Considerations\n- Respond **H**ART\n- Utilising **A**erial appliance\n- Separate **R**adio channel for SWH operations\n- **T**IC for roof temperature"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "markdown": "### Docks/Ports\n### Safety\nWaterway **SAFETY** is always **P E A C E**\n- **P**FD within 2mts of edge\n- **E**stablish 2mt safety zone around edges\n- **A**ppoint Safety Officer\n- **C**aution working near edges\n- b**E**ware of load limitations on piers/jetties/wharves...\n  - No **weight limit plaque** = **NO GO**\n### Considerations\n- Marine operators responded\n- Beware of weight limitations/loading on wharves and appliance exclusion zones.\n- TUGS available west of Bolte Bridge only\n- **SHIPPING container NUMBER** – obtain container number and relay to firecom for details of contents\n  - 2 - 4 alpha characters followed by 6-7 numeric characters\n  - **Number marked on all sides of container** ⭐ PREVIOUS EXAM"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "markdown": "### Actions (SLAM) ⭐ PREVIOUS EXAM\n- **S**eek specialist advise\n- **L**iaise with port authority personnel\n- **A**wareness of other vehicles in dock area\n- **M**aintain flashing lights at all times\n### Ship emergencies/Firefighting tugs\n### Actions\n- Respond **FIRE BOATS (FRV)**\n- Respond **COAST GUARDS (CFA)**\n- Establish and maintain contact with **SHIPS SENIOR OFFICER** on board\n- Report to the **SHIPS BRIDGE**\n- Determine **LOCATION** and **ACCESS** to fire & intensity\n- Access information\n  - **SHIPS PLANS**\n  - **FIREFIGHTING** already **UNDERTAKEN**\n  - Operation of **FIREFIGHTING INSTALLATION/EQUIPMENT**\n  - Details of **CARGO / MANIFEST / LOG**\n  - State of **SHIPS SERVICES** power & water\n  - **VENTILATION**\n  - **SHIPS STABILITY**\n  - State of ships **HATCHES**\n  - Fire **SERVICE VESSELS** or **FIRE TUGS** to **COOL** the **EXTERIOR** of the vessel"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "markdown": "### Ship emergencies/Firefighting tugs (continued)\n  - **MONITOR AMOUNT** of water used and **REMOVAL** of firefighting water (**STABILITY**)\n  - Establish **ORIGIN** of **IGNITION**\n  - Consider & monitor **ALTERNATIVE EXTINGUISHING** media\n### Pollution Control\n### Considerations - SCARS\n- **S**ize, location & **type** of **spill**\n- Identify **C**ontrol agency\n- **A**ccessing State Cache of equipment\n- **R**espond (WR) Waterways Emergency responder\n- **S**pecialist advice early on"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "markdown": "### Trams\n### Considerations\n- Trams operate **600V** DC tractive control from overhead trolley wire\n- **POWER CONTROL CENTRAL** able to ISOLATE POWER TO SECTIONS of the network remotely.\n- **ISOLATION** not guaranteed until maintenance crews arrive\n- Respond **Heavy Rescue Pod**\n- Tram roof = **HART**"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "markdown": "### Victoria Police\n### MERC ⭐ PREVIOUS EXAM (who is responsible for rehousing)\n**M**UNICIPAL **E**MERGENCY **R**ESPONSE **C**OORDINATOR\n- VicPol **District Senior Sergeant** (MERC) has the responsibility to **coordinate requests from the Fire Services**, including but not limited to **accommodation, logistics, support resources** or issues related to **recovery activities**. (continues p.43)"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "markdown": "*(MERC continued from p.42)* ...limited to **accommodation, logistics, support resources** or issues related to **recovery activities**.\n### Airwing Authorisation/Guidelines\nAIR WING AUTHORISATION ⭐ PREVIOUS EXAM\n- Requests for **Victorian Police** air **support** in **emergency** situations may be made through the on-scene **VicPol coordinator**\n### Hostile Acts\n### Siting of Appliances PUPMAN\nHOSTILE ACT - SIGHTING APPLIANCE\n- **P**ark minimum 300m from area\n- **U**tilise open space wherever possible\n- **P**ark appliance facing away\n- **N**otify firecom of location of appliance\n- **A**ll firefighters stay in rear seats, side windows open\n- **M**aintain clear access and egress at all times\n\nor\n\nONLY THE FIRST TWO APPLIANCES ARE TO RESPOND TO THE SCENE, ALL FURTHER APPLIANCES ARE TO STAGE A SAFE DISTANCE AWAY"
+  }
+ ],
+ "questions": [
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: why must you identify contents before applying water onto an exposed surface?",
+   "a": "Water can cause heat reaction",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: what are the safety points?",
+   "a": [
+    "Identify contents prior to application of water onto exposed surface as water can cause heat reaction",
+    "Possible BLEVE"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: what are the considerations?",
+   "a": [
+    "Consider site evacuation",
+    "Consider utilising TIC"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: what are the actions?",
+   "a": [
+    "Liaise with onsite specialist",
+    "Secure the scene",
+    "Protect exposures and contain",
+    "Attempt to control with fuel isolation or dry agents",
+    "Liaise with onsite specialist"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: what must you ascertain?",
+   "a": [
+    "Vessel contents",
+    "Can the vessel be isolated/turned off?",
+    "Can the vessel be depressurised?"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: who are the specialist contacts?",
+   "a": "Plant Managers, operators and onsite specialist",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 31,
+   "q": "Pressure vessels: which authority must be notified?",
+   "a": "WorkSafe Victoria",
+   "choices": [
+    "EPA Victoria",
+    "Energy Safe Victoria",
+    "Victoria Police"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "Flammable metals: what are the safety cautions?",
+   "a": [
+    "Possible spontaneous heating or combustion",
+    "High risk of explosion for metal dust or powder",
+    "Storage potentially being in flammable liquid – kerosene"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "Flammable metals: what extinguishing agent must NOT be used, and why?",
+   "a": "Water – creates violent reaction",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "What is the maximum LPG cylinder size (vehicle and other) that can be flared off?",
+   "a": "200kg",
+   "choices": [
+    "100kg",
+    "150kg",
+    "500kg"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "When is an LPG flare-off operation to be implemented?",
+   "a": "At incidents involving leaking LPG cylinders, where the leak cannot be isolated",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "What is the minimum number of gas flare-off operators required on scene for a flare-off operation?",
+   "a": "Two",
+   "choices": [
+    "One",
+    "Three",
+    "Four"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 32,
+   "q": "Gas flare-off (LPG): what are the considerations?",
+   "a": [
+    "Location of incident for evacuation and possible ignition sources",
+    "Cylinder size – max 200kg",
+    "Flare-off operations can only take place with a minimum of two gas flare-off operators on scene",
+    "Atmospheric monitoring equipment to determine flammability",
+    "VicPol and Ambulance Victoria response"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas mains/natural gas WITH fire (GAAS): what are the actions?",
+   "a": [
+    "Gas Company for IMMEDIATE response",
+    "Approach from safe direction",
+    "Ascertain whether supply can be shut off",
+    "Protect exposures"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas mains/natural gas WITHOUT fire (GEtFUQD): what are the actions?",
+   "a": [
+    "Gas Company for IMMEDIATE response",
+    "Eliminate ignition sources 30mts minimum",
+    "Fully charged line. Dissipate gas in exceptional circumstances",
+    "Upwind approach with appropriate PPC",
+    "QREA for gas monitoring",
+    "Drychem on standby"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas leak without fire: what minimum distance must ignition sources be eliminated?",
+   "a": "30m",
+   "choices": [
+    "10m",
+    "50m",
+    "100m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas leak without fire: which appliance/resource is responded for gas monitoring?",
+   "a": "QREA",
+   "choices": [
+    "HART",
+    "Heavy Rescue Pod",
+    "Hazmat Pod"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas leak inside/confined space: what are the actions?",
+   "a": [
+    "Evacuate",
+    "Use personal gas monitor to monitor gas concentration (%LEL)",
+    "Ventilate until personal gas monitor alarm ceases",
+    "Shut off gas when safe to do so"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 33,
+   "q": "Gas leak inside/confined space: ventilate until when?",
+   "a": "Until personal gas monitor alarm ceases",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "Major Hazardous Facilities/Refineries (FFLLEES BMW(M)): what are the actions?",
+   "a": [
+    "FIRST APPLIANCE on scene report to INCIDENT SUPPORT CENTRE",
+    "FOLLOWING APPLIANCES report to STAGING AREA",
+    "LOCATE and ACCESS emergency information container (front gate/nr entrance)",
+    "LIASE with on-site EMERGENCY SUPERVISOR",
+    "ESTABLISH LOCATION and access to fire/spill",
+    "EVACUATE area",
+    "SEND regular sitreps",
+    "BOOST hydrants/sprinklers",
+    "MAINTAIN appliance FLASHING lights in MHF",
+    "WEAR ear/eye protection",
+    "MONITOR wind direction/weather reports"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "At a Major Hazardous Facility, where does the FIRST appliance on scene report?",
+   "a": "Incident Support Centre",
+   "choices": [
+    "Staging Area",
+    "Front gate",
+    "Emergency information container"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "At a Major Hazardous Facility, where do FOLLOWING appliances report?",
+   "a": "Staging Area",
+   "choices": [
+    "Incident Support Centre",
+    "Front gate",
+    "Control point"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "At an MHF, where is the emergency information container located?",
+   "a": "Front gate/near entrance",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "At an MHF, who do you liaise with on site?",
+   "a": "On-site Emergency Supervisor",
+   "choices": [
+    "Plant Manager",
+    "Port authority personnel",
+    "Facility Liaison Officer"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "Aerial appliance safety: what must be used when working near a powerline?",
+   "a": "A spotter",
+   "choices": [
+    "A TIC",
+    "An earthing stake",
+    "A safety observer at the base"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "Aerial appliance safety: what is the EWP no go zone clearance for poles?",
+   "a": "3m",
+   "choices": [
+    "8m",
+    "2m",
+    "6m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "Aerial appliance safety: what is the EWP no go zone clearance for towers?",
+   "a": "8m",
+   "choices": [
+    "3m",
+    "10m",
+    "6m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 34,
+   "q": "Electrical substations/substation yards: under what condition may firefighters enter?",
+   "a": "Firefighters shall not enter unless accompanied by an electrical supply company representative or other trained/authorised persons",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "q": "Pole fires: what are the actions?",
+   "a": [
+    "Power Co. requested immediately",
+    "Do not attempt extinguish until power company confirm isolation or confirm area safe before extinguishing",
+    "Protect exposures",
+    "Attack fire ONLY to protect life"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "q": "Pole fires: when attacking the fire ONLY to protect life, how is it done?",
+   "a": [
+    "Fog or broken stream (no jet)",
+    "Lob onto fire",
+    "Avoid wires",
+    "Don't stand in water/wet surfaces"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "q": "Pole fires: when may the fire be attacked before power isolation is confirmed?",
+   "a": "Only to protect life",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "q": "UPS: where may Uninterrupted Power Supplies be present?",
+   "a": [
+    "Computers",
+    "Telephone exchanges",
+    "Process controllers"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 35,
+   "q": "UPS: what are the actions?",
+   "a": [
+    "Treat all such equipment as live",
+    "Isolate power between electrical equipment and UPS",
+    "Request power supply company to respond to ensure power isolation"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "q": "What are the response criteria of Fire Investigators?",
+   "a": [
+    "All fire related deaths",
+    "All fire related serious injuries",
+    "Fires where the origin and cause cannot be easily determined",
+    "Notification at 3rd alarm and automatic FIA response at 4th alarm or greater at structure fires (MFB)",
+    "Any firefighter injury (MFB)",
+    "Fires involving fire brigade property"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "q": "Structure fires (MFB): at what alarm level is Fire Investigation notified?",
+   "a": "3rd alarm",
+   "choices": [
+    "2nd alarm",
+    "4th alarm",
+    "5th alarm"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "q": "Structure fires (MFB): at what alarm level is there an automatic FIA response?",
+   "a": "4th alarm or greater",
+   "choices": [
+    "3rd alarm or greater",
+    "2nd alarm or greater",
+    "5th alarm or greater"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "q": "When will MFB Fire Investigation attend suspicious fires?",
+   "a": "Only if requested by VicPol",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 36,
+   "q": "Fire investigation: what are the considerations?",
+   "a": [
+    "Obstacles preventing entry into building access/firefighting",
+    "Extent of fire on arrival",
+    "Locations / intensity / colour of flames/smoke",
+    "Indications of forcible entry",
+    "Conditions of doors / windows"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "q": "What is the UN number for LPG?",
+   "a": "UN 1075",
+   "choices": [
+    "UN 1203",
+    "UN 1017",
+    "UN 1005"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "q": "What is the HAZCHEM code for LPG?",
+   "a": "2YE",
+   "choices": [
+    "2WE",
+    "3YE",
+    "2PE"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "q": "What is the expansion ratio of LPG?",
+   "a": "270:1",
+   "choices": [
+    "250:1",
+    "1700:1",
+    "600:1"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "q": "What are the LEL and UEL of LPG?",
+   "a": "LEL 1.5%, UEL 10%",
+   "choices": [
+    "LEL 2%, UEL 10%",
+    "LEL 1.5%, UEL 15%",
+    "LEL 5%, UEL 15%"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 36,
+   "q": "Which DG IERG guide applies to LPG?",
+   "a": "Guide 04",
+   "choices": [
+    "Guide 14",
+    "Guide 02",
+    "Guide 07"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 37,
+   "q": "Is LPG heavier or lighter than air, and what does it do?",
+   "a": "Heavier than air, will collect in low areas",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-dg",
+   "page": 37,
+   "q": "What colour are LPG cylinders and LPG bullets?",
+   "a": "Cylinders silver, bullets white",
+   "choices": [
+    "Cylinders white, bullets silver",
+    "Cylinders red, bullets white",
+    "Cylinders silver, bullets grey"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospital emergency codes: what does each colour code mean?",
+   "a": [
+    "Code RED – Fire, smoke",
+    "Code PURPLE – Bomb threat, extortion, suspicious package",
+    "Code ORANGE – Evacuation",
+    "Code YELLOW – Explosion, person trapped, chemical emergency",
+    "Code GREY – Patient violent, patient restraint",
+    "Code BLACK – Non patient violence, armed/unarmed intrusion, armed patient violence",
+    "Code BLUE – Medical emergency",
+    "Code BROWN – State disaster, major incident, internal accident"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: what does Code BLACK mean?",
+   "a": "Non patient violence, armed/unarmed intrusion, armed patient violence",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: which code indicates Bomb threat, extortion, suspicious package?",
+   "a": "Code PURPLE",
+   "choices": [
+    "Code BLACK",
+    "Code YELLOW",
+    "Code BROWN"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: which code indicates Evacuation?",
+   "a": "Code ORANGE",
+   "choices": [
+    "Code RED",
+    "Code BROWN",
+    "Code YELLOW"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: which code indicates Explosion, person trapped, chemical emergency?",
+   "a": "Code YELLOW",
+   "choices": [
+    "Code BROWN",
+    "Code ORANGE",
+    "Code PURPLE"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: which code indicates Patient violent, patient restraint?",
+   "a": "Code GREY",
+   "choices": [
+    "Code BLACK",
+    "Code BLUE",
+    "Code PURPLE"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 37,
+   "q": "Hospitals: which code indicates State disaster, major incident, internal accident?",
+   "a": "Code BROWN",
+   "choices": [
+    "Code YELLOW",
+    "Code ORANGE",
+    "Code GREY"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 37,
+   "q": "Electric and hybrid vehicles: what are the actions?",
+   "a": [
+    "Approach from side",
+    "Chock wheels, apply park brake",
+    "Place transmission into Park",
+    "Stabilise if not on four wheels"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 37,
+   "q": "Electric/hybrid vehicles: after disabling the HV battery pack, how long is power maintained in the airbags?",
+   "a": "90 seconds",
+   "choices": [
+    "10 minutes",
+    "60 seconds",
+    "5 minutes"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 37,
+   "q": "Electric/hybrid vehicles: after disabling the HV battery pack, how long is power maintained in the high voltage electrical system?",
+   "a": "Up to 10 minutes",
+   "choices": [
+    "90 seconds",
+    "Up to 5 minutes",
+    "Up to 30 minutes"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 37,
+   "q": "Generic motor vehicle incidents/fires: what are the considerations?",
+   "a": [
+    "Availability of water supply (respond WT or PT if req)",
+    "Fuel Source (petrol, gas, elec...)",
+    "Undeployed airbags",
+    "Once 12v battery is disconnected, handbrake may not engage/disengage"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 38,
+   "q": "LPG powered vehicles: what are the safety points?",
+   "a": [
+    "Do not extinguish burning if gas still venting; LEAVE TO BURN",
+    "Be aware of increase in fire intensity/pitch of escaping gas; SITUATION DETERIORATING",
+    "EVACUATE if suspected of rupturing",
+    "Do not direct water at VENTING PRESSURE GAUGE - icing"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 38,
+   "q": "LPG vehicle: what do you do if the gas is still venting and burning?",
+   "a": "Do not extinguish – leave to burn",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 38,
+   "q": "LPG vehicle: why must water not be directed at the venting pressure gauge?",
+   "a": "Icing",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 38,
+   "q": "LPG powered vehicles: what are the actions during fire?",
+   "a": [
+    "Utilize hose lines from SHELTERED POSITION where possible",
+    "Cool cylinder with flooding quantities of water onto upper surfaces until well after fire is out",
+    "Use dry chem, CO2 or water spray to EXT FIRE (only if absolutely necessary AND safe to do so)"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 38,
+   "q": "Non-structure fires (rubbish tips and other waste storage sites): who must be notified?",
+   "a": [
+    "Council MERO",
+    "EPA",
+    "DoH",
+    "Vic WorkCover Authority",
+    "Ops Comm",
+    "Comm Resilience Comm",
+    "Fire Safety Issue notification (completed to ensure notification of Building Inspection and compliance dept)"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Rubbish tips/waste storage sites: why is a Fire Safety Issue notification completed?",
+   "a": "To ensure notification of Building Inspection and compliance dept",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Secured facility response: what are the actions?",
+   "a": [
+    "Meet with facility Liaison Officer (LO) and Field Comm (FC) at entrance to site",
+    "OIC to ascertain nature and status of event, status of secured facility and assess situation",
+    "Enter only on req by Facility Management, if site security is confirmed, and only under guidance of escort/liaison officer (one per appl)",
+    "If req to enter and deemed safe, and if need arises, IC notify Ops Comm",
+    "FSV personnel to receive briefing by facility staff incl arrangements for emerg evac plan",
+    "Min number of appl and crew to be committed, IC to determine",
+    "Routine security checks undertaken in consideration of situation",
+    "FSV to withdraw if safety/security of personnel/appl becomes threatened",
+    "Security checks on departure. LO to confirm absence of prisoners on appl",
+    "IC to confirm ID of FF leaving secured facility"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Secured facility: who do you meet at the entrance to the site?",
+   "a": "Facility Liaison Officer (LO) and Field Comm (FC)",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Secured facility: under what conditions may crews enter?",
+   "a": "Only on request by Facility Management, if site security is confirmed, and only under guidance of escort/liaison officer (one per appliance)",
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Secured facility: on departure, who confirms the absence of prisoners on appliances?",
+   "a": "The Liaison Officer (LO)",
+   "choices": [
+    "The IC",
+    "The OIC",
+    "Field Comm"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "Secured facility: who confirms the ID of firefighters leaving the facility?",
+   "a": "The IC",
+   "choices": [
+    "The LO",
+    "Field Comm",
+    "Facility Management"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "High rise buildings: what are the considerations?",
+   "a": [
+    "EVACUATE (floor and roof area) - EWIS control - location of fire exit stairs",
+    "TACTICAL FIRE plans / floor plans / MSDS",
+    "COMMUNICATION PLAN",
+    "ESTABLISH SECTORS (Sector 2-16)",
+    "Use of manned FIREFIGHTER LIFT",
+    "Establish FALLING DEBRIS perimeter"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 39,
+   "q": "High rise buildings: what sector numbers are established?",
+   "a": "Sector 2-16",
+   "choices": [
+    "Sector 1-10",
+    "Sector 2-20",
+    "Sector 1-16"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 40,
+   "q": "Above what height is a building high rise, requiring use of BOOSTERS?",
+   "a": "25m +",
+   "choices": [
+    "15m +",
+    "50m +",
+    "30m +"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 40,
+   "q": "What defines an ULTRA HIGH RISE building?",
+   "a": "50+ stories / 150m+",
+   "choices": [
+    "25+ stories / 75m+",
+    "40+ stories / 120m+",
+    "100+ stories / 300m+"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 40,
+   "q": "Ultra high rise buildings: what may be present on higher floors to aid evacuation?",
+   "a": "Refuge zones",
+   "choices": [
+    "Firefighter lifts",
+    "Booster valves",
+    "Sterile corridors"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-site",
+   "page": 40,
+   "q": "Safe Working at Heights (HART): what are the considerations?",
+   "a": [
+    "Respond HART",
+    "Utilising Aerial appliance",
+    "Separate Radio channel for SWH operations",
+    "TIC for roof temperature"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Docks/ports: what is waterway safety (PEACE)?",
+   "a": [
+    "PFD within 2mts of edge",
+    "Establish 2mt safety zone around edges",
+    "Appoint Safety Officer",
+    "Caution working near edges",
+    "bEware of load limitations on piers/jetties/wharves... No weight limit plaque = NO GO"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Docks/ports: within what distance of an edge must a PFD be worn?",
+   "a": "2m",
+   "choices": [
+    "5m",
+    "1m",
+    "3m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Docks/ports: what does no weight limit plaque on a pier/jetty/wharf mean?",
+   "a": "NO GO",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Docks/ports: what are the considerations?",
+   "a": [
+    "Marine operators responded",
+    "Beware of weight limitations/loading on wharves and appliance exclusion zones",
+    "TUGS available west of Bolte Bridge only",
+    "SHIPPING container NUMBER – obtain container number and relay to firecom for details of contents"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Where are tugs available?",
+   "a": "West of Bolte Bridge only",
+   "choices": [
+    "East of Bolte Bridge only",
+    "Port of Geelong only",
+    "West of Westgate Bridge only"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "What is the format of a shipping container number?",
+   "a": "2-4 alpha characters followed by 6-7 numeric characters",
+   "choices": [
+    "4 alpha characters followed by 10 numeric characters",
+    "6-7 alpha characters followed by 2-4 numeric characters",
+    "3 alpha characters followed by 8 numeric characters"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "Where is the shipping container number marked?",
+   "a": "On all sides of the container",
+   "choices": [
+    "On the doors only",
+    "On the roof only",
+    "On the front and rear only"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 40,
+   "q": "What do you do with a shipping container number?",
+   "a": "Obtain the container number and relay to firecom for details of contents",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Docks/ports actions (SLAM)?",
+   "a": [
+    "Seek specialist advise",
+    "Liaise with port authority personnel",
+    "Awareness of other vehicles in dock area",
+    "Maintain flashing lights at all times"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies/firefighting tugs: what are the actions?",
+   "a": [
+    "Respond FIRE BOATS (FRV)",
+    "Respond COAST GUARDS (CFA)",
+    "Establish and maintain contact with SHIPS SENIOR OFFICER on board",
+    "Report to the SHIPS BRIDGE",
+    "Determine LOCATION and ACCESS to fire & intensity",
+    "Access information"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies: which agency provides Coast Guards?",
+   "a": "CFA",
+   "choices": [
+    "FRV",
+    "VicPol",
+    "Parks Victoria"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies: where do you report on board?",
+   "a": "The ship's bridge",
+   "choices": [
+    "The engine room",
+    "The gangway",
+    "The cargo hold"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies: who do you establish and maintain contact with on board?",
+   "a": "Ship's Senior Officer",
+   "choices": [
+    "Harbour Master",
+    "Port authority personnel",
+    "Ship's Engineer"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies: what information must be accessed?",
+   "a": [
+    "Ships plans",
+    "Firefighting already undertaken",
+    "Operation of firefighting installation/equipment",
+    "Details of cargo / manifest / log",
+    "State of ships services power & water",
+    "Ventilation",
+    "Ships stability",
+    "State of ships hatches",
+    "Fire service vessels or fire tugs to cool the exterior of the vessel",
+    "Monitor amount of water used and removal of firefighting water (stability)",
+    "Establish origin of ignition",
+    "Consider & monitor alternative extinguishing media"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 41,
+   "q": "Ship emergencies: what are fire service vessels or fire tugs used for?",
+   "a": "To cool the exterior of the vessel",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "Ship fires: why must the amount of water used and removal of firefighting water be monitored?",
+   "a": "Stability",
+   "choices": [
+    "Pollution",
+    "Cargo damage",
+    "Electrical hazard"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "Pollution control considerations (SCARS)?",
+   "a": [
+    "Size, location & type of spill",
+    "Identify Control agency",
+    "Accessing State Cache of equipment",
+    "Respond (WR) Waterways Emergency responder",
+    "Specialist advice early on"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "Pollution control: which responder is responded?",
+   "a": "(WR) Waterways Emergency responder",
+   "choices": [
+    "HART",
+    "QREA",
+    "Heavy Rescue Pod"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "q": "Trams: what voltage do trams operate from the overhead trolley wire?",
+   "a": "600V DC",
+   "choices": [
+    "1500V DC",
+    "240V AC",
+    "750V DC"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "q": "Trams: what are the considerations?",
+   "a": [
+    "Trams operate 600V DC tractive control from overhead trolley wire",
+    "POWER CONTROL CENTRAL able to ISOLATE POWER TO SECTIONS of the network remotely",
+    "ISOLATION not guaranteed until maintenance crews arrive",
+    "Respond Heavy Rescue Pod",
+    "Tram roof = HART"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "q": "Trams: who can isolate power to sections of the network remotely?",
+   "a": "Power Control Central",
+   "choices": [
+    "Ops Comm",
+    "Maintenance crews",
+    "Power supply company"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "q": "Trams: when is isolation guaranteed?",
+   "a": "Not until maintenance crews arrive",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-veh",
+   "page": 42,
+   "q": "Trams: which resource is responded for a tram roof?",
+   "a": "HART",
+   "choices": [
+    "Heavy Rescue Pod",
+    "QREA",
+    "Aerial appliance"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "Who is responsible for rehousing (coordinating accommodation requests from the Fire Services)?",
+   "a": "MERC – Municipal Emergency Response Coordinator (VicPol District Senior Sergeant)",
+   "choices": [
+    "MERO – Municipal Emergency Resource Officer",
+    "Council MRM",
+    "Ops Comm"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "What does MERC stand for?",
+   "a": "Municipal Emergency Response Coordinator",
+   "choices": [
+    "Municipal Emergency Resource Coordinator",
+    "Metropolitan Emergency Response Commander",
+    "Municipal Emergency Recovery Coordinator"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 42,
+   "q": "Who holds the MERC role?",
+   "a": "VicPol District Senior Sergeant",
+   "choices": [
+    "Council MERO",
+    "VicPol Inspector",
+    "FRV Commander"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "q": "What requests from the Fire Services does the MERC coordinate?",
+   "a": [
+    "Accommodation",
+    "Logistics",
+    "Support resources",
+    "Issues related to recovery activities"
+   ],
+   "choices": null,
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "q": "Air wing authorisation: how may requests for Victorian Police air support in emergency situations be made?",
+   "a": "Through the on-scene VicPol coordinator",
+   "choices": [
+    "Through Ops Comm",
+    "Through the IC",
+    "Through the MERC"
+   ],
+   "priority": true,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "q": "Hostile acts – siting of appliances (PUPMAN)?",
+   "a": [
+    "Park minimum 300m from area",
+    "Utilise open space wherever possible",
+    "Park appliance facing away",
+    "Notify firecom of location of appliance",
+    "All firefighters stay in rear seats, side windows open",
+    "Maintain clear access and egress at all times"
+   ],
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "q": "Hostile act: what is the minimum distance to park appliances from the area?",
+   "a": "300m",
+   "choices": [
+    "100m",
+    "500m",
+    "200m"
+   ],
+   "priority": false,
+   "source": "book"
+  },
+  {
+   "topic": "ferg-port",
+   "page": 43,
+   "q": "Hostile act: what is the alternative to PUPMAN siting for responding appliances?",
+   "a": "Only the first two appliances are to respond to the scene, all further appliances are to stage a safe distance away",
+   "choices": null,
+   "priority": false,
+   "source": "book"
+  }
+ ],
+ "issues": [
+  "so-33: GAAS mnemonic has 4 letters but the 4th bullet is 'Protect exposures' (no S word); transcribed as on page.",
+  "so-33: GEtFUQD mnemonic has a stray standalone 't' line between 'Eliminate' and 'Fully' bullets on the page; kept as '(t)'.",
+  "so-34: 'LIASE' spelled as on page (liaise). so-41 'advise' kept as on page (advice).",
+  "so-38: 'GUAGE' corrected to 'GAUGE'. so-41 'INSTALLATIION' corrected to 'INSTALLATION'. so-42 'Sargent' corrected to 'Sergeant'.",
+  "so-38/39: Non-structure fire notifications box spans pages 38-39 (last item 'Fire Safety Issue notification' on p39).",
+  "so-36/37: LPG properties placed in ferg-dg; Hospitals and Fire Investigation in ferg-site; MERC/Airwing/Hostile Acts (VicPol) in ferg-port; Trams/LPG vehicles in ferg-veh. Pressure vessels (p31) placed in ferg-dg (boilers).",
+  "so-43: Hostile Acts page heading says 'Siting of Appliances' but subheading reads 'HOSTILE ACT - SIGHTING APPLIANCE'; kept as on page.",
+  "so-40: '**PREVIOUS EXAM**VV' tag on High rise boosters line — trailing 'VV' unclear."
+ ]
+}
