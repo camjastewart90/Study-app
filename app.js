@@ -110,6 +110,7 @@
 
   function setChrome(title, back, tab) {
     titleEl.textContent = title || '';
+    titleEl.classList.remove('brand');
     document.title = title ? title + ' · Study App' : 'Study App';
     backBtn.hidden = !back;
     backBtn.onclick = back ? () => { location.hash = back; } : null;
@@ -119,7 +120,8 @@
   /* ---------- views ---------- */
 
   function viewHome(focusSearch) {
-    setChrome('', null, focusSearch ? 'search' : 'home');
+    setChrome('SO STUDY GUIDE', null, focusSearch ? 'search' : 'home');
+    titleEl.classList.add('brand');
     const course = courses[0];
     const cs = courseStats(course);
     const streak = streakDays();
