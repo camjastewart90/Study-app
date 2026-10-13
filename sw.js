@@ -1,9 +1,10 @@
 /* Offline support: app shell is cached; everything is refreshed from the network when online. */
-const CACHE = 'studyapp-v1';
+const CACHE = 'studyapp-v2';
 const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'vendor/marked.min.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'data/courses.json', 'data/course6.json',
+  'fonts/instrument-serif-latin-400-normal.woff2', 'fonts/instrument-serif-latin-400-italic.woff2', 'fonts/inter-latin-wght-normal.woff2',
 ];
 
 self.addEventListener('install', (e) => {

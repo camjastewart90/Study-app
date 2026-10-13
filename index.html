@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Study App</title>
   <meta name="description" content="Study notes and knowledge tests for FRV courses.">
-  <meta name="theme-color" content="#c8102e">
+  <meta name="theme-color" content="#f6f4f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0c0c" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>
     try { var t = localStorage.getItem('studyapp.theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -19,26 +21,31 @@
 <body>
   <header class="topbar">
     <button class="icon-btn" id="back" aria-label="Back" hidden>
-      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <h1 id="title">Study</h1>
-    <button class="icon-btn" id="theme" aria-label="Toggle dark mode">
-      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+    <h1 id="title"></h1>
+    <button class="icon-btn theme-icon" id="theme" aria-label="Toggle dark mode">
+      <svg class="moon" viewBox="0 0 24 24" width="19" height="19"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     </button>
   </header>
   <main id="app" tabindex="-1"><p class="muted center pad">Loading…</p></main>
-  <nav class="tabbar">
-    <a href="#/" data-tab="home">
-      <svg viewBox="0 0 24 24"><path d="M4 5h7v14H4zM13 5h7v14h-7z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-      <span>Topics</span>
+  <nav class="dock" aria-label="Main">
+    <a href="#/?search=1" class="dock-item dock-solo" data-tab="search" aria-label="Search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
     </a>
-    <a href="#/quiz/all" data-tab="quiz">
-      <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-      <span>Test all</span>
-    </a>
-    <a href="#/progress" data-tab="progress">
-      <svg viewBox="0 0 24 24"><path d="M5 20V11M12 20V5M19 20v-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-      <span>Progress</span>
+    <div class="dock-group">
+      <a href="#/" class="dock-item" data-tab="home">
+        <svg viewBox="0 0 24 24"><path d="M4 10.5L12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="#/progress" class="dock-item" data-tab="progress">
+        <svg viewBox="0 0 24 24"><path d="M5 19.5v-7M12 19.5v-15M19 19.5v-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Progress</span>
+      </a>
+    </div>
+    <a href="#/quiz/all" class="orb" data-tab="quiz" aria-label="Test all topics">
+      <svg viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z" fill="currentColor"/></svg>
     </a>
   </nav>
   <script src="vendor/marked.min.js"></script>

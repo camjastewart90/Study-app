@@ -42,6 +42,42 @@
     return `<div class="ring${big ? ' big' : ''}" style="--p:${p}"><span>${p}%</span></div>`;
   }
 
+  // Half-circle progress gauge (FRV red to amber), like the reference design's hero arc.
+  function gauge(p) {
+    const a = Math.PI - (Math.PI * Math.max(0, Math.min(100, p))) / 100;
+    const x = 150 + 130 * Math.cos(a), y = 150 - 130 * Math.sin(a);
+    return `<svg class="gauge" viewBox="0 0 300 160" aria-hidden="true">
+      <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#c8102e"/><stop offset=".6" stop-color="#ef5a2a"/><stop offset="1" stop-color="#f5a300"/></linearGradient></defs>
+      <path class="track" d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke-width="5" stroke-dasharray="1.5 6" stroke-linecap="round"/>
+      ${p > 0 ? `<path d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke="url(#gg)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="${p} 100"/>` : ''}
+      <circle class="knob" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5" fill="#fff"/>
+    </svg>`;
+  }
+
+  // Consecutive days (ending today or yesterday) with at least one finished test.
+  function streakDays() {
+    const days = new Set(state.sessions.map((s) => new Date(s.at).toDateString()));
+    const d = new Date();
+    if (!days.has(d.toDateString())) d.setDate(d.getDate() - 1);
+    let n = 0;
+    while (days.has(d.toDateString())) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+
+  function courseStats(course) {
+    const qs = course.topics.flatMap((t) => t.questions);
+    const stats = qs.map((q) => qstat(qkey(course, q)));
+    return {
+      qs,
+      pct: qs.length ? pct(stats.reduce((s, x) => s + Math.min(x.box, MASTER_BOX) / MASTER_BOX, 0) / qs.length) : 0,
+      mastered: stats.filter((x) => x.box >= MASTER_BOX).length,
+      seen: stats.filter((x) => x.right + x.wrong > 0).length,
+    };
+  }
+
+  const chevron = '<svg class="chev" width="18" height="18" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  const sparkle = '<svg viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z" fill="currentColor"/></svg>';
+
   function topicMastery(course, topic) {
     const qs = topic.questions;
     if (!qs.length) return { pct: 0, mastered: 0, seen: 0, total: 0 };
@@ -69,39 +105,57 @@
   }
 
   function setChrome(title, back, tab) {
-    titleEl.textContent = title;
-    document.title = title === 'Study' ? 'Study App' : title + ' · Study App';
+    titleEl.textContent = title || '';
+    document.title = title ? title + ' · Study App' : 'Study App';
     backBtn.hidden = !back;
     backBtn.onclick = back ? () => { location.hash = back; } : null;
-    document.querySelectorAll('.tabbar a').forEach((a) => a.classList.toggle('active', a.dataset.tab === tab));
+    document.querySelectorAll('.dock [data-tab]').forEach((a) => a.classList.toggle('active', a.dataset.tab === tab));
   }
 
   /* ---------- views ---------- */
 
-  function viewHome() {
-    setChrome('Study', null, 'home');
-    let html = `<input class="search" id="search" type="search" placeholder="Search notes and questions" autocomplete="off">`;
-    html += `<div id="results"></div><div id="lists">`;
-    courses.forEach((course) => {
-      const all = course.topics.flatMap((t) => t.questions.map((q) => qstat(qkey(course, q))));
-      const overall = all.length ? pct(all.reduce((s, x) => s + Math.min(x.box, MASTER_BOX) / MASTER_BOX, 0) / all.length) : 0;
-      html += `<div class="card hero">${ring(overall, true)}<div><h2>${esc(course.title)}</h2>
-        <p class="muted small">${esc(course.subtitle || '')}</p>
-        <p class="muted small">${course.topics.length} topics · ${all.length} questions</p></div></div>`;
-      course.groups.forEach((g) => {
-        html += `<div class="group-title">${esc(g.title)}</div><div class="topic-list">`;
-        g.topics.forEach((tid) => {
-          const t = course.topics.find((x) => x.id === tid);
-          if (!t) return;
-          const m = topicMastery(course, t);
-          html += `<a class="card topic" href="#/t/${course.id}/${t.id}">
-            ${ring(m.pct)}
-            <div class="t-main"><div class="t-title">${esc(t.title)}</div>
-            <div class="t-sub">${t.questions.length} questions · ${m.mastered} mastered</div></div>
-            <svg class="chev" width="18" height="18" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>`;
-        });
-        html += `</div>`;
+  function viewHome(focusSearch) {
+    setChrome('', null, focusSearch ? 'search' : 'home');
+    const course = courses[0];
+    const cs = courseStats(course);
+    const streak = streakDays();
+    const priority = cs.qs.filter((q) => q.priority).length;
+    const today = new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
+    let lastRef = null;
+    try { lastRef = topicIndex[localStorage.getItem('studyapp.lastTopic')]; } catch (e) {}
+
+    let html = `<section class="greet"><p>${cs.seen ? 'Welcome back!' : 'Welcome!'}</p><h2>${esc(today)}</h2></section>
+      <section class="gauge-hero">${gauge(cs.pct)}
+        <p class="gauge-val">${cs.pct}%</p>
+        <p class="gauge-cap">${esc(course.title)} mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
+        ${streak ? `<div class="streak">🔥 ${streak}-day streak</div><br>` : ''}
+        <a class="pill-btn" href="#/start">${sparkle}<span>${cs.seen ? 'Keep learning' : 'Start learning'}</span>${chevron.replace('class="chev"', '')}</a>
+      </section>
+      <div class="tiles">
+        <a class="card tile warm" href="#/quiz/all"><span class="label">Question bank</span><span class="big">${cs.qs.length} Questions</span>
+          <span class="foot"><span>⭐ ${priority} priority</span><span>${cs.seen} seen</span></span></a>
+        <a class="card tile" href="#/progress"><span class="bubble"><svg viewBox="0 0 24 24"><path d="M4 6.5h6l2 2h8v9.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <span class="big">${course.topicOrder.length} Topics</span>
+          <span class="foot"><span>${course.groups.length} sections</span><span>${cs.mastered} mastered</span></span></a>
+      </div>`;
+    if (lastRef) {
+      const m = topicMastery(lastRef.course, lastRef.topic);
+      html += `<a class="card continue" href="#/t/${lastRef.course.id}/${lastRef.topic.id}"><div>
+        <div class="k">✦ Continue where you left off</div><div class="v">${esc(lastRef.topic.title)}</div></div>${ring(m.pct)}</a>`;
+    }
+    html += `<input class="search" id="search" type="search" placeholder="Search notes and questions" autocomplete="off">
+      <div id="results"></div><div id="lists">`;
+    course.groups.forEach((g) => {
+      html += `<div class="group-title"><span class="dot"></span>${esc(g.title)}</div><div class="topic-list">`;
+      g.topics.forEach((tid) => {
+        const t = course.topics.find((x) => x.id === tid);
+        if (!t) return;
+        const m = topicMastery(course, t);
+        html += `<a class="card topic" href="#/t/${course.id}/${t.id}">${ring(m.pct)}
+          <div class="t-main"><div class="t-title">${esc(t.title)}</div>
+          <div class="t-sub">${t.questions.length} questions · ${m.mastered} mastered</div></div>${chevron}</a>`;
       });
+      html += `</div>`;
     });
     html += `</div>`;
     app.innerHTML = html;
@@ -131,6 +185,7 @@
     };
     input.addEventListener('input', run);
     run();
+    if (focusSearch) { input.scrollIntoView({ block: 'start' }); input.focus({ preventScroll: true }); }
   }
 
   function highlight(root, term) {
@@ -159,13 +214,14 @@
     if (!ref) return viewNotFound();
     const { course, topic, idx } = ref;
     setChrome(topic.short || topic.title, '#/', 'home');
+    try { localStorage.setItem('studyapp.lastTopic', course.id + '/' + topic.id); } catch (e) {}
     const m = topicMastery(course, topic);
     const base = `#/t/${course.id}/${topic.id}`;
     let html = `<div class="seg"><a href="${base}" class="${tab === 'notes' ? 'on' : ''}">Notes</a>
       <a href="${base}/test" class="${tab === 'test' ? 'on' : ''}">Test · ${m.pct}%</a></div>`;
 
     if (tab === 'notes') {
-      html += `<div class="card notes" id="notes"><h2 style="margin:16px 0 4px;font-size:20px">${esc(topic.title)}</h2>`;
+      html += `<div class="card notes" id="notes"><h2>${esc(topic.title)}</h2>`;
       if (!topic.notes.length) html += `<p class="muted">No study notes for this topic yet. Use the Test tab.</p>`;
       let lastPage = null;
       topic.notes.forEach((n) => {
@@ -246,10 +302,12 @@
     document.getElementById('start').onclick = () => startQuiz(course, scope, questions, label, returnTo);
   }
 
-  function pickQuestions(course, questions) {
-    const pool = poolFor(course, questions, setup.mode);
-    const n = setup.len ? Math.min(setup.len, pool.length) : pool.length;
-    if (setup.mode !== 'smart') return shuffle(pool).slice(0, n);
+  function pickQuestions(course, questions, opts) {
+    const mode = (opts && opts.mode) || setup.mode;
+    const len = opts && opts.len !== undefined ? opts.len : setup.len;
+    const pool = poolFor(course, questions, mode);
+    const n = len ? Math.min(len, pool.length) : pool.length;
+    if (mode !== 'smart') return shuffle(pool).slice(0, n);
     // weighted sample without replacement: unseen and weak questions come up more often
     const weighted = pool.map((q) => {
       const s = qstat(qkey(course, q));
@@ -262,8 +320,8 @@
 
   /* ---------- quiz ---------- */
 
-  function startQuiz(course, scope, questions, label, returnTo) {
-    const list = pickQuestions(course, questions);
+  function startQuiz(course, scope, questions, label, returnTo, opts) {
+    const list = pickQuestions(course, questions, opts);
     if (!list.length) return;
     quiz = { course, scope, label, returnTo, list, i: 0, score: 0, results: [], answered: false, allQuestions: questions };
     location.hash = '#/run';
@@ -358,9 +416,9 @@
     }
     const p = pct(quiz.score / list.length);
     const missed = results.filter((r) => r.result < 1);
-    let html = `<div class="card setup center">${ring(p, true).replace('class="ring big"', 'class="ring big" style="--p:' + p + ';margin:0 auto 10px"')}
-      <h2>${p >= 80 ? 'Great work' : p >= 50 ? 'Getting there' : 'Keep at it'}</h2>
-      <p class="muted">You scored ${quiz.score} out of ${list.length}.</p></div>
+    let html = `<section class="gauge-hero">${gauge(p)}<p class="gauge-val">${p}%</p></section>
+      <div class="result"><h2>${p >= 80 ? 'Great work' : p >= 50 ? 'Getting there' : 'Keep at it'}</h2>
+      <p class="muted" style="margin:0">You scored ${quiz.score} out of ${list.length}.</p></div>
       <div class="stats"><div class="card stat"><b>${results.filter((r) => r.result === 1).length}</b><span>correct</span></div>
       <div class="card stat"><b>${results.filter((r) => r.result === 0.5).length}</b><span>partly</span></div>
       <div class="card stat"><b>${results.filter((r) => r.result === 0).length}</b><span>missed</span></div></div>
@@ -368,7 +426,7 @@
         ${missed.length ? '<button class="btn primary" id="retry">Retry missed</button>' : ''}
         <a class="btn" href="${quiz.returnTo}">Done</a></div>`;
     if (missed.length) {
-      html += `<div class="group-title">Review what you missed</div><div class="card missed">` +
+      html += `<div class="sub-title">Review what you missed</div><div class="card missed">` +
         missed.map((r) => `<div class="m"><div class="mq">${inline(stripNum(r.q.q))}</div><div class="ma">${answerHTML(r.q.a)}</div></div>`).join('') + `</div>`;
     }
     app.innerHTML = html;
@@ -378,6 +436,15 @@
       quiz = Object.assign({}, quiz, { list: shuffle(missed.map((r) => r.q)), i: 0, score: 0, results: [], saved: false });
       viewQuiz();
     };
+  }
+
+  function quickStart() {
+    const course = courses[0];
+    const all = course.topics.flatMap((t) => t.questions);
+    quiz = null;
+    const list = pickQuestions(course, all, { mode: 'smart', len: 10 });
+    quiz = { course, scope: 'all', label: 'Quick test', returnTo: '#/', list, i: 0, score: 0, results: [], answered: false };
+    location.replace('#/run');
   }
 
   function viewQuizAll() {
@@ -400,9 +467,13 @@
       const mastered = stats.filter((s) => s.box >= MASTER_BOX).length;
       const seen = stats.filter((s) => s.right + s.wrong > 0).length;
       const sessions = state.sessions.filter((s) => s.course === course.id);
-      html += `<div class="card hero">${ring(overall, true)}<div><h2>${esc(course.title)}</h2>
-        <p class="muted small">${mastered} of ${qs.length} questions mastered · ${seen} seen · ${sessions.length} test${sessions.length === 1 ? '' : 's'} taken</p></div></div>`;
-      html += `<div class="group-title">By topic (weakest first)</div><div class="topic-list">`;
+      const streak = streakDays();
+      html += `<section class="gauge-hero">${gauge(overall)}<p class="gauge-val">${overall}%</p>
+        <p class="gauge-cap">${esc(course.title)} · ${mastered} of ${qs.length} mastered · ${seen} seen</p></section>
+        <div class="stats"><div class="card stat"><b>${sessions.length}</b><span>tests taken</span></div>
+        <div class="card stat"><b>${streak}</b><span>day streak</span></div>
+        <div class="card stat"><b>${sessions.length ? pct(sessions.slice(-10).reduce((a, x) => a + x.score / x.n, 0) / Math.min(10, sessions.length)) : 0}%</b><span>recent avg</span></div></div>`;
+      html += `<div class="sub-title">By topic, weakest first</div><div class="topic-list">`;
       course.topicOrder.map((t) => ({ t, m: topicMastery(course, t) })).sort((a, b) => a.m.pct - b.m.pct).forEach(({ t, m }) => {
         const last = lastSession('t:' + t.id);
         html += `<a class="card topic" href="#/t/${course.id}/${t.id}/test"><div class="t-main">
@@ -412,7 +483,7 @@
       });
       html += `</div>`;
       if (sessions.length) {
-        html += `<div class="group-title">Recent tests</div><div class="card missed">` +
+        html += `<div class="sub-title">Recent tests</div><div class="card missed">` +
           sessions.slice(-10).reverse().map((s) => `<div class="m"><div class="mq">${esc(s.label)}</div>
             <div class="ma">${s.score}/${s.n} (${pct(s.score / s.n)}%) · ${new Date(s.at).toLocaleString()}</div></div>`).join('') + `</div>`;
       }
@@ -463,7 +534,8 @@
       // leaving a quiz part-way: keep what was answered, drop the rest
       quiz = null;
     }
-    if (!parts.length) viewHome();
+    if (!parts.length) viewHome(params.get('search') === '1');
+    else if (parts[0] === 'start') quickStart();
     else if (parts[0] === 't') viewTopic(parts[1], parts[2], parts[3] === 'test' ? 'test' : 'notes', params.get('q'));
     else if (parts[0] === 'quiz') viewQuizAll();
     else if (parts[0] === 'run') viewQuiz();
