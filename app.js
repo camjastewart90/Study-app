@@ -42,15 +42,19 @@
     return `<div class="ring${big ? ' big' : ''}" style="--p:${p}"><span>${p}%</span></div>`;
   }
 
-  // Half-circle progress gauge (FRV red to amber), like the reference design's hero arc.
+  // Half-circle progress gauge (FRV reds) with a flame marker, like the reference design's hero arc.
   function gauge(p) {
     const a = Math.PI - (Math.PI * Math.max(0, Math.min(100, p))) / 100;
     const x = 150 + 130 * Math.cos(a), y = 150 - 130 * Math.sin(a);
     return `<svg class="gauge" viewBox="0 0 300 160" aria-hidden="true">
-      <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#c8102e"/><stop offset=".6" stop-color="#ef5a2a"/><stop offset="1" stop-color="#f5a300"/></linearGradient></defs>
+      <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#8a0b1f"/><stop offset=".6" stop-color="#c8102e"/><stop offset="1" stop-color="#e63946"/></linearGradient></defs>
       <path class="track" d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke-width="5" stroke-dasharray="1.5 6" stroke-linecap="round"/>
       ${p > 0 ? `<path d="M20 150 A130 130 0 0 1 280 150" fill="none" stroke="url(#gg)" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="${p} 100"/>` : ''}
-      <circle class="knob" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5" fill="#fff"/>
+      <g class="flame" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})">
+        <circle r="15" fill="#c8102e"/>
+        <path d="M0.5 -9.5c1.2 3.1 5.6 5.6 5.6 10.3a6.1 6.1 0 0 1 -12.2 0c0 -2.6 1.3 -4.2 2.6 -5.5c0.2 2 1.1 3.2 2.3 3.6c-0.5 -3.3 0.3 -6 1.7 -8.4z" fill="#fff"/>
+        <path d="M0.2 -0.8c1.2 1.6 2.6 2.6 2.6 4.4a2.8 2.8 0 0 1 -5.6 0c0 -1.4 0.9 -2.3 1.7 -3c0.1 0.9 0.5 1.4 1.1 1.6c-0.1 -1.1 0 -2 0.2 -3z" fill="#c8102e"/>
+      </g>
     </svg>`;
   }
 
