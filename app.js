@@ -111,7 +111,7 @@
   function setChrome(title, back, tab) {
     titleEl.textContent = title || '';
     titleEl.classList.remove('brand');
-    document.title = title ? title + ' · Study App' : 'Study App';
+    document.title = title && title !== 'SO STUDY GUIDE' ? title + ' · SO Study Guide' : 'SO Study Guide';
     backBtn.hidden = !back;
     backBtn.onclick = back ? () => { location.hash = back; } : null;
     document.querySelectorAll('.dock [data-tab]').forEach((a) => a.classList.toggle('active', a.dataset.tab === tab));
@@ -133,7 +133,7 @@
     let html = `<section class="greet"><p>${cs.seen ? 'Welcome back!' : 'Welcome!'}</p><h2>${esc(today)}</h2></section>
       <section class="gauge-hero">${gauge(cs.pct)}
         <p class="gauge-val">${cs.pct}%</p>
-        <p class="gauge-cap">${esc(course.title)} mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
+        <p class="gauge-cap">Overall mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
         ${streak ? `<div class="streak">🔥 ${streak}-day streak</div><br>` : ''}
         <a class="pill-btn" href="#/start">${sparkle}<span>${cs.seen ? 'Keep learning' : 'Start learning'}</span>${chevron.replace('class="chev"', '')}</a>
       </section>
@@ -457,7 +457,7 @@
     const course = courses[0];
     setChrome('Test all topics', null, 'quiz');
     const all = course.topics.flatMap((t) => t.questions);
-    app.innerHTML = testSetupHTML(course, 'all', all, course.title + ': all topics');
+    app.innerHTML = testSetupHTML(course, 'all', all, 'All topics');
     bindSetup(course, 'all', all, 'All topics', '#/quiz/all');
   }
 
@@ -475,7 +475,7 @@
       const sessions = state.sessions.filter((s) => s.course === course.id);
       const streak = streakDays();
       html += `<section class="gauge-hero">${gauge(overall)}<p class="gauge-val">${overall}%</p>
-        <p class="gauge-cap">${esc(course.title)} · ${mastered} of ${qs.length} mastered · ${seen} seen</p></section>
+        <p class="gauge-cap">Overall · ${mastered} of ${qs.length} mastered · ${seen} seen</p></section>
         <div class="stats"><div class="card stat"><b>${sessions.length}</b><span>tests taken</span></div>
         <div class="card stat"><b>${streak}</b><span>day streak</span></div>
         <div class="card stat"><b>${sessions.length ? pct(sessions.slice(-10).reduce((a, x) => a + x.score / x.n, 0) / Math.min(10, sessions.length)) : 0}%</b><span>recent avg</span></div></div>`;
@@ -518,7 +518,7 @@
         state = Object.assign(emptyState(), data);
         save();
         viewProgress();
-      }).catch(() => alert('That file is not a Study App backup.'));
+      }).catch(() => alert('That file is not an SO Study Guide backup.'));
     };
     document.getElementById('reset').onclick = () => {
       if (confirm('Reset all progress on this device? This cannot be undone.')) { state = emptyState(); save(); viewProgress(); }
