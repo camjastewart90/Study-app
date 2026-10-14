@@ -209,6 +209,9 @@ main > * { animation: rise .35s ease both; }
   box-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
 .pill-btn:active { transform: scale(.97); }
+.hero-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.hero-actions .pill-btn { padding: 14px 18px; }
+.pill-btn.ghost { background: var(--glass-strong); color: var(--text); border: 1px solid var(--glass-border); box-shadow: var(--shadow); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
 .pill-btn svg { width: 18px; height: 18px; }
 
 .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 26px 0 12px; }

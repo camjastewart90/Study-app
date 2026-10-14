@@ -80,6 +80,7 @@
   }
 
   const chevron = '<svg class="chev" width="18" height="18" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  const shuffleIcon = '<svg viewBox="0 0 24 24"><path d="M4 7h3.5c2 0 3.2 1 4.3 2.7l1.4 2.2c1.1 1.8 2.3 2.8 4.3 2.8H20M4 17h3.5c1.4 0 2.4-.5 3.2-1.4M14.3 8.4c.8-.9 1.8-1.4 3.2-1.4H20M17.5 4.5L20 7l-2.5 2.5M17.5 14.5L20 17l-2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   const sparkle = '<svg viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z" fill="currentColor"/></svg>';
 
   function topicMastery(course, topic) {
@@ -135,7 +136,10 @@
         <p class="gauge-val">${cs.pct}%</p>
         <p class="gauge-cap">Overall mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
         ${streak ? `<div class="streak">🔥 ${streak}-day streak</div><br>` : ''}
-        <a class="pill-btn" href="#/start">${sparkle}<span>${cs.seen ? 'Keep learning' : 'Start learning'}</span>${chevron.replace('class="chev"', '')}</a>
+        <div class="hero-actions">
+          <a class="pill-btn" href="#/start">${sparkle}<span>${cs.seen ? 'Keep learning' : 'Start learning'}</span></a>
+          <a class="pill-btn ghost" href="#/random">${shuffleIcon}<span>Random topic</span></a>
+        </div>
       </section>
       <div class="tiles">
         <a class="card tile warm" href="#/quiz/all"><span class="label">Question bank</span><span class="big">${cs.qs.length} Questions</span>
@@ -453,6 +457,16 @@
     location.replace('#/run');
   }
 
+  // Jump to a random topic's notes, never the same one twice in a row.
+  function randomTopic() {
+    const course = courses[0];
+    let last = null;
+    try { last = localStorage.getItem('studyapp.lastTopic'); } catch (e) {}
+    const pool = course.topicOrder.filter((t) => course.id + '/' + t.id !== last);
+    const t = pool[Math.floor(Math.random() * pool.length)];
+    location.replace(`#/t/${course.id}/${t.id}`);
+  }
+
   function viewQuizAll() {
     const course = courses[0];
     setChrome('Test all topics', null, 'quiz');
@@ -542,6 +556,7 @@
     }
     if (!parts.length) viewHome(params.get('search') === '1');
     else if (parts[0] === 'start') quickStart();
+    else if (parts[0] === 'random') randomTopic();
     else if (parts[0] === 't') viewTopic(parts[1], parts[2], parts[3] === 'test' ? 'test' : 'notes', params.get('q'));
     else if (parts[0] === 'quiz') viewQuizAll();
     else if (parts[0] === 'run') viewQuiz();
