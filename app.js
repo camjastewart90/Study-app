@@ -235,8 +235,9 @@
       if (!topic.notes.length) html += `<p class="muted">No study notes for this topic yet. Use the Test tab.</p>`;
       let lastPage = null;
       topic.notes.forEach((n) => {
-        if (n.page !== lastPage) html += `<p class="page-tag">Study Book p.${n.page}</p>`;
-        lastPage = n.page;
+        const tag = n.ref || 'Study Book p.' + n.page;
+        if (tag !== lastPage) html += `<p class="page-tag">${esc(tag)}</p>`;
+        lastPage = tag;
         html += starify(marked.parse(n.markdown));
       });
       html += `</div>`;
@@ -345,7 +346,7 @@
     const course = quiz.course;
     const topic = topicIndex[course.id + '/' + q.topic].topic;
     const num = bankNum(q.q);
-    const meta = [topic.short || topic.title, num ? 'Bank Q' + num : 'Study Book p.' + q.page, q.priority ? '⭐ Priority' : ''].filter(Boolean).join(' · ');
+    const meta = [topic.short || topic.title, num ? 'Bank Q' + num : (q.ref || 'Study Book p.' + q.page), q.priority ? '⭐ Priority' : ''].filter(Boolean).join(' · ');
     quiz.answered = false;
 
     let html = `<div class="qbar"><span>${quiz.i + 1}/${quiz.list.length}</span><div class="bar"><i style="width:${pct(quiz.i / quiz.list.length)}%"></i></div><span>${quiz.score} ✓</span></div>
