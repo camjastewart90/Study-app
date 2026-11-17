@@ -23,10 +23,12 @@
       ["ferg-site", "FERG: Buildings & Special Sites", "FERG: Sites"],
       ["ferg-port", "FERG: Docks, Ships, Pollution, VicPol & Hostile Acts", "FERG: Ports & VicPol"] ] },
     { "title": "Fireground Operations", "topics": [
+      ["aiims", "AIIMS & Incident Management Roles", "AIIMS"],
       ["ba", "Breathing Apparatus (PUAFIR207)", "Breathing Apparatus"],
       ["oms-cmd", "OMS: Command & Communications", "OMS: Command"],
       ["oms-ops", "OMS: Fireground Operations", "OMS: Operations"],
-      ["opp", "Operational Practices (OPP)", "OPPs"] ] },
+      ["opp", "Operational Practices (OPP)", "OPPs"],
+      ["hazmat", "Hazmat: OMS 068, OPG 006 & OPP 040", "Hazmat"] ] },
     { "title": "Emergency Management", "topics": [
       ["semp", "State Emergency Management Plan (SEMP)", "SEMP"],
       ["emr", "Emergency Medical Response", "Medical Response"],

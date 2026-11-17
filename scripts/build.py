@@ -24,7 +24,9 @@ def build(folder):
             continue
         chunk = json.load(open(f))
         for n in chunk.get('notes', []):
-            topics[n['topic']]['notes'].append({'page': n['page'], 'markdown': n['markdown']})
+            note = {'page': n['page'], 'markdown': n['markdown']}
+            if n.get('ref'): note['ref'] = n['ref']
+            topics[n['topic']]['notes'].append(note)
         for q in chunk.get('questions', []):
             qid = hashlib.sha1((q['topic'] + '|' + q['q']).encode()).hexdigest()[:10]
             if qid in seen:
@@ -38,6 +40,7 @@ def build(folder):
                 'id': qid, 'topic': q['topic'], 'page': q.get('page'), 'q': q['q'], 'a': q['a'],
                 'choices': choices, 'priority': bool(q.get('priority')), 'source': q.get('source', 'book'),
             })
+            if q.get('ref'): topics[q['topic']]['questions'][-1]['ref'] = q['ref']
     for t in topics.values():
         t['notes'].sort(key=lambda n: n['page'])
     return {'id': meta['id'], 'title': meta['title'], 'subtitle': meta.get('subtitle', ''),
