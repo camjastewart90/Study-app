@@ -20,7 +20,7 @@
 
   /* ---------- storage ---------- */
 
-  function emptyState() { return { v: 2, q: {}, sessions: [] }; }
+  function emptyState() { return { v: 2, q: {}, sessions: [], days: {} }; }
   let state = emptyState();
 
   // Local midnight, `add` days from the day containing time t (handles daylight saving).
@@ -35,10 +35,23 @@
     }
     return st;
   }
+  // Answers per local day ('YYYY-MM-DD' -> count), for the heatmap, daily goal and streak.
+  // Older progress only has finished tests, so seed it from those.
+  const dayKey = (t) => { const d = new Date(t); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+  function backfillDays(st, had) {
+    if (had) return st;
+    st.days = {};
+    (st.sessions || []).forEach((x) => { const k = dayKey(x.at); st.days[k] = (st.days[k] || 0) + (x.n || 0); });
+    return st;
+  }
   function load() {
     try {
       const raw = localStorage.getItem(STORE_KEY);
-      if (raw) { state = migrate(Object.assign(emptyState(), { v: 1 }, JSON.parse(raw))); save(); }
+      if (raw) {
+        const data = JSON.parse(raw);
+        state = backfillDays(migrate(Object.assign(emptyState(), { v: 1 }, data)), !!data.days);
+        save();
+      }
     } catch (e) { state = emptyState(); }
   }
   function save() {
@@ -85,14 +98,53 @@
     </svg>`;
   }
 
-  // Consecutive days (ending today or yesterday) with at least one finished test.
+  // Days in a row with at least one answer. One missed day per week (Mon-Sun) is a rest day and
+  // doesn't break the streak; a second missed day in the same week does. Today never breaks it.
+  const weekStart = (t) => { const d = new Date(dayStart(t)); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return d.getTime(); };
   function streakDays() {
-    const days = new Set(state.sessions.map((s) => new Date(s.at).toDateString()));
-    const d = new Date();
-    if (!days.has(d.toDateString())) d.setDate(d.getDate() - 1);
+    const studied = Object.keys(state.days).filter((k) => state.days[k] > 0);
+    if (!studied.length) return 0;
+    const first = studied.sort()[0];
+    const rested = new Set();
     let n = 0;
-    while (days.has(d.toDateString())) { n++; d.setDate(d.getDate() - 1); }
+    for (let d = new Date(dayStart(Date.now())); dayKey(d) >= first; d.setDate(d.getDate() - 1)) {
+      if (state.days[dayKey(d)] > 0) { n++; continue; }
+      if (dayKey(d) === dayKey(Date.now())) continue; // today isn't over yet
+      const wk = weekStart(d.getTime());
+      if (rested.has(wk)) break;
+      rested.add(wk);
+    }
     return n;
+  }
+  function daysThisWeek() {
+    let n = 0;
+    for (let d = new Date(weekStart(Date.now())), i = 0; i < 7; i++, d.setDate(d.getDate() + 1)) if (state.days[dayKey(d)] > 0) n++;
+    return n;
+  }
+
+  /* ---------- exam date and daily goal ---------- */
+
+  function examDaysLeft() {
+    if (!state.examDate) return null;
+    const [y, m, d] = state.examDate.split('-').map(Number);
+    const left = Math.round((new Date(y, m - 1, d).getTime() - dayStart(Date.now())) / 864e5);
+    return left >= 0 ? left : null;
+  }
+  // Today's goal is fixed the first time it's worked out each day: what's due now, plus enough new
+  // questions to have seen everything a week before the exam (or 10 a day with no exam date).
+  function dailyGoal(course) {
+    const today = dayKey(Date.now());
+    const sig = today + '|' + (state.examDate || '');
+    if (!state.goal || state.goal.sig !== sig) {
+      const cs = courseStats(course);
+      const unseen = cs.qs.length - cs.seen;
+      const left = examDaysLeft();
+      const perDay = !unseen ? 0 : left == null ? 10 : Math.ceil(unseen / Math.max(1, left - 7));
+      state.goal = { sig, n: Math.max(10, cs.due + perDay), perDay };
+      save();
+    }
+    const done = state.days[today] || 0;
+    return { n: state.goal.n, perDay: state.goal.perDay, done, hit: done >= state.goal.n };
   }
 
   function courseStats(course) {
@@ -174,19 +226,24 @@
     const unseen = cs.qs.length - cs.seen;
     const startLabel = cs.due ? `Review ${cs.due} due` : !cs.seen ? 'Start learning' : unseen ? 'Learn 10 new' : 'Practise';
     const tomorrow = cs.due ? 0 : dueOn(course, 1);
-    const dueLine = cs.due
-      ? `<div class="due-chip"><b>${cs.due}</b> due today</div>`
-      : cs.seen ? `<div class="due-chip done">✓ All caught up${tomorrow ? ` · ${tomorrow} due tomorrow` : ''}</div>` : '';
+    const left = examDaysLeft();
+    const examChip = left == null ? '' : `<div class="streak">📅 ${left ? `Exam in ${left} day${left === 1 ? '' : 's'}` : 'Exam today'}</div>`;
+    const goal = dailyGoal(course);
+    const todayCard = `<a class="card today${goal.hit ? ' hit' : ''}" href="#/start">
+        <div class="today-top"><span class="k">${goal.hit ? '✓ Done for today' : "Today's goal"}</span><span class="v"><b>${Math.min(goal.done, goal.n)}</b> / ${goal.n}</span></div>
+        <div class="pbar"><i style="width:${pct(Math.min(1, goal.done / goal.n))}%"></i></div>
+        <div class="muted small">${cs.due ? `${cs.due} due now` : `✓ All caught up${tomorrow ? ` · ${tomorrow} due tomorrow` : ''}`}${!goal.hit && goal.perDay ? ` · ${goal.perDay} new a day${left != null ? ' to finish a week before the exam' : ''}` : ''}${goal.hit && cs.due ? ' · extra reviews still help' : ''}</div></a>`;
     let html = `<section class="greet"><p>${cs.seen ? 'Welcome back!' : 'Welcome!'}</p><h2>${esc(today)}</h2></section>
       <section class="gauge-hero">${gauge(cs.pct)}
         <p class="gauge-val">${cs.pct}%</p>
         <p class="gauge-cap">Overall mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
-        <div class="hero-chips">${dueLine}${streak ? `<div class="streak">🔥 ${streak}-day streak</div>` : ''}</div>
+        <div class="hero-chips">${examChip}${streak ? `<div class="streak">🔥 ${streak}-day streak</div>` : ''}</div>
         <div class="hero-actions">
           <a class="pill-btn" href="#/start">${sparkle}<span>${startLabel}</span></a>
           <a class="pill-btn ghost" href="#/random">${shuffleIcon}<span>Random topic</span></a>
         </div>
       </section>
+      ${cs.seen || left != null ? todayCard : ''}
       <div class="tiles">
         <a class="card tile warm" href="#/quiz/all"><span class="label">Question bank</span><span class="big">${cs.qs.length} Questions</span>
           <span class="foot"><span>⭐ ${priority} priority</span><span>${cs.seen} seen</span></span></a>
@@ -497,6 +554,8 @@
     s.due = schedule(s.box, now, result === 1 && !wasDue ? s.due : 0);
     s.last = now;
     state.q[key] = s;
+    const dk = dayKey(now);
+    state.days[dk] = (state.days[dk] || 0) + 1;
     quiz.score += result;
     quiz.results.push({ q, result });
     save();
@@ -520,6 +579,8 @@
       persistQuiz();
     }
     const stillDue = courseStats(course).due;
+    const goal = dailyGoal(course);
+    const goalLine = goal.hit ? `🎯 Today's goal done (${goal.done} answered)` : `Today: ${goal.done} of ${goal.n}`;
     const p = pct(quiz.score / list.length);
     const missed = results.filter((r) => r.result < 1);
     let html = `<section class="gauge-hero">${gauge(p)}<p class="gauge-val">${p}%</p></section>
@@ -531,8 +592,8 @@
       <div class="row" style="margin-bottom:16px">
         ${missed.length ? '<button class="btn primary" id="retry">Retry missed</button>' : ''}
         <a class="btn" href="${quiz.returnTo}">Done</a></div>
-      ${stillDue ? `<a class="card continue" href="#/start"><div><div class="k">Still due today</div><div class="v">${stillDue} question${stillDue === 1 ? '' : 's'} to review</div></div><span class="pill-btn small-pill">Keep going</span></a>`
-        : `<div class="card continue done-today"><div><div class="k">✓ All caught up for today</div><div class="v">${dueOn(course, 1) || 'No'} review${dueOn(course, 1) === 1 ? '' : 's'} due tomorrow</div></div></div>`}`;
+      ${stillDue ? `<a class="card continue" href="#/start"><div><div class="k">${goalLine}</div><div class="v">${stillDue} question${stillDue === 1 ? '' : 's'} to review</div></div><span class="pill-btn small-pill">Keep going</span></a>`
+        : `<div class="card continue done-today"><div><div class="k">✓ All caught up for today · ${goalLine}</div><div class="v">${dueOn(course, 1) || 'No'} review${dueOn(course, 1) === 1 ? '' : 's'} due tomorrow</div></div></div>`}`;
     if (missed.length) {
       html += `<div class="sub-title">Review what you missed</div><div class="card missed">` +
         missed.map((r) => `<div class="m"><div class="mq">${inline(stripNum(r.q.q))}</div><div class="ma">${answerHTML(r.q.a)}</div></div>`).join('') + `</div>`;
@@ -708,34 +769,90 @@
 
   /* ---------- progress ---------- */
 
+  // The 10 questions missed most often (and still not mastered), worst first.
+  function hardest(course) {
+    return course.topics.flatMap((t) => t.questions)
+      .map((q) => ({ q, s: qstat(qkey(course, q)) }))
+      .filter((x) => x.s.wrong > 0 && !isMastered(x.s))
+      .sort((a, b) => b.s.wrong - a.s.wrong || a.s.right / (a.s.right + a.s.wrong) - b.s.right / (b.s.right + b.s.wrong))
+      .slice(0, 10).map((x) => x.q);
+  }
+
   function viewProgress() {
     setChrome('Progress', null, 'progress');
     let html = '';
     courses.forEach((course) => {
       const qs = course.topics.flatMap((t) => t.questions);
       const stats = qs.map((q) => qstat(qkey(course, q)));
-      const overall = qs.length ? pct(stats.reduce((s, x) => s + masteryOf(x), 0) / qs.length) : 0;
+      const ready = (list) => list.length ? pct(list.reduce((a, q) => a + masteryOf(qstat(qkey(course, q))), 0) / list.length) : 0;
+      const overall = ready(qs);
       const mastered = stats.filter(isMastered).length;
       const seen = stats.filter(isSeen).length;
-      const due = stats.filter((s) => isDue(s)).length;
-      let week = 0; for (let d = 1; d <= 7; d++) week += dueOn(course, d);
+      const prio = qs.filter((q) => q.priority), rest = qs.filter((q) => !q.priority);
       const sessions = state.sessions.filter((s) => s.course === course.id);
-      const streak = streakDays();
+      const left = examDaysLeft();
+      const goal = dailyGoal(course);
+
       html += `<section class="gauge-hero">${gauge(overall)}<p class="gauge-val">${overall}%</p>
-        <p class="gauge-cap">Overall · ${mastered} of ${qs.length} mastered · ${seen} seen</p>
-        <div class="hero-chips"><div class="due-chip"><b>${due}</b> due today · ${dueOn(course, 1)} tomorrow · ${week} next 7 days</div></div></section>
-        <div class="stats"><div class="card stat"><b>${sessions.length}</b><span>tests taken</span></div>
-        <div class="card stat"><b>${streak}</b><span>day streak</span></div>
-        <div class="card stat"><b>${sessions.length ? pct(sessions.slice(-10).reduce((a, x) => a + x.score / x.n, 0) / Math.min(10, sessions.length)) : 0}%</b><span>recent avg</span></div></div>`;
+        <p class="gauge-cap">Exam readiness · ${mastered} of ${qs.length} mastered · ${seen} seen</p></section>
+        <div class="card exam-card"><div><div class="k">Exam date</div>
+          <div class="v">${left == null ? (state.examDate ? 'Passed. Set your next one' : 'Not set') : left ? `${left} day${left === 1 ? '' : 's'} to go` : 'Today. Good luck!'}</div></div>
+          <input type="date" id="exam-date" value="${esc(state.examDate || '')}" aria-label="Exam date"></div>
+        <div class="card split">
+          <div class="split-row"><span>⭐ Previous exam questions</span><b>${ready(prio)}%</b></div><div class="pbar"><i style="width:${ready(prio)}%"></i></div>
+          <div class="split-row"><span>Everything else</span><b>${ready(rest)}%</b></div><div class="pbar"><i style="width:${ready(rest)}%"></i></div>
+          <p class="muted small">Readiness drops when reviews go overdue, so this shows what you'd likely know today.</p></div>
+        <div class="stats"><div class="card stat"><b>${streakDays()}</b><span>day streak</span></div>
+        <div class="card stat"><b>${daysThisWeek()}<small>/7</small></b><span>days this week</span></div>
+        <div class="card stat"><b>${Math.min(goal.done, goal.n)}<small>/${goal.n}</small></b><span>today's goal</span></div></div>
+        <p class="muted small center" style="margin:-6px 0 0">One missed day a week is a rest day and keeps your streak.</p>`;
+
+      // 12-week heatmap, Monday-first columns, shaded by answers that day
+      const first = new Date(weekStart(Date.now())); first.setDate(first.getDate() - 7 * 11);
+      const shade = (n) => (!n ? 0 : n < 10 ? 1 : n < 25 ? 2 : n < 50 ? 3 : 4);
+      let cells = '', total = 0, active = 0;
+      for (let i = 0, d = new Date(first); i < 84; i++, d.setDate(d.getDate() + 1)) {
+        const k = dayKey(d), n = state.days[k] || 0, future = d.getTime() > Date.now();
+        if (n) { total += n; active++; }
+        cells += `<i class="l${future ? 'x' : shade(n)}" title="${future ? '' : `${d.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' })}: ${n} answer${n === 1 ? '' : 's'}`}"></i>`;
+      }
+      html += `<div class="sub-title">Last 12 weeks</div><div class="card heat-card">
+        <div class="heat-wrap"><div class="heat-days"><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span></div>
+        <div class="heat" role="img" aria-label="${active} study days and ${total} answers in the last 12 weeks">${cells}</div></div>
+        <div class="heat-foot"><span>${active} study days · ${total} answers</span>
+        <span class="heat-key">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</span></div></div>`;
+
+      // 7-day review forecast (today includes anything overdue)
+      const fc = [courseStats(course).due];
+      for (let d = 1; d < 7; d++) fc.push(dueOn(course, d));
+      const max = Math.max(...fc, 1);
+      html += `<div class="sub-title">Reviews coming up</div><div class="card fc-card"><div class="fc">` +
+        fc.map((n, d) => {
+          const day = new Date(dayStart(Date.now(), d));
+          return `<div class="fc-col" title="${n} due ${d ? day.toLocaleDateString(undefined, { weekday: 'long' }) : 'today'}">
+            <span class="fc-n">${n}</span><div class="fc-bar"><i style="height:${n ? Math.max(4, (n / max) * 100) : 0}%"></i></div>
+            <span class="fc-d">${d ? day.toLocaleDateString(undefined, { weekday: 'short' }) : 'Today'}</span></div>`;
+        }).join('') + `</div></div>`;
+
       html += `<div class="sub-title">By topic, weakest first</div><div class="topic-list">`;
       course.topicOrder.map((t) => ({ t, m: topicMastery(course, t) })).sort((a, b) => a.m.pct - b.m.pct).forEach(({ t, m }) => {
         const last = lastSession('t:' + t.id);
+        const fading = t.questions.filter((q) => isOverdue(qstat(qkey(course, q)))).length;
         html += `<a class="card topic" href="#/t/${course.id}/${t.id}/test"><div class="t-main">
-          <div class="t-title">${esc(t.title)}</div>
+          <div class="t-title">${esc(t.title)}${fading ? ` <span class="tag">fading</span>` : ''}</div>
           <div class="t-sub">${m.pct}% · ${m.mastered}/${m.total} mastered${m.due ? ` · <span class="due-txt">${m.due} due</span>` : ''}${last ? ` · last test ${pct(last.score / last.n)}%` : ''}</div>
           <div class="pbar"><i style="width:${m.pct}%"></i></div></div></a>`;
       });
       html += `</div>`;
+
+      const hard = hardest(course);
+      if (hard.length) {
+        html += `<div class="sub-title">Hardest questions</div><div class="card missed">` +
+          hard.map((q) => { const s = qstat(qkey(course, q)); return `<div class="m"><div class="mq">${inline(stripNum(q.q))}</div>
+            <div class="ma">Missed ${s.wrong} of ${s.right + s.wrong} · ${esc(topicIndex[course.id + '/' + q.topic].topic.short || topicIndex[course.id + '/' + q.topic].topic.title)}</div></div>`; }).join('') +
+          `</div><button class="btn primary block" id="drill" style="margin-top:12px">Drill these ${hard.length}</button>`;
+      }
+
       if (sessions.length) {
         html += `<div class="sub-title">Recent tests</div><div class="card missed">` +
           sessions.slice(-10).reverse().map((s) => `<div class="m"><div class="mq">${esc(s.label)}</div>
@@ -750,13 +867,24 @@
     app.innerHTML = html;
 
     document.getElementById('export').onclick = () => { exportBackup(); };
+    document.getElementById('exam-date').onchange = (e) => {
+      state.examDate = e.target.value || null;
+      save();
+      viewProgress();
+    };
+    const drill = document.getElementById('drill');
+    if (drill) drill.onclick = () => {
+      const course = courses[0];
+      quiz = { course, scope: 'hard', label: 'Hardest questions', returnTo: '#/progress', list: shuffle(hardest(course)), i: 0, score: 0, results: [], answered: false };
+      location.hash = '#/run';
+    };
     document.getElementById('import').onchange = (e) => {
       const f = e.target.files[0];
       if (!f) return;
       f.text().then((txt) => {
         const data = JSON.parse(txt);
         if (!data || typeof data.q !== 'object') throw new Error('bad file');
-        state = migrate(Object.assign(emptyState(), { v: 1 }, data));
+        state = backfillDays(migrate(Object.assign(emptyState(), { v: 1 }, data)), !!data.days);
         save();
         viewProgress();
       }).catch(() => alert('That file is not an SO Study Guide backup.'));
