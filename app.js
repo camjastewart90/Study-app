@@ -342,7 +342,7 @@
     if (first) first.scrollIntoView({ block: 'center' });
   }
 
-  function viewTopic(courseId, topicId, tab, term) {
+  function viewTopic(courseId, topicId, tab, term, at, from) {
     const ref = topicIndex[courseId + '/' + topicId];
     if (!ref) return viewNotFound();
     const { course, topic, idx } = ref;
@@ -353,16 +353,29 @@
     let html = `<div class="seg"><a href="${base}" class="${tab === 'notes' ? 'on' : ''}">Notes</a>
       <a href="${base}/test" class="${tab === 'test' ? 'on' : ''}">Test · ${m.pct}%</a></div>`;
 
+    // questions that come from each page / document, for the "Check yourself" buttons
+    const byTag = {};
+    topic.notes.forEach((n) => {
+      const set = byTag[noteTag(n)] || (byTag[noteTag(n)] = new Set());
+      topic.questions.forEach((q) => { if (fromNote(q, n)) set.add(q); });
+    });
+    const checkBtn = (tag) => (byTag[tag] && byTag[tag].size ? `<button class="btn check-btn" data-tag="${esc(tag)}">✓ Check yourself on this page (${byTag[tag].size})</button>` : '');
+
     if (tab === 'notes') {
+      if (from === 'run' && savedQuiz()) html += `<a class="btn primary block back-test" href="#/resume">‹ Back to your test</a>`;
       html += `<div class="card notes" id="notes"><h2>${esc(topic.title)}</h2>`;
       if (!topic.notes.length) html += `<p class="muted">No study notes for this topic yet. Use the Test tab.</p>`;
       let lastPage = null;
       topic.notes.forEach((n) => {
-        const tag = n.ref || 'Study Book p.' + n.page;
-        if (tag !== lastPage) html += `<p class="page-tag">${esc(tag)}</p>`;
+        const tag = noteTag(n);
+        if (tag !== lastPage) {
+          if (lastPage !== null) html += checkBtn(lastPage);
+          html += `<p class="page-tag" data-tag="${esc(tag)}">${esc(tag)}</p>`;
+        }
         lastPage = tag;
         html += starify(marked.parse(n.markdown));
       });
+      if (lastPage !== null) html += checkBtn(lastPage);
       html += `</div>`;
       html += `<a class="btn primary block" style="margin-top:16px" href="${base}/test">Test your knowledge (${topic.questions.length})</a>`;
     } else {
@@ -377,6 +390,18 @@
     html += `</div>`;
     app.innerHTML = html;
     if (tab === 'notes' && term) highlight(document.getElementById('notes'), term);
+    if (tab === 'notes' && at && !term) {
+      const el = [...document.querySelectorAll('.page-tag')].find((x) => x.dataset.tag === at);
+      if (el) { el.scrollIntoView({ block: 'start' }); window.scrollBy(0, -80); el.classList.add('flash'); }
+    }
+    if (tab === 'notes') document.getElementById('notes').onclick = (e) => {
+      const b = e.target.closest('.check-btn');
+      if (!b) return;
+      const tag = b.dataset.tag;
+      quiz = { course, scope: 't:' + topic.id, label: 'Check: ' + tag, returnTo: `${base}?at=${encodeURIComponent(tag)}`,
+        list: shuffle([...byTag[tag]]), i: 0, score: 0, results: [], answered: false };
+      location.hash = '#/run';
+    };
     if (tab === 'test') bindSetup(course, 't:' + topic.id, topic.questions, topic.title, base + '/test');
   }
 
@@ -475,19 +500,33 @@
     const q = quiz.list[quiz.i];
     const course = quiz.course;
     const topic = topicIndex[course.id + '/' + q.topic].topic;
+    const st = qstat(qkey(course, q));
     const num = bankNum(q.q);
     const meta = [topic.short || topic.title, num ? 'Bank Q' + num : (q.ref || 'Study Book p.' + q.page), q.priority ? '⭐ Priority' : ''].filter(Boolean).join(' · ');
     quiz.answered = false;
+    const nextLabel = quiz.i + 1 < quiz.list.length ? 'Next question' : 'See results';
 
     let html = `<div class="qbar"><span>${quiz.i + 1}/${quiz.list.length}</span><div class="bar"><i style="width:${pct(quiz.i / quiz.list.length)}%"></i></div><span>${quiz.score} ✓</span></div>
       <div class="card qcard"><div class="qtopic">${esc(meta)}</div><p class="qtext">${inline(stripNum(q.q))}</p>`;
-    if (q.choices && q.choices.length) {
+    const isMC = q.choices && q.choices.length;
+    // Recall first: once a question has been answered correctly twice (box 2+), the options start
+    // hidden so you have to produce the answer before you can recognise it.
+    const recallFirst = isMC && st.box >= 2;
+    const typeable = isMC && typeof q.a === 'string' && q.a.length <= 40;
+    const points = Array.isArray(q.a) ? q.a.filter((x) => !/^\s/.test(x)).length : 0;
+    if (isMC) {
       const opts = shuffle([{ t: q.a, ok: true }].concat(q.choices.map((c) => ({ t: c, ok: false }))));
-      html += `<div class="choices" id="choices">${opts.map((o, k) => `<button class="choice" data-k="${k}" data-ok="${o.ok ? 1 : 0}"><kbd>${k + 1}</kbd>${inline(o.t)}</button>`).join('')}</div>
+      if (recallFirst) {
+        html += `<div id="recall"><p class="hint">You've got this one right before. Answer it before you see the options.</p>
+          ${typeable ? `<form id="typed" class="typed" autocomplete="off"><input id="typed-in" type="text" placeholder="Type your answer (optional)" autocapitalize="off" spellcheck="false" enterkeyhint="done"><button class="btn" type="submit">Check</button></form>` : ''}
+          <button class="btn primary block" id="show-opts">Show options</button></div>`;
+      }
+      html += `<button class="chip guess" id="guess" aria-pressed="false"${recallFirst ? ' hidden' : ''}>🎲 I'm guessing</button>
+        <div class="choices" id="choices"${recallFirst ? ' hidden' : ''}>${opts.map((o, k) => `<button class="choice" data-k="${k}" data-ok="${o.ok ? 1 : 0}"><kbd>${k + 1}</kbd>${inline(o.t)}</button>`).join('')}</div>
         <div id="after"></div>`;
     } else {
-      const items = Array.isArray(q.a) ? q.a.filter((x) => !/^\s/.test(x)).length : 0;
-      html += `<p class="hint">${items > 1 ? `Recall all ${items} points, then check yourself.` : 'Answer in your head, then check yourself.'}</p>
+      const lastMiss = points > 1 && st.miss && st.miss.length ? st.miss.length : 0;
+      html += `<p class="hint">${points > 1 ? `Recall all ${points} points, then check yourself.` : 'Answer in your head, then check yourself.'}${lastMiss ? ` Last time you missed ${lastMiss}.` : ''}</p>
         <div id="reveal-area"><button class="btn primary block" id="reveal">Show answer</button></div>`;
     }
     html += `</div>`;
@@ -496,43 +535,179 @@
 
     const choices = document.getElementById('choices');
     if (choices) {
+      const guessBtn = document.getElementById('guess');
+      guessBtn.onclick = () => guessBtn.setAttribute('aria-pressed', guessBtn.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      const showOptions = () => {
+        const r = document.getElementById('recall');
+        if (r) r.remove();
+        choices.hidden = false; guessBtn.hidden = false;
+      };
+      // Mark the question: lock the options, show the right one, record it, offer the notes on a miss.
+      const finish = (ok, picked, note) => {
+        if (quiz.answered) return;
+        showOptions();
+        guessBtn.hidden = true;
+        const guess = guessBtn.getAttribute('aria-pressed') === 'true';
+        choices.querySelectorAll('.choice').forEach((c) => { c.disabled = true; if (c.dataset.ok === '1') c.classList.add('right'); });
+        if (picked && !ok) picked.classList.add('wrong');
+        (ok ? choices.querySelector('.right') : choices).classList.add(ok ? 'pop' : 'shake');
+        buzz(ok);
+        record(q, ok ? 1 : 0, { guess });
+        document.getElementById('after').innerHTML = `<p class="feedback ${ok ? 'good' : 'bad'}">${ok ? (guess ? 'Correct, but it was a guess. It stays at its level.' : 'Correct') : 'Not quite'}</p>
+          ${note || ''}${ok ? '' : notesCardHTML(course, topic, q)}
+          <button class="btn primary block" id="next">${nextLabel}</button>`;
+        bindNext();
+      };
       choices.onclick = (e) => {
         const b = e.target.closest('.choice');
-        if (!b || quiz.answered) return;
-        const ok = b.dataset.ok === '1';
-        choices.querySelectorAll('.choice').forEach((c) => { c.disabled = true; if (c.dataset.ok === '1') c.classList.add('right'); });
-        if (!ok) b.classList.add('wrong');
-        (ok ? b : choices).classList.add(ok ? 'pop' : 'shake');
-        buzz(ok);
-        record(q, ok ? 1 : 0);
-        document.getElementById('after').innerHTML = `<p class="feedback ${ok ? 'good' : 'bad'}">${ok ? 'Correct' : 'Not quite'}</p>
-          <button class="btn primary block" id="next">${quiz.i + 1 < quiz.list.length ? 'Next question' : 'See results'}</button>`;
-        bindNext();
+        if (b) finish(b.dataset.ok === '1', b);
+      };
+      const so = document.getElementById('show-opts');
+      if (so) so.onclick = () => { showOptions(); const f = choices.querySelector('.choice'); if (f) f.focus(); };
+      const typed = document.getElementById('typed');
+      if (typed) typed.onsubmit = (e) => {
+        e.preventDefault();
+        const val = document.getElementById('typed-in').value.trim();
+        if (!val) return;
+        if (closeEnough(val, q.a)) return finish(true, null, `<p class="muted small">You typed “${esc(val)}”.</p>`);
+        // Not a clear match: show the answer and let them judge (wording often differs).
+        document.getElementById('recall').innerHTML = `<div class="answer"><div class="muted small">You typed</div><div>${esc(val)}</div>
+            <div class="muted small" style="margin-top:8px">Answer</div><div>${inline(q.a)}</div></div>
+          <div class="row grades"><button class="btn bad" id="t-no"><kbd>1</kbd>I was wrong</button><button class="btn good" id="t-yes"><kbd>2</kbd>I was right</button></div>`;
+        document.getElementById('t-no').onclick = () => finish(false, null);
+        document.getElementById('t-yes').onclick = () => finish(true, null);
       };
     } else {
       document.getElementById('reveal').onclick = () => {
+        const area = document.getElementById('reveal-area');
+        const link = notesLinkHTML(course, topic, q);
+        const grade = (r, miss) => {
+          if (quiz.answered) return;
+          buzz(r === 1);
+          record(q, r, { miss });
+          advance();
+        };
+        if (points > 1) {
+          // List answers: tick the points you got. All = right, none = missed, some = partly.
+          const prev = new Set(st.miss || []);
+          let k = -1;
+          area.innerHTML = `<p class="hint">Tick the points you got.</p><ul class="answer ticks">${q.a.map((x) => {
+              const depth = (String(x).match(/^\s*/)[0].length / 2) | 0;
+              if (depth) return `<li class="sub" style="margin-left:${depth * 16 + 34}px">${inline(String(x).trim())}</li>`;
+              k++;
+              return `<li><label class="tick${prev.has(k) ? ' was-missed' : ''}"><input type="checkbox" data-i="${k}"><span>${inline(x)}</span>${prev.has(k) ? '<em>missed last time</em>' : ''}</label></li>`;
+            }).join('')}</ul>
+            <div class="row grades"><button class="btn" id="tick-all">All</button><button class="btn primary" id="tick-save"></button></div>
+            <p class="hint touch-only center">Or swipe the card: right if you got them all, left if you missed them all.</p>${link}`;
+          const boxes = [...area.querySelectorAll('input[data-i]')];
+          const save = document.getElementById('tick-save');
+          const update = () => {
+            const got = boxes.filter((b) => b.checked).length;
+            save.textContent = got === boxes.length ? `Got all ${got}` : got ? `Got ${got} of ${boxes.length}` : 'Missed them all';
+            save.className = 'btn ' + (got === boxes.length ? 'good' : got ? 'primary' : 'bad');
+          };
+          update();
+          area.onchange = update;
+          document.getElementById('tick-all').onclick = () => { boxes.forEach((b) => { b.checked = true; }); update(); };
+          save.id = 'next'; // Enter / Space saves
+          save.onclick = () => {
+            const miss = boxes.filter((b) => !b.checked).map((b) => +b.dataset.i);
+            grade(!miss.length ? 1 : miss.length === boxes.length ? 0 : 0.5, miss);
+          };
+          enableSwipe(document.querySelector('.qcard'), (r) => grade(r, r ? [] : boxes.map((b) => +b.dataset.i)));
+          return;
+        }
         const multi = Array.isArray(q.a) && q.a.length > 1;
         let n = 0;
-        document.getElementById('reveal-area').innerHTML = `<div class="answer">${answerHTML(q.a)}</div>
+        area.innerHTML = `<div class="answer">${answerHTML(q.a)}</div>
           <div class="row grades">
             <button class="btn bad" data-r="0"><kbd>${++n}</kbd>Missed it</button>
             ${multi ? `<button class="btn" data-r="0.5"><kbd>${++n}</kbd>Partly</button>` : ''}
             <button class="btn good" data-r="1"><kbd>${++n}</kbd>Got it</button>
           </div>
-          <p class="hint touch-only center">Or swipe the card: right if you got it, left if you missed it.</p>`;
-        const grade = (r) => {
-          if (quiz.answered) return;
-          buzz(r === 1);
-          record(q, r);
-          advance();
-        };
-        document.getElementById('reveal-area').onclick = (e) => {
+          <p class="hint touch-only center">Or swipe the card: right if you got it, left if you missed it.</p>${link}`;
+        area.onclick = (e) => {
           const b = e.target.closest('[data-r]');
           if (b) grade(+b.dataset.r);
         };
         enableSwipe(document.querySelector('.qcard'), grade);
       };
     }
+  }
+
+  // Forgiving match for typed answers: ignore case, punctuation, a leading "the/a", and small typos.
+  function closeEnough(typed, answer) {
+    const norm = (x) => String(x).toLowerCase().replace(/\*|_/g, '').replace(/[^a-z0-9 ]+/g, ' ').replace(/^(the|a|an) /, '').replace(/\s+/g, ' ').trim();
+    const a = norm(typed), b = norm(answer);
+    if (!a) return false;
+    if (a === b) return true;
+    const strip = (x) => x.replace(/ /g, '');
+    return lev(strip(a), strip(b)) <= Math.max(1, Math.floor(strip(b).length * 0.15));
+  }
+  function lev(a, b) {
+    let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+
+  /* ---------- link questions to the notes ---------- */
+
+  const noteTag = (n) => n.ref || 'Study Book p.' + n.page;
+  const docCode = (r) => { const m = String(r).match(/^([A-Z]{2,4} \d{3})/); return m ? m[1] : null; };
+  // Does this question come from this note? Study book: same page. Documents: same code (e.g. OMS 020).
+  function fromNote(q, n) {
+    if (q.ref) {
+      if (!n.ref) return false;
+      const a = docCode(q.ref), b = docCode(n.ref);
+      return a && b ? a === b : n.ref.toLowerCase().startsWith(q.ref.toLowerCase());
+    }
+    return !n.ref && q.page != null && n.page === q.page;
+  }
+  const STOP = new Set('that this with from what which when where there their they them have been were will would should could must into than then also only each other such these those your about after before under over more most some many does done make made used uses using within between including'.split(' '));
+  const words = (x) => [...new Set(String(x).toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((w) => w.length >= 3 && !STOP.has(w)))];
+
+  // The passage in the notes that best explains a question: from its own page if it has one,
+  // otherwise the best match anywhere in the topic. Returns null if nothing matches well.
+  function findInNotes(topic, q) {
+    const own = topic.notes.filter((n) => fromNote(q, n));
+    const pool = own.length ? own : topic.notes;
+    const aw = words([].concat(q.a).join(' ')), qw = words(stripNum(q.q));
+    let best = null;
+    pool.forEach((n) => {
+      n.markdown.split(/\n\s*\n/).forEach((block) => {
+        const lines = block.split('\n');
+        lines.forEach((line, i) => {
+          const lw = new Set(words(line));
+          const score = aw.filter((w) => lw.has(w)).length * 2 + qw.filter((w) => lw.has(w)).length;
+          if (!best || score > best.score) best = { score, n, lines, i };
+        });
+      });
+    });
+    if (!best || best.score < (own.length ? 2 : 5)) return own.length ? { tag: noteTag(own[0]), excerpt: '' } : null;
+    const from = Math.max(0, best.i - 1), to = Math.min(best.lines.length, best.i + 3);
+    const excerpt = best.lines.slice(from, to)
+      .filter((l) => !/^\s*\|?[\s:|-]+\|?\s*$/.test(l)) // drop table separator rows
+      .map((l) => (/^\s*\|/.test(l) ? l.replace(/^\s*\||\|\s*$/g, '').split('|').map((c) => c.trim()).filter(Boolean).join(' · ') : l))
+      .join('\n');
+    return { tag: noteTag(best.n), excerpt };
+  }
+  function notesHref(course, topic, tag) {
+    return `#/t/${course.id}/${topic.id}?at=${encodeURIComponent(tag)}&from=run`;
+  }
+  function notesCardHTML(course, topic, q) {
+    const hit = findInNotes(topic, q);
+    if (!hit) return '';
+    return `<div class="card notes-hit"><div class="k">📖 See it in the notes · ${esc(hit.tag)}</div>
+      ${hit.excerpt ? `<div class="excerpt">${starify(marked.parse(hit.excerpt))}</div>` : ''}
+      <a class="more" href="${notesHref(course, topic, hit.tag)}">Open the notes ›</a></div>`;
+  }
+  function notesLinkHTML(course, topic, q) {
+    const hit = findInNotes(topic, q);
+    return hit ? `<a class="notes-link" href="${notesHref(course, topic, hit.tag)}">📖 See it in the notes · ${esc(hit.tag)} ›</a>` : '';
   }
 
   function bindNext() {
@@ -542,16 +717,19 @@
   }
   function advance() { quiz.i++; viewQuiz(); }
 
-  function record(q, result) {
+  function record(q, result, opts) {
+    opts = opts || {};
     quiz.answered = true;
     const key = qkey(quiz.course, q);
     const s = Object.assign({}, qstat(key));
     const now = Date.now();
     const wasDue = !isSeen(s) || isDue(s, now);
-    if (result === 1) { if (wasDue) s.box = Math.min(s.box + 1, 5); s.right++; }
+    // a lucky guess counts as right but doesn't move the question up a box
+    if (result === 1) { if (wasDue && !opts.guess) s.box = Math.min(s.box + 1, 5); s.right++; }
     else if (result === 0) { s.box = Math.max(s.box - 2, 0); s.wrong++; } // missed: back two boxes
     else { s.box = Math.max(s.box - 1, 0); s.wrong++; } // partly: back one box
     s.due = schedule(s.box, now, result === 1 && !wasDue ? s.due : 0);
+    if (opts.miss && opts.miss.length) s.miss = opts.miss; else delete s.miss; // list points missed, shown next time
     s.last = now;
     state.q[key] = s;
     const dk = dayKey(now);
@@ -559,6 +737,7 @@
     quiz.score += result;
     quiz.results.push({ q, result });
     save();
+    persistQuiz();
   }
 
   // Next review day for a box. Longer gaps get a little jitter so reviews don't all land on one day.
@@ -595,8 +774,20 @@
       ${stillDue ? `<a class="card continue" href="#/start"><div><div class="k">${goalLine}</div><div class="v">${stillDue} question${stillDue === 1 ? '' : 's'} to review</div></div><span class="pill-btn small-pill">Keep going</span></a>`
         : `<div class="card continue done-today"><div><div class="k">✓ All caught up for today · ${goalLine}</div><div class="v">${dueOn(course, 1) || 'No'} review${dueOn(course, 1) === 1 ? '' : 's'} due tomorrow</div></div></div>`}`;
     if (missed.length) {
-      html += `<div class="sub-title">Review what you missed</div><div class="card missed">` +
-        missed.map((r) => `<div class="m"><div class="mq">${inline(stripNum(r.q.q))}</div><div class="ma">${answerHTML(r.q.a)}</div></div>`).join('') + `</div>`;
+      // group misses by where they come from, so it's clear what to re-read
+      const groups = new Map();
+      missed.forEach((r) => {
+        const topic = topicIndex[course.id + '/' + r.q.topic].topic;
+        const hit = findInNotes(topic, r.q);
+        const key = hit ? topic.id + '|' + hit.tag : '~';
+        if (!groups.has(key)) groups.set(key, { topic, tag: hit && hit.tag, items: [] });
+        groups.get(key).items.push(r);
+      });
+      const ordered = [...groups.values()].sort((a, b) => (!a.tag) - (!b.tag) || b.items.length - a.items.length);
+      html += `<div class="sub-title">Review what you missed</div>` + ordered.map((g) => `<div class="miss-head">
+          <span>${g.tag ? `${esc(g.topic.short || g.topic.title)} · ${esc(g.tag)}` : 'Other questions'} · ${g.items.length} missed</span>
+          ${g.tag ? `<a href="#/t/${course.id}/${g.topic.id}?at=${encodeURIComponent(g.tag)}">Re-read ›</a>` : ''}</div>
+        <div class="card missed">` + g.items.map((r) => `<div class="m"><div class="mq">${inline(stripNum(r.q.q))}</div><div class="ma">${answerHTML(r.q.a)}</div></div>`).join('') + `</div>`).join('');
     }
     app.innerHTML = html;
     window.scrollTo(0, 0);
@@ -751,10 +942,15 @@
     if (!location.hash.startsWith('#/run') || !quiz) return;
     const go = e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight';
     if (/^[1-9]$/.test(e.key)) {
-      const opts = document.querySelectorAll('#choices .choice:not(:disabled), .grades [data-r]');
+      const ticks = document.querySelectorAll('.ticks input[data-i]');
+      if (ticks.length) { const t = ticks[+e.key - 1]; if (t) { e.preventDefault(); t.checked = !t.checked; t.dispatchEvent(new Event('change', { bubbles: true })); } return; }
+      const opts = document.querySelectorAll('#choices:not([hidden]) .choice:not(:disabled), .grades [data-r], #t-no, #t-yes');
       click(opts[+e.key - 1]);
+    } else if (e.key === 'g') {
+      const g = document.getElementById('guess');
+      if (g && !g.hidden) click(g);
     } else if (go && !(onButton && e.key !== 'ArrowRight')) { // a focused button already handles Enter/Space
-      click(document.getElementById('next') || document.getElementById('reveal'));
+      click(document.getElementById('next') || document.getElementById('reveal') || document.getElementById('show-opts'));
     }
   });
 
@@ -912,7 +1108,7 @@
     if (!parts.length) viewHome(params.get('search') === '1');
     else if (parts[0] === 'start') quickStart();
     else if (parts[0] === 'random') randomTopic();
-    else if (parts[0] === 't') viewTopic(parts[1], parts[2], parts[3] === 'test' ? 'test' : 'notes', params.get('q'));
+    else if (parts[0] === 't') viewTopic(parts[1], parts[2], parts[3] === 'test' ? 'test' : 'notes', params.get('q'), params.get('at'), params.get('from'));
     else if (parts[0] === 'quiz') viewQuizAll();
     else if (parts[0] === 'resume') { if (restoreQuiz()) location.replace('#/run'); else location.replace('#/'); return; }
     else if (parts[0] === 'run') { if (!quiz) restoreQuiz(); viewQuiz(); }

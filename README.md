@@ -12,6 +12,14 @@ An installable study app (PWA) for FRV courses. It has study notes for each topi
   boxes and brings it back tomorrow. Box 3 counts as mastered, but an overdue question slips back
   until it's reviewed. Home shows what's due today, and "Smart mix", "Priority", "Weak spots" and
   "Not seen yet" are still there for free practice.
+- **Recall first:** multiple choice questions you've answered right twice hide their options until
+  you've tried to answer (you can type it in). "I'm guessing" stops a lucky guess from counting as
+  progress. List flashcards let you tick off the points you got, and remember which you missed.
+- **Notes links:** a miss shows the matching passage from the notes with a link to it; each notes
+  page has a "Check yourself" quiz; the results screen groups misses by where to re-read.
+- **Exam date and goal:** set the exam date on Progress for a daily goal and countdown. Progress
+  also has a 12-week heatmap, a 7-day review forecast and your hardest questions. The streak
+  allows one rest day a week.
 - **Progress:** kept on the device in `localStorage`. Back it up and restore it from the Progress
   tab; Home reminds you after 7 days of study without a backup. A test in progress is saved after
   every answer and can be resumed from Home.

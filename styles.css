@@ -406,3 +406,31 @@ kbd { display: none; font: 600 11px/1 var(--sans); min-width: 20px; padding: 4px
 .fc-bar i { display: block; width: 100%; background: var(--grad); border-radius: 4px 4px 0 0; }
 .fc-n { font-size: 12px; font-weight: 600; color: var(--text); }
 .fc-d { font-size: 11px; color: var(--muted); }
+
+/* ---------- recall first, list ticks, notes links ---------- */
+.guess { margin: 0 0 12px; font-size: 13px; padding: 7px 12px; }
+.guess[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--ink-fg); }
+.typed { display: flex; gap: 8px; margin: 0 0 12px; }
+.typed input { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--text); background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 999px; padding: 12px 16px; outline: none; }
+.typed input:focus { border-color: var(--accent); }
+.typed .btn { padding: 12px 18px; }
+.ticks { list-style: none; padding: 8px 10px !important; }
+.ticks li { margin: 2px 0; }
+.ticks li.sub { list-style: circle; font-size: 14px; color: var(--muted); }
+.tick { display: flex; align-items: flex-start; gap: 10px; padding: 8px 6px; border-radius: 12px; cursor: pointer; flex-wrap: wrap; }
+.tick input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--good); flex: none; }
+.tick span { flex: 1; min-width: 0; }
+.tick em { font-style: normal; font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; width: 100%; padding-left: 30px; margin-top: -2px; }
+.tick:has(input:checked) span { color: var(--good); }
+.notes-hit { padding: 14px 16px; margin: 0 0 14px; background: var(--surface-2); box-shadow: none; }
+.notes-hit .k { font-size: 13px; font-weight: 600; color: var(--muted); }
+.notes-hit .excerpt { font-size: 14.5px; line-height: 1.45; }
+.notes-hit .excerpt p, .notes-hit .excerpt ul { margin: 6px 0; }
+.notes-hit .excerpt ul { padding-left: 20px; }
+.notes-hit .more, .notes-link { display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none; margin-top: 4px; }
+.notes-link { margin-top: 14px; }
+.check-btn { display: flex; margin: 14px 0 4px; font-size: 14px; padding: 10px 16px; }
+.back-test { margin-bottom: 12px; }
+.page-tag.flash { background: var(--accent); color: #fff; transition: background 1.5s; }
+.miss-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 13px; font-weight: 600; color: var(--muted); margin: 14px 6px 8px; }
+.miss-head a { white-space: nowrap; text-decoration: none; }
