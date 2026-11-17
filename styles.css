@@ -338,3 +338,33 @@ mark { background: #ffe58a; color: #1c1b1a; border-radius: 4px; padding: 0 2px; 
   main { padding: 8px 24px 24px; }
   .greet h2 { font-size: 42px; }
 }
+
+/* ---------- due queue ---------- */
+.hero-chips { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.hero-chips .streak { margin-bottom: 0; }
+.due-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--bad-soft); color: var(--accent); border: 1px solid var(--glass-border); }
+.due-chip b { font-weight: 750; }
+.due-chip.done { background: var(--good-soft); color: var(--good); }
+.due-txt { color: var(--accent); font-weight: 600; }
+.small-pill { padding: 8px 14px; font-size: 14px; flex: none; }
+.done-today .k { color: var(--good); font-weight: 600; }
+.nudge { padding: 16px 18px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 12px; }
+.nudge .k { font-weight: 600; margin-bottom: 2px; }
+
+/* ---------- feel ---------- */
+kbd { display: none; font: 600 11px/1 var(--sans); min-width: 20px; padding: 4px 5px; margin-right: 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); text-align: center; vertical-align: 2px; }
+.btn kbd { margin-right: 2px; }
+.touch-only { display: none; }
+@media (hover: hover) and (pointer: fine) { kbd { display: inline-block; } }
+@media (pointer: coarse) { .touch-only { display: block; } }
+.choice.pop { animation: pop .28s ease; }
+.choices.shake { animation: shake .32s ease; }
+@keyframes pop { 40% { transform: scale(1.025); } }
+@keyframes shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+.qcard.swipeable { touch-action: pan-y; transition: transform .2s ease, box-shadow .2s; }
+.qcard.swipe-good { box-shadow: 0 0 0 2px var(--good), var(--shadow); }
+.qcard.swipe-bad { box-shadow: 0 0 0 2px var(--bad), var(--shadow); }
+@media (prefers-reduced-motion: reduce) { .choice.pop, .choices.shake { animation: none; } .qcard.swipeable { transition: none; } }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(96px + env(safe-area-inset-bottom)); z-index: 50; display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 18px; border-radius: 999px; background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--shadow); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); font-size: 14px; font-weight: 600; white-space: nowrap; max-width: calc(100vw - 32px); animation: toast-in .3s ease both; }
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+.toast .btn { padding: 9px 16px; }

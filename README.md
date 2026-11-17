@@ -7,10 +7,18 @@ An installable study app (PWA) for FRV courses. It has study notes for each topi
   (OMS, OPP, OPG, ORP, POL 003, ORG 109/133, Workplace Behaviour Policy, AIIMS card, FRV Act).
 - **Tests:** questions from the study book, the numbered Q&A bank, and the source documents. Short-fact questions are
   multiple choice. List questions are flashcards that you mark yourself.
-- **Progress:** kept on the device in `localStorage`. A question is mastered after 3 correct
-  answers in a row. The "Smart mix" test favours questions you've missed or haven't seen yet.
-  You can back progress up and restore it from the Progress tab.
-- **Offline:** a service worker caches the app after the first visit.
+- **Spaced review:** every answered question gets a due date. A correct answer on a due question
+  moves it up a box and pushes the next review out (1, 3, 7, 16, then 35 days); a miss drops it two
+  boxes and brings it back tomorrow. Box 3 counts as mastered, but an overdue question slips back
+  until it's reviewed. Home shows what's due today, and "Smart mix", "Priority", "Weak spots" and
+  "Not seen yet" are still there for free practice.
+- **Progress:** kept on the device in `localStorage`. Back it up and restore it from the Progress
+  tab; Home reminds you after 7 days of study without a backup. A test in progress is saved after
+  every answer and can be resumed from Home.
+- **Keys and gestures:** `1`-`4` pick an answer or grade, `Space`/`Enter` reveal and go on, `/`
+  searches, `Esc` goes back. Swipe a revealed flashcard right (got it) or left (missed it).
+- **Offline:** a cache-first service worker opens the app instantly from the saved copy and checks
+  for updates in the background, then offers "New version ready · Refresh".
 
 ## Adding material
 

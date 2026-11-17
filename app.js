@@ -3,29 +3,56 @@
   'use strict';
 
   const STORE_KEY = 'studyapp.v1';
-  const MASTER_BOX = 3; // a question counts as mastered after 3 correct answers in a row
+  const MASTER_BOX = 3; // a question counts as mastered once it reaches box 3 (and isn't overdue)
+  // Days until the next review for each box. Box 0 = just missed, so it comes back tomorrow.
+  // A correct answer only moves a question up a box when it was due, so cramming can't fake mastery.
+  const INTERVAL_DAYS = [1, 1, 3, 7, 16, 35];
+  const DUE_SESSION = 20; // most due questions in one round
+  const RESUME_KEY = 'studyapp.quiz';
   const app = document.getElementById('app');
   const titleEl = document.getElementById('title');
   const backBtn = document.getElementById('back');
 
   let courses = [];       // [{id, title, subtitle, groups, topics}]
   const topicIndex = {};  // "course/topic" -> {course, topic, idx}
+  const qById = {};       // "course/question id" -> question
   let quiz = null;        // active quiz session
 
   /* ---------- storage ---------- */
 
-  function emptyState() { return { v: 1, q: {}, sessions: [] }; }
+  function emptyState() { return { v: 2, q: {}, sessions: [] }; }
   let state = emptyState();
+
+  // Local midnight, `add` days from the day containing time t (handles daylight saving).
+  function dayStart(t, add) { const d = new Date(t); d.setHours(0, 0, 0, 0); if (add) d.setDate(d.getDate() + add); return d.getTime(); }
+  // v1 progress had a box and a last-answered time but no due date: schedule from the last answer.
+  function migrate(st) {
+    if ((st.v || 1) < 2) {
+      Object.values(st.q || {}).forEach((s) => {
+        if (s.due == null && s.last) s.due = dayStart(s.last, INTERVAL_DAYS[Math.min(s.box || 0, 5)]);
+      });
+      st.v = 2;
+    }
+    return st;
+  }
   function load() {
     try {
       const raw = localStorage.getItem(STORE_KEY);
-      if (raw) state = Object.assign(emptyState(), JSON.parse(raw));
+      if (raw) { state = migrate(Object.assign(emptyState(), { v: 1 }, JSON.parse(raw))); save(); }
     } catch (e) { state = emptyState(); }
   }
   function save() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* storage full or blocked */ }
   }
   function qstat(key) { return state.q[key] || { box: 0, right: 0, wrong: 0, last: 0 }; }
+  const isSeen = (s) => s.right + s.wrong > 0;
+  // Due = seen before and scheduled for today or earlier. New questions are never "due".
+  const isDue = (s, now) => isSeen(s) && (s.due == null || s.due < dayStart(now || Date.now(), 1));
+  const isOverdue = (s, now) => isSeen(s) && s.due != null && s.due < dayStart(now || Date.now());
+  // Overdue questions count as box 2 at most, so mastery slips if reviews are skipped.
+  const effBox = (s) => (isOverdue(s) ? Math.min(s.box, MASTER_BOX - 1) : s.box);
+  const isMastered = (s) => effBox(s) >= MASTER_BOX;
+  const masteryOf = (s) => Math.min(effBox(s), MASTER_BOX) / MASTER_BOX;
 
   /* ---------- helpers ---------- */
 
@@ -73,10 +100,22 @@
     const stats = qs.map((q) => qstat(qkey(course, q)));
     return {
       qs,
-      pct: qs.length ? pct(stats.reduce((s, x) => s + Math.min(x.box, MASTER_BOX) / MASTER_BOX, 0) / qs.length) : 0,
-      mastered: stats.filter((x) => x.box >= MASTER_BOX).length,
-      seen: stats.filter((x) => x.right + x.wrong > 0).length,
+      pct: qs.length ? pct(stats.reduce((s, x) => s + masteryOf(x), 0) / qs.length) : 0,
+      mastered: stats.filter(isMastered).length,
+      seen: stats.filter(isSeen).length,
+      due: stats.filter((x) => isDue(x)).length,
     };
+  }
+
+  // How many seen questions fall due on the day `d` days from today.
+  function dueOn(course, d) {
+    const from = dayStart(Date.now(), d), to = dayStart(Date.now(), d + 1);
+    let n = 0;
+    course.topics.forEach((t) => t.questions.forEach((q) => {
+      const s = qstat(qkey(course, q));
+      if (isSeen(s) && s.due >= from && s.due < to) n++;
+    }));
+    return n;
   }
 
   const chevron = '<svg class="chev" width="18" height="18" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
@@ -85,15 +124,16 @@
 
   function topicMastery(course, topic) {
     const qs = topic.questions;
-    if (!qs.length) return { pct: 0, mastered: 0, seen: 0, total: 0 };
-    let sum = 0, mastered = 0, seen = 0;
+    if (!qs.length) return { pct: 0, mastered: 0, seen: 0, due: 0, total: 0 };
+    let sum = 0, mastered = 0, seen = 0, due = 0;
     qs.forEach((q) => {
       const s = qstat(qkey(course, q));
-      sum += Math.min(s.box, MASTER_BOX) / MASTER_BOX;
-      if (s.box >= MASTER_BOX) mastered++;
-      if (s.right + s.wrong > 0) seen++;
+      sum += masteryOf(s);
+      if (isMastered(s)) mastered++;
+      if (isSeen(s)) seen++;
+      if (isDue(s)) due++;
     });
-    return { pct: pct(sum / qs.length), mastered, seen, total: qs.length };
+    return { pct: pct(sum / qs.length), mastered, seen, due, total: qs.length };
   }
 
   function lastSession(scopeKey) {
@@ -131,13 +171,19 @@
     let lastRef = null;
     try { lastRef = topicIndex[localStorage.getItem('studyapp.lastTopic')]; } catch (e) {}
 
+    const unseen = cs.qs.length - cs.seen;
+    const startLabel = cs.due ? `Review ${cs.due} due` : !cs.seen ? 'Start learning' : unseen ? 'Learn 10 new' : 'Practise';
+    const tomorrow = cs.due ? 0 : dueOn(course, 1);
+    const dueLine = cs.due
+      ? `<div class="due-chip"><b>${cs.due}</b> due today</div>`
+      : cs.seen ? `<div class="due-chip done">✓ All caught up${tomorrow ? ` · ${tomorrow} due tomorrow` : ''}</div>` : '';
     let html = `<section class="greet"><p>${cs.seen ? 'Welcome back!' : 'Welcome!'}</p><h2>${esc(today)}</h2></section>
       <section class="gauge-hero">${gauge(cs.pct)}
         <p class="gauge-val">${cs.pct}%</p>
         <p class="gauge-cap">Overall mastery · ${cs.mastered} of ${cs.qs.length} questions mastered</p>
-        ${streak ? `<div class="streak">🔥 ${streak}-day streak</div><br>` : ''}
+        <div class="hero-chips">${dueLine}${streak ? `<div class="streak">🔥 ${streak}-day streak</div>` : ''}</div>
         <div class="hero-actions">
-          <a class="pill-btn" href="#/start">${sparkle}<span>${cs.seen ? 'Keep learning' : 'Start learning'}</span></a>
+          <a class="pill-btn" href="#/start">${sparkle}<span>${startLabel}</span></a>
           <a class="pill-btn ghost" href="#/random">${shuffleIcon}<span>Random topic</span></a>
         </div>
       </section>
@@ -148,6 +194,17 @@
           <span class="big">${course.topicOrder.length} Topics</span>
           <span class="foot"><span>${course.groups.length} sections</span><span>${cs.mastered} mastered</span></span></a>
       </div>`;
+    const paused = savedQuiz();
+    if (paused && paused.results.length) {
+      html += `<a class="card continue" href="#/resume"><div>
+        <div class="k">⏸ Test in progress</div><div class="v">${esc(paused.label)} · question ${paused.i + 1} of ${paused.ids.length}</div></div>
+        <span class="pill-btn small-pill">Resume</span></a>`;
+    }
+    if (backupDue()) {
+      html += `<div class="card nudge"><div><div class="k">Back up your progress</div>
+        <div class="muted small">You've studied on ${studyDaysSinceBackup()} days since your last backup. Progress only lives on this device.</div></div>
+        <div class="row"><button class="btn primary" id="nudge-backup">Back up</button><button class="btn" id="nudge-later">Later</button></div></div>`;
+    }
     if (lastRef) {
       const m = topicMastery(lastRef.course, lastRef.topic);
       html += `<a class="card continue" href="#/t/${lastRef.course.id}/${lastRef.topic.id}"><div>
@@ -163,12 +220,21 @@
         const m = topicMastery(course, t);
         html += `<a class="card topic" href="#/t/${course.id}/${t.id}">${ring(m.pct)}
           <div class="t-main"><div class="t-title">${esc(t.title)}</div>
-          <div class="t-sub">${t.questions.length} questions · ${m.mastered} mastered</div></div>${chevron}</a>`;
+          <div class="t-sub">${t.questions.length} questions · ${m.mastered} mastered${m.due ? ` · <span class="due-txt">${m.due} due</span>` : ''}</div></div>${chevron}</a>`;
       });
       html += `</div>`;
     });
     html += `</div>`;
     app.innerHTML = html;
+
+    const nb = document.getElementById('nudge-backup');
+    if (nb) {
+      nb.onclick = () => exportBackup().then(() => viewHome());
+      document.getElementById('nudge-later').onclick = () => {
+        try { localStorage.setItem('studyapp.backupSnooze', String(Date.now() + 3 * 864e5)); } catch (e) {}
+        viewHome();
+      };
+    }
 
     const input = document.getElementById('search');
     const results = document.getElementById('results');
@@ -259,15 +325,16 @@
 
   /* ---------- test setup ---------- */
 
-  const setup = { mode: 'smart', len: 10 };
+  const setup = { mode: 'due', len: 10 };
   try { Object.assign(setup, JSON.parse(localStorage.getItem('studyapp.setup') || '{}')); } catch (e) {}
 
   function poolFor(course, questions, mode) {
     return questions.filter((q) => {
       const s = qstat(qkey(course, q));
+      if (mode === 'due') return isDue(s);
       if (mode === 'priority') return q.priority;
-      if (mode === 'weak') return s.wrong > 0 && s.box < MASTER_BOX;
-      if (mode === 'new') return s.right + s.wrong === 0;
+      if (mode === 'weak') return s.wrong > 0 && effBox(s) < MASTER_BOX;
+      if (mode === 'new') return !isSeen(s);
       return true;
     });
   }
@@ -275,16 +342,17 @@
   function testSetupHTML(course, scope, questions, label) {
     const m = { pct: 0, mastered: 0, seen: 0, total: questions.length };
     let sum = 0;
-    questions.forEach((q) => { const s = qstat(qkey(course, q)); sum += Math.min(s.box, MASTER_BOX) / MASTER_BOX; if (s.box >= MASTER_BOX) m.mastered++; if (s.right + s.wrong) m.seen++; });
+    questions.forEach((q) => { const s = qstat(qkey(course, q)); sum += masteryOf(s); if (isMastered(s)) m.mastered++; if (isSeen(s)) m.seen++; });
     m.pct = questions.length ? pct(sum / questions.length) : 0;
     const last = lastSession(scope);
     const counts = {
+      due: poolFor(course, questions, 'due').length,
       smart: questions.length,
       priority: poolFor(course, questions, 'priority').length,
       weak: poolFor(course, questions, 'weak').length,
       new: poolFor(course, questions, 'new').length,
     };
-    const modes = [['smart', 'Smart mix'], ['priority', '⭐ Priority'], ['weak', 'Weak spots'], ['new', 'Not seen yet']];
+    const modes = [['due', 'Due today'], ['smart', 'Smart mix'], ['priority', '⭐ Priority'], ['weak', 'Weak spots'], ['new', 'Not seen yet']];
     const lens = [[10, '10'], [20, '20'], [0, 'All']];
     return `<div class="card setup">
       <div style="display:flex;gap:16px;align-items:center">${ring(m.pct, true)}
@@ -295,14 +363,14 @@
       <div class="chips" id="modes">${modes.map(([k, l]) => `<button class="chip${setup.mode === k ? ' on' : ''}" data-mode="${k}" ${counts[k] ? '' : 'disabled'}>${l} (${counts[k]})</button>`).join('')}</div>
       <div class="opt-label">How many</div>
       <div class="chips" id="lens">${lens.map(([k, l]) => `<button class="chip${setup.len === k ? ' on' : ''}" data-len="${k}">${l}</button>`).join('')}</div>
-      <p class="muted small" style="margin:14px 0">Smart mix favours questions you've missed or haven't seen. Three correct answers in a row marks a question as mastered.</p>
+      <p class="muted small" style="margin:14px 0">Due today is what's scheduled for review. Each correct answer on a due question pushes its next review further out (1, 3, 7, 16, then 35 days), and a question counts as mastered after 3 spaced correct answers. Skip its review and it slips back.</p>
       <button class="btn primary block" id="start">Start test</button></div>`;
   }
 
   function bindSetup(course, scope, questions, label, returnTo) {
     const persist = () => { try { localStorage.setItem('studyapp.setup', JSON.stringify(setup)); } catch (e) {} };
     const counts = (mode) => poolFor(course, questions, mode).length;
-    if (!counts(setup.mode)) setup.mode = 'smart';
+    if (!counts(setup.mode)) setup.mode = counts('due') ? 'due' : 'smart';
     const refresh = () => {
       document.querySelectorAll('#modes .chip').forEach((b) => b.classList.toggle('on', b.dataset.mode === setup.mode));
       document.querySelectorAll('#lens .chip').forEach((b) => b.classList.toggle('on', +b.dataset.len === setup.len));
@@ -318,12 +386,16 @@
     const len = opts && opts.len !== undefined ? opts.len : setup.len;
     const pool = poolFor(course, questions, mode);
     const n = len ? Math.min(len, pool.length) : pool.length;
+    if (mode === 'due') {
+      // most overdue first, then mixed up so topics interleave
+      const byDue = pool.map((q) => ({ q, d: qstat(qkey(course, q)).due || 0 })).sort((a, b) => a.d - b.d);
+      return shuffle(byDue.slice(0, n).map((x) => x.q));
+    }
     if (mode !== 'smart') return shuffle(pool).slice(0, n);
-    // weighted sample without replacement: unseen and weak questions come up more often
+    // weighted sample without replacement: due, unseen and weak questions come up more often
     const weighted = pool.map((q) => {
       const s = qstat(qkey(course, q));
-      const seen = s.right + s.wrong > 0;
-      const w = !seen ? 4 : [6, 3, 2, 1, 1, 1][Math.min(s.box, 5)];
+      const w = !isSeen(s) ? 4 : isDue(s) ? 8 : [6, 3, 2, 1, 1, 1][Math.min(s.box, 5)];
       return { q, k: Math.pow(Math.random(), 1 / w) };
     });
     return weighted.sort((a, b) => b.k - a.k).slice(0, n).map((x) => x.q);
@@ -342,6 +414,7 @@
     if (!quiz) { location.replace('#/'); return; }
     setChrome(quiz.label, quiz.returnTo, quiz.scope === 'all' ? 'quiz' : 'home');
     if (quiz.i >= quiz.list.length) return viewSummary();
+    persistQuiz();
     const q = quiz.list[quiz.i];
     const course = quiz.course;
     const topic = topicIndex[course.id + '/' + q.topic].topic;
@@ -353,7 +426,7 @@
       <div class="card qcard"><div class="qtopic">${esc(meta)}</div><p class="qtext">${inline(stripNum(q.q))}</p>`;
     if (q.choices && q.choices.length) {
       const opts = shuffle([{ t: q.a, ok: true }].concat(q.choices.map((c) => ({ t: c, ok: false }))));
-      html += `<div class="choices" id="choices">${opts.map((o, k) => `<button class="choice" data-k="${k}" data-ok="${o.ok ? 1 : 0}">${inline(o.t)}</button>`).join('')}</div>
+      html += `<div class="choices" id="choices">${opts.map((o, k) => `<button class="choice" data-k="${k}" data-ok="${o.ok ? 1 : 0}"><kbd>${k + 1}</kbd>${inline(o.t)}</button>`).join('')}</div>
         <div id="after"></div>`;
     } else {
       const items = Array.isArray(q.a) ? q.a.filter((x) => !/^\s/.test(x)).length : 0;
@@ -372,6 +445,8 @@
         const ok = b.dataset.ok === '1';
         choices.querySelectorAll('.choice').forEach((c) => { c.disabled = true; if (c.dataset.ok === '1') c.classList.add('right'); });
         if (!ok) b.classList.add('wrong');
+        (ok ? b : choices).classList.add(ok ? 'pop' : 'shake');
+        buzz(ok);
         record(q, ok ? 1 : 0);
         document.getElementById('after').innerHTML = `<p class="feedback ${ok ? 'good' : 'bad'}">${ok ? 'Correct' : 'Not quite'}</p>
           <button class="btn primary block" id="next">${quiz.i + 1 < quiz.list.length ? 'Next question' : 'See results'}</button>`;
@@ -380,18 +455,25 @@
     } else {
       document.getElementById('reveal').onclick = () => {
         const multi = Array.isArray(q.a) && q.a.length > 1;
+        let n = 0;
         document.getElementById('reveal-area').innerHTML = `<div class="answer">${answerHTML(q.a)}</div>
-          <div class="row">
-            <button class="btn bad" data-r="0">Missed it</button>
-            ${multi ? '<button class="btn" data-r="0.5">Partly</button>' : ''}
-            <button class="btn good" data-r="1">Got it</button>
-          </div>`;
-        document.getElementById('reveal-area').onclick = (e) => {
-          const b = e.target.closest('[data-r]');
-          if (!b || quiz.answered) return;
-          record(q, +b.dataset.r);
+          <div class="row grades">
+            <button class="btn bad" data-r="0"><kbd>${++n}</kbd>Missed it</button>
+            ${multi ? `<button class="btn" data-r="0.5"><kbd>${++n}</kbd>Partly</button>` : ''}
+            <button class="btn good" data-r="1"><kbd>${++n}</kbd>Got it</button>
+          </div>
+          <p class="hint touch-only center">Or swipe the card: right if you got it, left if you missed it.</p>`;
+        const grade = (r) => {
+          if (quiz.answered) return;
+          buzz(r === 1);
+          record(q, r);
           advance();
         };
+        document.getElementById('reveal-area').onclick = (e) => {
+          const b = e.target.closest('[data-r]');
+          if (b) grade(+b.dataset.r);
+        };
+        enableSwipe(document.querySelector('.qcard'), grade);
       };
     }
   }
@@ -407,14 +489,25 @@
     quiz.answered = true;
     const key = qkey(quiz.course, q);
     const s = Object.assign({}, qstat(key));
-    if (result === 1) { s.box = Math.min(s.box + 1, 5); s.right++; }
-    else if (result === 0) { s.box = 0; s.wrong++; }
-    else { s.box = Math.max(s.box - 1, 0); s.wrong++; } // partly: step back one box
-    s.last = Date.now();
+    const now = Date.now();
+    const wasDue = !isSeen(s) || isDue(s, now);
+    if (result === 1) { if (wasDue) s.box = Math.min(s.box + 1, 5); s.right++; }
+    else if (result === 0) { s.box = Math.max(s.box - 2, 0); s.wrong++; } // missed: back two boxes
+    else { s.box = Math.max(s.box - 1, 0); s.wrong++; } // partly: back one box
+    s.due = schedule(s.box, now, result === 1 && !wasDue ? s.due : 0);
+    s.last = now;
     state.q[key] = s;
     quiz.score += result;
     quiz.results.push({ q, result });
     save();
+  }
+
+  // Next review day for a box. Longer gaps get a little jitter so reviews don't all land on one day.
+  // An early correct answer (not due yet) keeps whichever due date is later.
+  function schedule(box, now, keep) {
+    let days = INTERVAL_DAYS[Math.min(box, 5)];
+    if (days >= 7) days += Math.round((Math.random() - 0.5) * days * 0.2);
+    return Math.max(dayStart(now, days), keep || 0);
   }
 
   function viewSummary() {
@@ -424,7 +517,9 @@
       if (state.sessions.length > 300) state.sessions = state.sessions.slice(-300);
       save();
       quiz.saved = true;
+      persistQuiz();
     }
+    const stillDue = courseStats(course).due;
     const p = pct(quiz.score / list.length);
     const missed = results.filter((r) => r.result < 1);
     let html = `<section class="gauge-hero">${gauge(p)}<p class="gauge-val">${p}%</p></section>
@@ -435,7 +530,9 @@
       <div class="card stat"><b>${results.filter((r) => r.result === 0).length}</b><span>missed</span></div></div>
       <div class="row" style="margin-bottom:16px">
         ${missed.length ? '<button class="btn primary" id="retry">Retry missed</button>' : ''}
-        <a class="btn" href="${quiz.returnTo}">Done</a></div>`;
+        <a class="btn" href="${quiz.returnTo}">Done</a></div>
+      ${stillDue ? `<a class="card continue" href="#/start"><div><div class="k">Still due today</div><div class="v">${stillDue} question${stillDue === 1 ? '' : 's'} to review</div></div><span class="pill-btn small-pill">Keep going</span></a>`
+        : `<div class="card continue done-today"><div><div class="k">✓ All caught up for today</div><div class="v">${dueOn(course, 1) || 'No'} review${dueOn(course, 1) === 1 ? '' : 's'} due tomorrow</div></div></div>`}`;
     if (missed.length) {
       html += `<div class="sub-title">Review what you missed</div><div class="card missed">` +
         missed.map((r) => `<div class="m"><div class="mq">${inline(stripNum(r.q.q))}</div><div class="ma">${answerHTML(r.q.a)}</div></div>`).join('') + `</div>`;
@@ -453,8 +550,13 @@
     const course = courses[0];
     const all = course.topics.flatMap((t) => t.questions);
     quiz = null;
-    const list = pickQuestions(course, all, { mode: 'smart', len: 10 });
-    quiz = { course, scope: 'all', label: 'Quick test', returnTo: '#/', list, i: 0, score: 0, results: [], answered: false };
+    const due = poolFor(course, all, 'due').length;
+    const fresh = poolFor(course, all, 'new').length;
+    const opts = due ? { mode: 'due', len: DUE_SESSION } : fresh ? { mode: 'new', len: 10 } : { mode: 'smart', len: 10 };
+    const label = due ? 'Due today' : fresh ? 'New questions' : 'Quick test';
+    const list = pickQuestions(course, all, opts);
+    if (!list.length) { location.replace('#/'); return; }
+    quiz = { course, scope: 'all', label, returnTo: '#/', list, i: 0, score: 0, results: [], answered: false };
     location.replace('#/run');
   }
 
@@ -476,6 +578,134 @@
     bindSetup(course, 'all', all, 'All topics', '#/quiz/all');
   }
 
+  /* ---------- resume a test ---------- */
+
+  // The test in progress is saved after every answer, so a reload or the phone closing the app
+  // doesn't lose it. Kept in localStorage (iOS can drop sessionStorage when it unloads a home screen app).
+  function persistQuiz() {
+    try {
+      if (!quiz || quiz.saved || quiz.i >= quiz.list.length) { localStorage.removeItem(RESUME_KEY); return; }
+      localStorage.setItem(RESUME_KEY, JSON.stringify({
+        course: quiz.course.id, scope: quiz.scope, label: quiz.label, returnTo: quiz.returnTo,
+        ids: quiz.list.map((q) => q.id), i: quiz.i, score: quiz.score,
+        results: quiz.results.map((r) => [r.q.id, r.result]), at: Date.now(),
+      }));
+    } catch (e) {}
+  }
+  function savedQuiz() {
+    try {
+      const d = JSON.parse(localStorage.getItem(RESUME_KEY) || 'null');
+      if (!d || Date.now() - d.at > 12 * 36e5 || !d.ids || d.i >= d.ids.length) return null; // stale after 12 hours
+      if (!d.ids.every((id) => qById[d.course + '/' + id])) return null; // content changed underneath it
+      return d;
+    } catch (e) { return null; }
+  }
+  function restoreQuiz() {
+    const d = savedQuiz();
+    if (!d) return false;
+    const course = courses.find((c) => c.id === d.course);
+    const get = (id) => qById[d.course + '/' + id];
+    const results = d.results.map(([id, result]) => ({ q: get(id), result })).filter((r) => r.q);
+    quiz = { course, scope: d.scope, label: d.label, returnTo: d.returnTo, list: d.ids.map(get),
+      i: Math.max(d.i, results.length), score: d.score, results, answered: false };
+    return true;
+  }
+
+  /* ---------- backup ---------- */
+
+  function studyDaysSinceBackup() {
+    const since = state.backupAt || 0;
+    return new Set(state.sessions.filter((s) => s.at > since).map((s) => new Date(s.at).toDateString())).size;
+  }
+  function backupDue() {
+    let snooze = 0;
+    try { snooze = +localStorage.getItem('studyapp.backupSnooze') || 0; } catch (e) {}
+    return Date.now() > snooze && studyDaysSinceBackup() >= 7;
+  }
+  // Uses the share sheet where it can send files (best on iPhone: Save to Files), else a download.
+  function exportBackup() {
+    const name = 'study-progress-' + new Date().toISOString().slice(0, 10) + '.json';
+    const json = JSON.stringify(state);
+    const done = () => { state.backupAt = Date.now(); save(); };
+    let file = null;
+    try { file = new File([json], name, { type: 'application/json' }); } catch (e) {}
+    if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+      return navigator.share({ files: [file], title: 'SO Study Guide backup' }).then(done, () => {});
+    }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    done();
+    return Promise.resolve();
+  }
+
+  /* ---------- feel: haptics, swipe, keys, toast ---------- */
+
+  const reduceMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function buzz(ok) { try { if (navigator.vibrate) navigator.vibrate(ok ? 12 : [30, 50, 30]); } catch (e) {} }
+
+  // Drag a revealed flashcard sideways: right = got it, left = missed it.
+  function enableSwipe(card, grade) {
+    if (!card || !('ontouchstart' in window)) return;
+    card.classList.add('swipeable');
+    let x0 = null, y0 = 0, dx = 0, horiz = null;
+    card.addEventListener('touchstart', (e) => {
+      if (e.touches.length !== 1 || e.target.closest('button')) return;
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; dx = 0; horiz = null;
+      card.style.transition = 'none';
+    }, { passive: true });
+    card.addEventListener('touchmove', (e) => {
+      if (x0 === null) return;
+      dx = e.touches[0].clientX - x0;
+      const dy = e.touches[0].clientY - y0;
+      if (horiz === null && Math.abs(dx) + Math.abs(dy) > 10) horiz = Math.abs(dx) > Math.abs(dy);
+      if (!horiz) return;
+      card.style.transform = `translateX(${dx}px) rotate(${dx / 30}deg)`;
+      card.classList.toggle('swipe-good', dx > 90);
+      card.classList.toggle('swipe-bad', dx < -90);
+    }, { passive: true });
+    card.addEventListener('touchend', () => {
+      if (x0 === null) return;
+      x0 = null;
+      card.style.transition = '';
+      if (horiz && Math.abs(dx) > 90) {
+        card.style.transform = `translateX(${dx > 0 ? 130 : -130}%) rotate(${dx > 0 ? 12 : -12}deg)`;
+        setTimeout(() => grade(dx > 0 ? 1 : 0), reduceMotion() ? 0 : 180);
+      } else {
+        card.style.transform = '';
+        card.classList.remove('swipe-good', 'swipe-bad');
+      }
+    });
+  }
+
+  // Space/Enter reveal and go on, 1-4 pick an option or a grade, / searches, Esc goes back.
+  document.addEventListener('keydown', (e) => {
+    if (e.metaKey || e.ctrlKey || e.altKey || e.target.closest('input, textarea, select')) return;
+    const onButton = e.target.closest('button, a');
+    const click = (el) => { if (el) { e.preventDefault(); el.click(); } };
+    if (e.key === 'Escape') { if (!backBtn.hidden) click(backBtn); return; }
+    if (e.key === '/') { e.preventDefault(); location.hash = '#/?search=1'; return; }
+    if (!location.hash.startsWith('#/run') || !quiz) return;
+    const go = e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight';
+    if (/^[1-9]$/.test(e.key)) {
+      const opts = document.querySelectorAll('#choices .choice:not(:disabled), .grades [data-r]');
+      click(opts[+e.key - 1]);
+    } else if (go && !(onButton && e.key !== 'ArrowRight')) { // a focused button already handles Enter/Space
+      click(document.getElementById('next') || document.getElementById('reveal'));
+    }
+  });
+
+  function toast(msg, action, fn) {
+    if (document.querySelector('.toast')) return;
+    const t = document.createElement('div');
+    t.className = 'toast';
+    t.innerHTML = `<span>${esc(msg)}</span>${action ? `<button class="btn primary">${esc(action)}</button>` : ''}`;
+    if (action) t.querySelector('button').onclick = fn;
+    document.body.appendChild(t);
+  }
+
   /* ---------- progress ---------- */
 
   function viewProgress() {
@@ -484,13 +714,16 @@
     courses.forEach((course) => {
       const qs = course.topics.flatMap((t) => t.questions);
       const stats = qs.map((q) => qstat(qkey(course, q)));
-      const overall = qs.length ? pct(stats.reduce((s, x) => s + Math.min(x.box, MASTER_BOX) / MASTER_BOX, 0) / qs.length) : 0;
-      const mastered = stats.filter((s) => s.box >= MASTER_BOX).length;
-      const seen = stats.filter((s) => s.right + s.wrong > 0).length;
+      const overall = qs.length ? pct(stats.reduce((s, x) => s + masteryOf(x), 0) / qs.length) : 0;
+      const mastered = stats.filter(isMastered).length;
+      const seen = stats.filter(isSeen).length;
+      const due = stats.filter((s) => isDue(s)).length;
+      let week = 0; for (let d = 1; d <= 7; d++) week += dueOn(course, d);
       const sessions = state.sessions.filter((s) => s.course === course.id);
       const streak = streakDays();
       html += `<section class="gauge-hero">${gauge(overall)}<p class="gauge-val">${overall}%</p>
-        <p class="gauge-cap">Overall · ${mastered} of ${qs.length} mastered · ${seen} seen</p></section>
+        <p class="gauge-cap">Overall · ${mastered} of ${qs.length} mastered · ${seen} seen</p>
+        <div class="hero-chips"><div class="due-chip"><b>${due}</b> due today · ${dueOn(course, 1)} tomorrow · ${week} next 7 days</div></div></section>
         <div class="stats"><div class="card stat"><b>${sessions.length}</b><span>tests taken</span></div>
         <div class="card stat"><b>${streak}</b><span>day streak</span></div>
         <div class="card stat"><b>${sessions.length ? pct(sessions.slice(-10).reduce((a, x) => a + x.score / x.n, 0) / Math.min(10, sessions.length)) : 0}%</b><span>recent avg</span></div></div>`;
@@ -499,7 +732,7 @@
         const last = lastSession('t:' + t.id);
         html += `<a class="card topic" href="#/t/${course.id}/${t.id}/test"><div class="t-main">
           <div class="t-title">${esc(t.title)}</div>
-          <div class="t-sub">${m.pct}% · ${m.mastered}/${m.total} mastered${last ? ` · last test ${pct(last.score / last.n)}%` : ''}</div>
+          <div class="t-sub">${m.pct}% · ${m.mastered}/${m.total} mastered${m.due ? ` · <span class="due-txt">${m.due} due</span>` : ''}${last ? ` · last test ${pct(last.score / last.n)}%` : ''}</div>
           <div class="pbar"><i style="width:${m.pct}%"></i></div></div></a>`;
       });
       html += `</div>`;
@@ -516,21 +749,14 @@
         <button class="btn bad" id="reset">Reset progress</button></div>`;
     app.innerHTML = html;
 
-    document.getElementById('export').onclick = () => {
-      const blob = new Blob([JSON.stringify(state)], { type: 'application/json' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'study-progress-' + new Date().toISOString().slice(0, 10) + '.json';
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-    };
+    document.getElementById('export').onclick = () => { exportBackup(); };
     document.getElementById('import').onchange = (e) => {
       const f = e.target.files[0];
       if (!f) return;
       f.text().then((txt) => {
         const data = JSON.parse(txt);
         if (!data || typeof data.q !== 'object') throw new Error('bad file');
-        state = Object.assign(emptyState(), data);
+        state = migrate(Object.assign(emptyState(), { v: 1 }, data));
         save();
         viewProgress();
       }).catch(() => alert('That file is not an SO Study Guide backup.'));
@@ -552,7 +778,7 @@
     const parts = path.split('/').filter(Boolean);
     const params = new URLSearchParams(qs || '');
     if (parts[0] !== 'run' && quiz && quiz.i < quiz.list.length && quiz.results.length && !quiz.saved) {
-      // leaving a quiz part-way: keep what was answered, drop the rest
+      // leaving a quiz part-way: answers are already recorded, and it can be resumed from Home
       quiz = null;
     }
     if (!parts.length) viewHome(params.get('search') === '1');
@@ -560,7 +786,8 @@
     else if (parts[0] === 'random') randomTopic();
     else if (parts[0] === 't') viewTopic(parts[1], parts[2], parts[3] === 'test' ? 'test' : 'notes', params.get('q'));
     else if (parts[0] === 'quiz') viewQuizAll();
-    else if (parts[0] === 'run') viewQuiz();
+    else if (parts[0] === 'resume') { if (restoreQuiz()) location.replace('#/run'); else location.replace('#/'); return; }
+    else if (parts[0] === 'run') { if (!quiz) restoreQuiz(); viewQuiz(); }
     else if (parts[0] === 'progress') viewProgress();
     else viewNotFound();
     if (parts[0] !== 'run') window.scrollTo(0, 0);
@@ -590,13 +817,24 @@
     courses.forEach((course) => {
       course.topicOrder = course.groups.flatMap((g) => g.topics).map((id) => course.topics.find((t) => t.id === id)).filter(Boolean);
       course.topicOrder.forEach((topic, idx) => { topicIndex[course.id + '/' + topic.id] = { course, topic, idx }; });
+      course.topics.forEach((t) => t.questions.forEach((q) => { qById[course.id + '/' + q.id] = q; }));
     });
+    // Ask the browser not to clear saved progress when space runs low.
+    try {
+      if (Object.keys(state.q).length && navigator.storage && navigator.storage.persist) {
+        navigator.storage.persisted().then((p) => { if (!p) navigator.storage.persist(); }).catch(() => {});
+      }
+    } catch (e) {}
     window.addEventListener('hashchange', route);
     route();
   }
 
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'updated') toast('New version ready', 'Refresh', () => location.reload());
+    });
+    navigator.serviceWorker.startMessages();
   }
   boot();
 })();
